@@ -1,0 +1,22 @@
+2026/10/10 21:27:12 ATENCIÓN: spike de 30s; la guía pide al menos 2 minutos continuos
+2026/10/10 21:27:12 plan de publicación: normal (500 ev/s durante 10s) → spike (5000 ev/s durante 30s) → normal-post (500 ev/s hasta agotar el archivo)
+2026/10/10 21:27:17 publicadas 2501 líneas, fase normal (500 ev/s promedio)
+2026/10/10 21:27:22 fase spike: 5000 ev/s durante 30s
+2026/10/10 21:27:22 publicadas 5014 líneas, fase spike (501 ev/s promedio)
+2026/10/10 21:27:27 publicadas 30020 líneas, fase spike (2001 ev/s promedio)
+
+=== PRODUCTOR ===
+líneas publicadas:      40000
+PubAck confirmados:     40001 (incluye EOF)
+reintentos del prod.:   0
+descartados por broker: 0 (Nats-Msg-Id repetido = reintento del productor)
+tiempo:                 17s
+throughput publicación: 2353 ev/s
+
+=== FASES (tasa real medida) ===
+fase             objetivo       líneas   duración    real ev/s
+normal                500         4999        10s          500
+spike                5000        35001         7s         5000
+normal-post           500            0          -            -
+spike / normal = 10.00x sostenido durante 7s
+línea de tiempo:        results\go04\blocked-buffer\producer-20261010-212712.csv

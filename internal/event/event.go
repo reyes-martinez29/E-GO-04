@@ -44,6 +44,7 @@ type ID [16]byte
 
 type Event struct {
 	ID      ID
+	OrderID ID // order_id: lo necesita la verificación de inventario (E-Go04)
 	Type    Type
 	Country Country
 	Cents   int64 // amount_usd en centavos; 0 si amount_usd es null
@@ -52,6 +53,7 @@ type Event struct {
 
 type raw struct {
 	EventID   string       `json:"event_id"`
+	OrderID   string       `json:"order_id"`
 	EventType string       `json:"event_type"`
 	Country   string       `json:"country"`
 	Amount    *json.Number `json:"amount_usd"`
@@ -70,6 +72,11 @@ func Parse(line []byte) (Event, error) {
 	var err error
 	if e.ID, err = ParseID(r.EventID); err != nil {
 		return Event{}, err
+	}
+	if r.OrderID != "" {
+		if e.OrderID, err = ParseID(r.OrderID); err != nil {
+			return Event{}, fmt.Errorf("order_id: %w", err)
+		}
 	}
 	if e.Type, err = parseType(r.EventType); err != nil {
 		return Event{}, err

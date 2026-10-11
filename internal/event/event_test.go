@@ -17,6 +17,13 @@ func TestParse(t *testing.T) {
 	if e.TS != 1794619841 {
 		t.Errorf("ts = %d", e.TS)
 	}
+	if e.OrderID.String() != "17003331-77ac-47cd-8213-a0f26c940490" {
+		t.Errorf("order_id = %s", e.OrderID)
+	}
+	bad := []byte(`{"event_id": "61bada38-c6d6-401f-a2c5-0758faa57fb9", "event_type": "inventory_reserved", "order_id": "x", "country": "MX", "amount_usd": null, "timestamp": "2026-11-14T01:30:41"}`)
+	if _, err := Parse(bad); err == nil {
+		t.Error("un order_id que no es UUID debe rechazarse")
+	}
 }
 
 func TestExtractIDMatchesParse(t *testing.T) {
@@ -41,7 +48,7 @@ func TestExtractIDMatchesParse(t *testing.T) {
 }
 
 func TestParseNullAmount(t *testing.T) {
-	line := []byte(`{"event_id": "5d2d6a41-391f-4fb6-bb2f-55029c58beeb", "event_type": "inventory_reserved", "order_id": "x", "country": "PE", "amount_usd": null, "timestamp": "2026-11-14T01:30:33"}`)
+	line := []byte(`{"event_id": "5d2d6a41-391f-4fb6-bb2f-55029c58beeb", "event_type": "inventory_reserved", "order_id": "8e1f6a2b-7c3d-4e5f-9a0b-1c2d3e4f5a6b", "country": "PE", "amount_usd": null, "timestamp": "2026-11-14T01:30:33"}`)
 	e, err := Parse(line)
 	if err != nil {
 		t.Fatal(err)

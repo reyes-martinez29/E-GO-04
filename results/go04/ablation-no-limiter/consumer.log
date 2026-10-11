@@ -1,0 +1,68 @@
+2026/10/10 21:24:27 consumidor listo (shards=8, ventana=5m0s/10 gen, retención garantizada=4m30s); esperando eventos...
+2026/10/10 21:24:27 inventario: http://127.0.0.1:8090, 32 workers, timeout 1s, breaker 5 fallos/2s/3 pruebas, limitador=false, buffer mem=50000 disco=4000000
+2026/10/10 21:24:32 recibidos=2350 aplicados=2350 (470 ev/s) ventana=0 llaves heap=9 MiB inválidos=0 | inventario: confirmados=370/619 buffer=217 (mem=217 disco=0, nivel=memory, más viejo=1.6s) breaker=closed límite=0.0 llamadas/s
+2026/10/10 21:24:37 recibidos=4850 aplicados=4850 (500 ev/s) ventana=0 llaves heap=10 MiB inválidos=0 | inventario: confirmados=758/1286 buffer=496 (mem=496 disco=0, nivel=memory, más viejo=3.7s) breaker=closed límite=0.0 llamadas/s
+2026/10/10 21:24:43 recibidos=33507 aplicados=33507 (4776 ev/s) ventana=30826 llaves heap=13 MiB inválidos=0 | inventario: confirmados=1219/8781 buffer=7530 (mem=7530 disco=0, nivel=memory, más viejo=6.3s) breaker=closed límite=0.0 llamadas/s
+2026/10/10 21:24:44 pipeline principal terminado: 40000 eventos aplicados; drenando 9121 verificaciones pendientes de inventario
+2026/10/10 21:25:13 drenando 77.6 confirmaciones/s, ETA 1m28s | inventario: confirmados=3546/10467 buffer=6889 (mem=6889 disco=0, nivel=memory, más viejo=34.0s) breaker=closed límite=0.0 llamadas/s
+2026/10/10 21:25:43 drenando 78.6 confirmaciones/s, ETA 57s | inventario: confirmados=5905/10467 buffer=4530 (mem=4530 disco=0, nivel=memory, más viejo=62.2s) breaker=closed límite=0.0 llamadas/s
+2026/10/10 21:26:14 drenando 77.1 confirmaciones/s, ETA 27s | inventario: confirmados=8295/10467 buffer=2140 (mem=2140 disco=0, nivel=memory, más viejo=91.3s) breaker=closed límite=0.0 llamadas/s
+2026/10/10 21:26:42 buffer drenado en 1m58s
+
+=== CONSUMIDOR: AGREGADO FINAL ===
+país      órdenes      órdenes USD        pagos        pagos USD   inventario
+MX           3073        194996.19         2617        165568.74         2099
+AR           2999        185857.07         2561        159684.81         2053
+CO           3014        185514.23         2557        158694.46         2039
+CL           3194        195939.76         2689        167120.29         2172
+PE           3051        189682.75         2616        161004.39         2104
+TOTAL       15331        951990.00        13040        812072.69        10467
+
+=== CONTEO ===
+líneas esperadas (EOF):     40000
+primeras entregas:          40000
+eventos únicos aplicados:   38838
+duplicados descartados:     1162
+re-entregas del broker:     0 (descartadas por la ventana: 0)
+inválidos:                  0
+acks enviados (AckAll):     1701
+EVENTOS PROCESADOS:         38838 (esperados: 38838 únicos)
+
+=== INVENTARIO ===
+encolados / confirmados:    10467 / 10467
+llamadas:                   12973 (200=10467 503=2506 timeout=0 conexión=0 otros=0)
+rechazadas por el breaker:  0; ítems que necesitaron reintento: 2005
+latencia por llamada:       p50=318.2ms p95=327.5ms p99=331.2ms max=400.3ms
+espera en buffer:           p50=54.3s p95=1m51.3s max=1m57.8s
+pipeline principal:         17.0s; drenado del buffer: 1m57.8s; total: 2m14.8s
+
+=== CIRCUIT BREAKER ===
+veces que abrió:            0 (por fallos consecutivos: 0, por prueba fallida en half-open: 0)
+cerró tras half-open:       0
+tiempo total abierto:       0s (half-open: 0s)
+racha máx. de fallos:       4
+
+=== BUFFER DE ESPERA (backpressure) ===
+profundidad máxima:         9121 (memoria máx. 9121, disco máx. 0)
+ítems que pasaron por disco: 0; Push bloqueados: 0
+tiempo en nivel blocked:    0s
+tiempo en nivel memory:     2m15.1s
+tiempo en nivel spilling:   0s
+
+=== RENDIMIENTO DEL PIPELINE PRINCIPAL ===
+throughput consumidor:      2353 ev/s (17.00s, primer recibido -> último aplicado)
+latencia e2e (publicado -> aplicado): p50=0.55ms p95=0.70ms p99=1.08ms max=5.89ms (n=40000)
+heap pico: 14 MiB; ventana final: 38838 llaves, 0 expulsiones prematuras
+
+=== CHEQUEOS ===
+[OK] accounting: unique + duplicates + invalid == first_deliveries
+[OK] aggregate_total == unique_applied
+[OK] buffer: final depth == 0
+[OK] inventory: confirmed == enqueued (nada se descartó)
+[OK] inventory: enqueued == aggregate inventory_reserved
+[OK] no_loss: first_deliveries == expected_lines
+[OK] no_premature_evictions
+[OK] processed == unique_applied
+
+reporte: results\go04\ablation-no-limiter\consumer-20261010-212427.json
+línea de tiempo: results\go04\ablation-no-limiter\timeline-20261010-212427.csv

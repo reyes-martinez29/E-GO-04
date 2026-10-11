@@ -1,0 +1,47 @@
+# Corrida end-to-end completa en Docker, aislada del docker-compose.yml de
+# desarrollo (proyecto, red y volumen propios; sin puertos publicados, así que
+# puede correr al mismo tiempo que una corrida local sin pisarle el stream).
+#
+#   docker compose -f docker-compose.e2e.yml up -d --build
+#   docker compose -f docker-compose.e2e.yml logs -f runner
+#   docker compose -f docker-compose.e2e.yml down -v      # al terminar
+#
+# El runner comparte la red del contenedor de NATS (network_mode), así que
+# scripts/run.sh y los binarios ven el broker en 127.0.0.1:4222 sin cambios.
+# Resultados en results/go04/<RUN_LABEL>/ del host.
+name: hotsale-e2e
+
+services:
+  nats:
+    image: nats:2.11-alpine
+    command: ["-js", "-sd", "/data", "-m", "8222"]
+    volumes:
+      - nats-data:/data
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O-", "http://localhost:8222/healthz?js-enabled-only=true"]
+      interval: 2s
+      timeout: 2s
+      retries: 15
+
+  runner:
+    build: .
+    network_mode: "service:nats"
+    depends_on:
+      nats:
+        condition: service_healthy
+    environment:
+      RATE: ${RATE:-2000}
+      SPIKE_MULT: ${SPIKE_MULT:-10}
+      SPIKE_AFTER: ${SPIKE_AFTER:-60s}
+      SPIKE_FOR: ${SPIKE_FOR:-2m}
+      OUTAGE_AT: ${OUTAGE_AT:-100}
+      OUTAGE_FOR: ${OUTAGE_FOR:-45}
+      CONSUMER_ARGS: ${CONSUMER_ARGS:-}
+      OUT: results/go04
+    volumes:
+      - ./eventos_hotsale.jsonl:/app/eventos_hotsale.jsonl:ro
+      - ./results:/app/results
+    command: ["${RUN_LABEL:-full-docker}", "${RUN_LIMIT:-0}"]
+
+volumes:
+  nats-data:

@@ -1,0 +1,211 @@
+{
+  "label": "ablation-no-limiter",
+  "timestamp": "2026-10-10T21:26:42.3916042-06:00",
+  "config": {
+    "shards": 8,
+    "dedup_window": 300000000000,
+    "dedup_generations": 10,
+    "dedup_min_retention": 180000000000,
+    "dedup_max_per_generation": 0,
+    "pull_max_messages": 4096,
+    "max_ack_pending": 65536,
+    "purge_stream_on_start": true,
+    "ack_batch": 1000,
+    "ack_max_interval": 10000000,
+    "ack_wait": 300000000000,
+    "label": "ablation-no-limiter",
+    "inventory": {
+      "url": "http://127.0.0.1:8090",
+      "workers": 32,
+      "call_timeout": 1000000000,
+      "breaker_consecutive_failures": 5,
+      "breaker_cooldown": 2000000000,
+      "breaker_half_open_probes": 3,
+      "no_limiter": true,
+      "limiter_initial_rps": 10,
+      "limiter_min_rps": 2,
+      "limiter_max_rps": 1000,
+      "limiter_increase_rps": 2,
+      "limiter_decrease_factor": 0.75,
+      "limiter_window": 1000000000,
+      "limiter_latency_factor": 4,
+      "buffer_mem_cap": 50000,
+      "buffer_spill_cap": 4000000,
+      "buffer_spill_path": "C:\\Users\\ulise\\AppData\\Local\\Temp\\hotsale-inventory-spill.bin"
+    }
+  },
+  "counts": {
+    "expected_lines": 40000,
+    "received": 40000,
+    "first_deliveries": 40000,
+    "unique_applied": 38838,
+    "duplicates_discarded": 1162,
+    "broker_redeliveries": 0,
+    "broker_redeliveries_discarded": 0,
+    "invalid": 0,
+    "acks_sent": 1701,
+    "processed": 38838
+  },
+  "checks": {
+    "accounting: unique + duplicates + invalid == first_deliveries": true,
+    "aggregate_total == unique_applied": true,
+    "buffer: final depth == 0": true,
+    "inventory: confirmed == enqueued (nada se descartó)": true,
+    "inventory: enqueued == aggregate inventory_reserved": true,
+    "no_loss: first_deliveries == expected_lines": true,
+    "no_premature_evictions": true,
+    "processed == unique_applied": true
+  },
+  "throughput": {
+    "consumer_seconds": 16.9961858,
+    "consumer_events_per_sec": 2353.469211898119,
+    "end_to_end_seconds": 16.9972768,
+    "end_to_end_events_per_sec": 2353.3181503521787
+  },
+  "latency_end_to_end": {
+    "samples": 40000,
+    "p50_ms": 0.5503,
+    "p95_ms": 0.6975,
+    "p99_ms": 1.0787,
+    "max_ms": 5.8869,
+    "mean_ms": 0.5351372275
+  },
+  "retry_delays": {
+    "count": 1162,
+    "min_sec": 2,
+    "max_sec": 179,
+    "mean_sec": 91.41738382099828,
+    "outside_2_to_180s": 0
+  },
+  "dedup": {
+    "guaranteed_retention": "4m30s",
+    "final_keys": 38838,
+    "rotations": 0,
+    "premature_evictions": 0
+  },
+  "memory": {
+    "peak_heap_inuse_mib": 14,
+    "final_heap_inuse_mib": 9
+  },
+  "inventory": {
+    "enqueued": 10467,
+    "confirmed": 10467,
+    "final_buffer_depth": 0,
+    "calls": 12973,
+    "ok_200": 10467,
+    "overloaded_503": 2506,
+    "timeouts": 0,
+    "connection_errors": 0,
+    "other_status": 0,
+    "rejected_by_breaker": 0,
+    "items_needing_retry": 2005,
+    "call_latency": {
+      "samples": 12973,
+      "p50_ms": 318.158,
+      "p95_ms": 327.5088,
+      "p99_ms": 331.1983,
+      "max_ms": 400.2889,
+      "mean_ms": 316.86664746010945
+    },
+    "wait_enqueue_to_confirmed": {
+      "samples": 10467,
+      "p50_ms": 54346.6738,
+      "p95_ms": 111279.3739,
+      "p99_ms": 116198.3404,
+      "max_ms": 117777.5639,
+      "mean_ms": 54882.893736237704
+    },
+    "breaker": {
+      "opens": 0,
+      "opens_from_closed": 0,
+      "reopens_from_half_open": 0,
+      "closes_from_half_open": 0,
+      "open_seconds": 0,
+      "half_open_seconds": 0,
+      "rejected_calls": 0,
+      "successes": 10467,
+      "failures": 2506,
+      "stale_results": 0,
+      "max_consecutive": 4
+    },
+    "breaker_transitions": null,
+    "breaker_transitions_total": 0,
+    "buffer": {
+      "pushed": 10467,
+      "popped": 10467,
+      "spilled_to_disk": 0,
+      "max_depth": 9121,
+      "max_mem": 9121,
+      "max_disk": 0,
+      "blocked_pushes": 0,
+      "level_changes": 0,
+      "seconds_in_level": {
+        "blocked": 0,
+        "memory": 135.0700354,
+        "spilling": 0
+      }
+    },
+    "buffer_level_changes": null,
+    "main_pipeline_seconds": 16.9961858,
+    "drain_seconds": 117.7626693,
+    "total_seconds": 134.7593865
+  },
+  "aggregate": {
+    "by_country": {
+      "AR": {
+        "orders": 2999,
+        "orders_usd": "185857.07",
+        "payments_confirmed": 2561,
+        "payments_confirmed_usd": "159684.81",
+        "inventory_reserved": 2053,
+        "unique_events": 7613
+      },
+      "CL": {
+        "orders": 3194,
+        "orders_usd": "195939.76",
+        "payments_confirmed": 2689,
+        "payments_confirmed_usd": "167120.29",
+        "inventory_reserved": 2172,
+        "unique_events": 8055
+      },
+      "CO": {
+        "orders": 3014,
+        "orders_usd": "185514.23",
+        "payments_confirmed": 2557,
+        "payments_confirmed_usd": "158694.46",
+        "inventory_reserved": 2039,
+        "unique_events": 7610
+      },
+      "MX": {
+        "orders": 3073,
+        "orders_usd": "194996.19",
+        "payments_confirmed": 2617,
+        "payments_confirmed_usd": "165568.74",
+        "inventory_reserved": 2099,
+        "unique_events": 7789
+      },
+      "PE": {
+        "orders": 3051,
+        "orders_usd": "189682.75",
+        "payments_confirmed": 2616,
+        "payments_confirmed_usd": "161004.39",
+        "inventory_reserved": 2104,
+        "unique_events": 7771
+      }
+    },
+    "total": {
+      "orders": 15331,
+      "orders_usd": "951990.00",
+      "payments_confirmed": 13040,
+      "payments_confirmed_usd": "812072.69",
+      "inventory_reserved": 10467,
+      "unique_events": 38838
+    },
+    "by_type": {
+      "inventory_reserved": 10467,
+      "order_placed": 15331,
+      "payment_confirmed": 13040
+    }
+  },
+  "timeline_csv": "results\\go04\\ablation-no-limiter\\timeline-20261010-212427.csv"
+}

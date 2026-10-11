@@ -1,6 +1,10 @@
 // Verify es el oráculo: lee el archivo directo (sin broker), deduplica con un
 // map SIN ventana (recuerda todos los event_id) y calcula el agregado
-// verdadero. Con -report compara contra el JSON que escribió el consumidor.
+// verdadero. Con -report compara contra el JSON que escribió el consumidor:
+// duplicados, agregado al centavo y (E-Go04) que cada inventory_reserved
+// único quedó confirmado y que los eventos procesados son exactamente los
+// únicos del archivo. Con -limit N calcula la verdad de las primeras N
+// líneas (para corridas parciales con producer -limit N).
 package main
 
 import (
@@ -18,6 +22,7 @@ import (
 func main() {
 	file := flag.String("file", "eventos_hotsale.jsonl", "archivo JSONL de eventos")
 	reportPath := flag.String("report", "", "reporte JSON del consumidor a comparar (opcional)")
+	limit := flag.Int64("limit", 0, "considerar solo las primeras N líneas (0 = todas)")
 	flag.Parse()
 
 	f, err := os.Open(*file)
@@ -32,6 +37,9 @@ func main() {
 	sc := bufio.NewScanner(f)
 	sc.Buffer(make([]byte, 0, 64<<10), 1<<20)
 	for sc.Scan() {
+		if *limit > 0 && lines >= *limit {
+			break
+		}
 		lines++
 		e, err := event.Parse(sc.Bytes())
 		if err != nil {
@@ -70,8 +78,13 @@ func main() {
 	}
 	var rep struct {
 		Counts struct {
+			Expected   int64 `json:"expected_lines"`
 			Duplicates int64 `json:"duplicates_discarded"`
+			Processed  int64 `json:"processed"`
 		} `json:"counts"`
+		Inventory struct {
+			Confirmed int64 `json:"confirmed"`
+		} `json:"inventory"`
 		Aggregate agg.Report `json:"aggregate"`
 	}
 	if err := json.Unmarshal(b, &rep); err != nil {
@@ -85,6 +98,20 @@ func main() {
 	} else {
 		fmt.Printf("OK duplicados: %d == %d\n", rep.Counts.Duplicates, dups)
 	}
+	if rep.Counts.Expected != lines {
+		ok = false
+		fmt.Printf("FALLA el consumidor esperaba %d líneas y el oráculo leyó %d (¿falta -limit?)\n", rep.Counts.Expected, lines)
+	}
+	cmp := func(name string, got, want int64) {
+		if got != want {
+			ok = false
+			fmt.Printf("FALLA %s: consumidor=%d verdad=%d\n", name, got, want)
+		} else {
+			fmt.Printf("OK %s: %d == %d\n", name, got, want)
+		}
+	}
+	cmp("inventario confirmado", rep.Inventory.Confirmed, t.InventoryReserved)
+	cmp("eventos procesados", rep.Counts.Processed, t.UniqueEventsCounted)
 	if diffs := agg.Diff(rep.Aggregate, truth); len(diffs) > 0 {
 		ok = false
 		for _, d := range diffs {

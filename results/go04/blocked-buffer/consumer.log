@@ -1,0 +1,130 @@
+2026/10/10 21:27:12 consumidor listo (shards=8, ventana=5m0s/10 gen, retención garantizada=4m30s); esperando eventos...
+2026/10/10 21:27:12 inventario: http://127.0.0.1:8090, 32 workers, timeout 1s, breaker 5 fallos/2s/3 pruebas, limitador=true, buffer mem=500 disco=2000
+2026/10/10 21:27:17 BUFFER memory → spilling (profundidad=501 memoria=500 disco=1)
+2026/10/10 21:27:17 recibidos=2297 aplicados=2297 (459 ev/s) ventana=0 llaves heap=4 MiB inválidos=0 | inventario: confirmados=46/603 buffer=525 (mem=498 disco=27, nivel=spilling, más viejo=4.0s) breaker=closed límite=14.0 llamadas/s
+2026/10/10 21:27:23 recibidos=7971 aplicados=7971 (946 ev/s) ventana=990 llaves heap=4 MiB inválidos=0 | inventario: confirmados=135/2126 buffer=1959 (mem=409 disco=1550, nivel=spilling, más viejo=9.3s) breaker=closed límite=22.0 llamadas/s
+2026/10/10 21:27:23 BUFFER spilling → blocked (profundidad=2402 memoria=402 disco=2000)
+2026/10/10 21:27:29 recibidos=17453 aplicados=9696 (288 ev/s) ventana=7978 llaves heap=21 MiB inválidos=0 | inventario: confirmados=287/2576 buffer=2257 (mem=257 disco=2000, nivel=blocked, más viejo=14.1s) breaker=closed límite=34.0 llamadas/s
+2026/10/10 21:27:34 recibidos=17453 aplicados=9696 (0 ev/s) ventana=7978 llaves heap=24 MiB inválidos=0 | inventario: confirmados=472/2576 buffer=2072 (mem=72 disco=2000, nivel=blocked, más viejo=17.7s) breaker=closed límite=44.0 llamadas/s
+2026/10/10 21:27:36 BUFFER blocked → spilling (profundidad=2157 memoria=499 disco=1658)
+2026/10/10 21:27:36 BUFFER spilling → blocked (profundidad=2499 memoria=499 disco=2000)
+2026/10/10 21:27:39 recibidos=18654 aplicados=11604 (382 ev/s) ventana=7978 llaves heap=23 MiB inválidos=0 | inventario: confirmados=709/3076 buffer=2335 (mem=335 disco=2000, nivel=blocked, más viejo=21.0s) breaker=closed límite=54.0 llamadas/s
+2026/10/10 21:27:45 recibidos=18654 aplicados=11604 (0 ev/s) ventana=7978 llaves heap=28 MiB inválidos=0 | inventario: confirmados=1034/3076 buffer=2010 (mem=10 disco=2000, nivel=blocked, más viejo=24.5s) breaker=closed límite=34.9 llamadas/s
+2026/10/10 21:27:45 BUFFER blocked → spilling (profundidad=2104 memoria=499 disco=1605)
+2026/10/10 21:27:45 BUFFER spilling → blocked (profundidad=2499 memoria=499 disco=2000)
+2026/10/10 21:27:51 recibidos=20109 aplicados=13512 (318 ev/s) ventana=7978 llaves heap=25 MiB inválidos=0 | inventario: confirmados=1273/3576 buffer=2271 (mem=271 disco=2000, nivel=blocked, más viejo=28.7s) breaker=closed límite=46.9 llamadas/s
+2026/10/10 21:27:56 BUFFER blocked → spilling (profundidad=2037 memoria=499 disco=1538)
+2026/10/10 21:27:56 BUFFER spilling → blocked (profundidad=2499 memoria=499 disco=2000)
+2026/10/10 21:27:57 recibidos=22455 aplicados=15435 (321 ev/s) ventana=7978 llaves heap=33 MiB inválidos=0 | inventario: confirmados=1578/4076 buffer=2466 (mem=466 disco=2000, nivel=blocked, más viejo=34.4s) breaker=closed límite=58.9 llamadas/s
+2026/10/10 21:28:02 recibidos=22455 aplicados=15435 (0 ev/s) ventana=7978 llaves heap=25 MiB inválidos=0 | inventario: confirmados=1838/4076 buffer=2206 (mem=206 disco=2000, nivel=blocked, más viejo=39.2s) breaker=closed límite=37.4 llamadas/s
+2026/10/10 21:28:07 BUFFER blocked → spilling (profundidad=2142 memoria=499 disco=1643)
+2026/10/10 21:28:07 BUFFER spilling → blocked (profundidad=2499 memoria=499 disco=2000)
+2026/10/10 21:28:08 recibidos=24044 aplicados=17362 (321 ev/s) ventana=14929 llaves heap=30 MiB inválidos=0 | inventario: confirmados=2083/4576 buffer=2461 (mem=461 disco=2000, nivel=blocked, más viejo=45.0s) breaker=closed límite=49.4 llamadas/s
+2026/10/10 21:28:14 recibidos=24044 aplicados=17362 (0 ev/s) ventana=14929 llaves heap=25 MiB inválidos=0 | inventario: confirmados=2403/4576 buffer=2141 (mem=141 disco=2000, nivel=blocked, más viejo=50.8s) breaker=closed límite=59.4 llamadas/s
+2026/10/10 21:28:17 BUFFER blocked → spilling (profundidad=2050 memoria=499 disco=1551)
+2026/10/10 21:28:17 BUFFER spilling → blocked (profundidad=2499 memoria=499 disco=2000)
+2026/10/10 21:28:20 recibidos=25912 aplicados=19253 (315 ev/s) ventana=15925 llaves heap=31 MiB inválidos=0 | inventario: confirmados=2686/5076 buffer=2358 (mem=358 disco=2000, nivel=blocked, más viejo=44.4s) breaker=closed límite=39.6 llamadas/s
+2026/10/10 21:28:25 recibidos=25912 aplicados=19253 (0 ev/s) ventana=15925 llaves heap=25 MiB inválidos=0 | inventario: confirmados=2904/5076 buffer=2140 (mem=140 disco=2000, nivel=blocked, más viejo=49.4s) breaker=closed límite=49.6 llamadas/s
+2026/10/10 21:28:28 BUFFER blocked → spilling (profundidad=2063 memoria=499 disco=1564)
+2026/10/10 21:28:28 BUFFER spilling → blocked (profundidad=2499 memoria=499 disco=2000)
+2026/10/10 21:28:31 recibidos=28018 aplicados=21223 (328 ev/s) ventana=15925 llaves heap=32 MiB inválidos=0 | inventario: confirmados=3233/5576 buffer=2311 (mem=311 disco=2000, nivel=blocked, más viejo=45.8s) breaker=closed límite=61.6 llamadas/s
+2026/10/10 21:28:36 recibidos=28018 aplicados=21223 (0 ev/s) ventana=15925 llaves heap=26 MiB inválidos=0 | inventario: confirmados=3453/5576 buffer=2091 (mem=91 disco=2000, nivel=blocked, más viejo=50.8s) breaker=closed límite=38.7 llamadas/s
+2026/10/10 21:28:38 BUFFER blocked → spilling (profundidad=2163 memoria=499 disco=1664)
+2026/10/10 21:28:38 BUFFER spilling → blocked (profundidad=2499 memoria=499 disco=2000)
+2026/10/10 21:28:42 recibidos=29707 aplicados=23057 (306 ev/s) ventana=15925 llaves heap=31 MiB inválidos=0 | inventario: confirmados=3714/6076 buffer=2330 (mem=330 disco=2000, nivel=blocked, más viejo=45.6s) breaker=closed límite=50.7 llamadas/s
+2026/10/10 21:28:48 recibidos=29707 aplicados=23057 (0 ev/s) ventana=15925 llaves heap=25 MiB inválidos=0 | inventario: confirmados=4035/6076 buffer=2009 (mem=9 disco=2000, nivel=blocked, más viejo=51.6s) breaker=closed límite=62.7 llamadas/s
+2026/10/10 21:28:48 BUFFER blocked → spilling (profundidad=2075 memoria=499 disco=1576)
+2026/10/10 21:28:48 BUFFER spilling → blocked (profundidad=2499 memoria=499 disco=2000)
+2026/10/10 21:28:54 recibidos=31334 aplicados=24974 (320 ev/s) ventana=19893 llaves heap=31 MiB inválidos=0 | inventario: confirmados=4297/6576 buffer=2247 (mem=247 disco=2000, nivel=blocked, más viejo=46.8s) breaker=closed límite=43.3 llamadas/s
+2026/10/10 21:28:59 recibidos=31334 aplicados=24974 (0 ev/s) ventana=19893 llaves heap=23 MiB inválidos=0 | inventario: confirmados=4530/6576 buffer=2014 (mem=14 disco=2000, nivel=blocked, más viejo=51.8s) breaker=closed límite=53.3 llamadas/s
+2026/10/10 21:28:59 BUFFER blocked → spilling (profundidad=2128 memoria=499 disco=1629)
+2026/10/10 21:28:59 BUFFER spilling → blocked (profundidad=2499 memoria=499 disco=2000)
+2026/10/10 21:29:04 recibidos=32999 aplicados=26961 (397 ev/s) ventana=23880 llaves heap=29 MiB inválidos=0 | inventario: confirmados=4802/7076 buffer=2242 (mem=242 disco=2000, nivel=blocked, más viejo=47.3s) breaker=closed límite=63.3 llamadas/s
+2026/10/10 21:29:10 BUFFER blocked → spilling (profundidad=2042 memoria=499 disco=1543)
+2026/10/10 21:29:10 BUFFER spilling → blocked (profundidad=2499 memoria=499 disco=2000)
+2026/10/10 21:29:10 recibidos=35097 aplicados=28809 (308 ev/s) ventana=23880 llaves heap=23 MiB inválidos=0 | inventario: confirmados=5064/7576 buffer=2480 (mem=480 disco=2000, nivel=blocked, más viejo=42.3s) breaker=closed límite=43.6 llamadas/s
+2026/10/10 21:29:16 recibidos=35097 aplicados=28809 (0 ev/s) ventana=23880 llaves heap=26 MiB inválidos=0 | inventario: confirmados=5349/7576 buffer=2195 (mem=195 disco=2000, nivel=blocked, más viejo=48.3s) breaker=closed límite=55.6 llamadas/s
+2026/10/10 21:29:19 BUFFER blocked → spilling (profundidad=2171 memoria=499 disco=1672)
+2026/10/10 21:29:19 BUFFER spilling → blocked (profundidad=2499 memoria=499 disco=2000)
+2026/10/10 21:29:21 recibidos=37252 aplicados=30830 (404 ev/s) ventana=23880 llaves heap=31 MiB inválidos=0 | inventario: confirmados=5625/8076 buffer=2419 (mem=419 disco=2000, nivel=blocked, más viejo=42.7s) breaker=closed límite=34.6 llamadas/s
+2026/10/10 21:29:27 recibidos=37252 aplicados=30830 (0 ev/s) ventana=23880 llaves heap=22 MiB inválidos=0 | inventario: confirmados=5862/8076 buffer=2182 (mem=182 disco=2000, nivel=blocked, más viejo=48.7s) breaker=closed límite=46.6 llamadas/s
+2026/10/10 21:29:31 BUFFER blocked → spilling (profundidad=2081 memoria=499 disco=1582)
+2026/10/10 21:29:31 BUFFER spilling → blocked (profundidad=2499 memoria=499 disco=2000)
+2026/10/10 21:29:32 recibidos=38518 aplicados=32786 (391 ev/s) ventana=27854 llaves heap=26 MiB inválidos=0 | inventario: confirmados=6109/8576 buffer=2435 (mem=435 disco=2000, nivel=blocked, más viejo=43.8s) breaker=closed límite=54.6 llamadas/s
+2026/10/10 21:29:38 recibidos=38518 aplicados=32786 (0 ev/s) ventana=27854 llaves heap=20 MiB inválidos=0 | inventario: confirmados=6430/8576 buffer=2114 (mem=114 disco=2000, nivel=blocked, más viejo=49.8s) breaker=closed límite=35.2 llamadas/s
+2026/10/10 21:29:41 BUFFER blocked → spilling (profundidad=2105 memoria=499 disco=1606)
+2026/10/10 21:29:41 BUFFER spilling → blocked (profundidad=2499 memoria=499 disco=2000)
+2026/10/10 21:29:43 recibidos=39841 aplicados=34708 (384 ev/s) ventana=30827 llaves heap=24 MiB inválidos=0 | inventario: confirmados=6627/9076 buffer=2417 (mem=417 disco=2000, nivel=blocked, más viejo=43.7s) breaker=closed límite=45.2 llamadas/s
+2026/10/10 21:29:49 recibidos=39841 aplicados=34708 (0 ev/s) ventana=30827 llaves heap=20 MiB inválidos=0 | inventario: confirmados=6931/9076 buffer=2113 (mem=113 disco=2000, nivel=blocked, más viejo=49.7s) breaker=closed límite=57.2 llamadas/s
+2026/10/10 21:29:51 BUFFER blocked → spilling (profundidad=2054 memoria=499 disco=1555)
+2026/10/10 21:29:51 BUFFER spilling → blocked (profundidad=2499 memoria=499 disco=2000)
+2026/10/10 21:29:54 recibidos=40000 aplicados=36616 (382 ev/s) ventana=31819 llaves heap=17 MiB inválidos=0 | inventario: confirmados=7200/9576 buffer=2344 (mem=344 disco=2000, nivel=blocked, más viejo=44.5s) breaker=closed límite=35.6 llamadas/s
+2026/10/10 21:30:00 recibidos=40000 aplicados=36616 (0 ev/s) ventana=31819 llaves heap=20 MiB inválidos=0 | inventario: confirmados=7441/9576 buffer=2103 (mem=103 disco=2000, nivel=blocked, más viejo=50.5s) breaker=closed límite=47.6 llamadas/s
+2026/10/10 21:30:02 BUFFER blocked → spilling (profundidad=2127 memoria=499 disco=1628)
+2026/10/10 21:30:02 BUFFER spilling → blocked (profundidad=2499 memoria=499 disco=2000)
+2026/10/10 21:30:06 recibidos=40000 aplicados=38469 (309 ev/s) ventana=31819 llaves heap=19 MiB inválidos=0 | inventario: confirmados=7756/10076 buffer=2288 (mem=288 disco=2000, nivel=blocked, más viejo=46.6s) breaker=closed límite=59.6 llamadas/s
+2026/10/10 21:30:11 recibidos=40000 aplicados=38469 (0 ev/s) ventana=31819 llaves heap=16 MiB inválidos=0 | inventario: confirmados=7987/10076 buffer=2057 (mem=57 disco=2000, nivel=blocked, más viejo=51.6s) breaker=closed límite=38.6 llamadas/s
+2026/10/10 21:30:13 BUFFER blocked → spilling (profundidad=2060 memoria=499 disco=1561)
+2026/10/10 21:30:13 pipeline principal terminado: 40000 eventos aplicados; drenando 2390 verificaciones pendientes de inventario
+2026/10/10 21:30:42 drenando 48.1 confirmaciones/s, ETA 19s | inventario: confirmados=9477/10467 buffer=958 (mem=67 disco=891, nivel=spilling, más viejo=51.1s) breaker=closed límite=35.6 llamadas/s
+2026/10/10 21:30:54 BUFFER spilling → memory (profundidad=390 memoria=390 disco=0)
+2026/10/10 21:31:04 buffer drenado en 51s
+
+=== CONSUMIDOR: AGREGADO FINAL ===
+país      órdenes      órdenes USD        pagos        pagos USD   inventario
+MX           3073        194996.19         2617        165568.74         2099
+AR           2999        185857.07         2561        159684.81         2053
+CO           3014        185514.23         2557        158694.46         2039
+CL           3194        195939.76         2689        167120.29         2172
+PE           3051        189682.75         2616        161004.39         2104
+TOTAL       15331        951990.00        13040        812072.69        10467
+
+=== CONTEO ===
+líneas esperadas (EOF):     40000
+primeras entregas:          40000
+eventos únicos aplicados:   38838
+duplicados descartados:     1162
+re-entregas del broker:     0 (descartadas por la ventana: 0)
+inválidos:                  0
+acks enviados (AckAll):     1282
+EVENTOS PROCESADOS:         38838 (esperados: 38838 únicos)
+
+=== INVENTARIO ===
+encolados / confirmados:    10467 / 10467
+llamadas:                   10618 (200=10467 503=151 timeout=0 conexión=0 otros=0)
+rechazadas por el breaker:  0; ítems que necesitaron reintento: 138
+latencia por llamada:       p50=22.1ms p95=207.3ms p99=210.8ms max=214.5ms
+espera en buffer:           p50=46.8s p95=52.6s max=57.9s
+limitador:                  tasa min=10.0 max=63.4 llamadas/s, base=16.4ms, +197 / -26 (fallos 26, latencia 0), backoffs por breaker 0
+pipeline principal:         180.1s; drenado del buffer: 51.3s; total: 3m51.4s
+
+=== CIRCUIT BREAKER ===
+veces que abrió:            0 (por fallos consecutivos: 0, por prueba fallida en half-open: 0)
+cerró tras half-open:       0
+tiempo total abierto:       0s (half-open: 0s)
+racha máx. de fallos:       3
+
+=== BUFFER DE ESPERA (backpressure) ===
+profundidad máxima:         2499 (memoria máx. 500, disco máx. 2000)
+ítems que pasaron por disco: 9891; Push bloqueados: 126
+tiempo en nivel blocked:    2m49.1s
+tiempo en nivel memory:     14.5s
+tiempo en nivel spilling:   48.2s
+
+=== RENDIMIENTO DEL PIPELINE PRINCIPAL ===
+throughput consumidor:      222 ev/s (180.09s, primer recibido -> último aplicado)
+latencia e2e (publicado -> aplicado): p50=62198.39ms p95=153446.84ms p99=163566.94ms max=163939.77ms (n=40000)
+heap pico: 34 MiB; ventana final: 38838 llaves, 0 expulsiones prematuras
+
+=== CHEQUEOS ===
+[OK] accounting: unique + duplicates + invalid == first_deliveries
+[OK] aggregate_total == unique_applied
+[OK] buffer: final depth == 0
+[OK] inventory: confirmed == enqueued (nada se descartó)
+[OK] inventory: enqueued == aggregate inventory_reserved
+[OK] no_loss: first_deliveries == expected_lines
+[OK] no_premature_evictions
+[OK] processed == unique_applied
+
+reporte: results\go04\blocked-buffer\consumer-20261010-212712.json
+línea de tiempo: results\go04\blocked-buffer\timeline-20261010-212712.csv

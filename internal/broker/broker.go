@@ -28,6 +28,13 @@ const (
 // event_id y deben llegar al consumidor para que él los detecte y cuente.
 const DuplicateWindow = time.Minute
 
+// EnsureStream declara el stream. El stream es el último eslabón de la cadena
+// de backpressure (decisions.md §1): si el consumidor deja de pedir mensajes
+// porque su buffer está lleno, los mensajes esperan aquí, en el disco del
+// broker. Por eso Discard es DiscardNew: con el stream lleno (MaxBytes) el
+// broker RECHAZA la publicación nueva y el productor reintenta. Con
+// DiscardOld (lo que tenía E-Go03) borraría en silencio los mensajes más
+// viejos, aunque nadie los haya consumido: pérdida de datos.
 func EnsureStream(ctx context.Context, js jetstream.JetStream) (jetstream.Stream, error) {
 	return js.CreateOrUpdateStream(ctx, jetstream.StreamConfig{
 		Name:       StreamName,
@@ -36,6 +43,6 @@ func EnsureStream(ctx context.Context, js jetstream.JetStream) (jetstream.Stream
 		Retention:  jetstream.LimitsPolicy, // no WorkQueue: permite re-consumir desde el inicio tras un reinicio
 		Duplicates: DuplicateWindow,
 		MaxBytes:   4 << 30,
-		Discard:    jetstream.DiscardOld,
+		Discard:    jetstream.DiscardNew,
 	})
 }

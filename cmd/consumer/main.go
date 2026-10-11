@@ -14,9 +14,16 @@
 // sigue siendo paralelo: ocurre dentro de los M shards. El ack se envía solo
 // después de aplicar el evento, por lotes y en orden (ver commit.go).
 //
-// El agregado vive solo en memoria (decisión explícita, ver decisions.md): si
-// el proceso se cae, al reiniciar se re-consume el stream desde el inicio y
-// ventana y agregado se reconstruyen juntos.
+// E-Go04: cada inventory_reserved único se confirma contra el servicio de
+// inventario (inventory.go). El shard lo deja en el buffer de backpressure y
+// sigue; la confirmación ocurre en workers aparte, detrás de un limitador
+// adaptativo y un circuit breaker. Al recibir el EOF el consumidor no termina:
+// drena el buffer hasta confirmar cada evento, y solo entonces reporta.
+//
+// El agregado y el buffer viven en memoria/disco local (decisión explícita, ver
+// decisions.md): si el proceso se cae, al reiniciar se re-consume el stream
+// desde el inicio y ventana, agregado y verificaciones pendientes se
+// reconstruyen juntos (verificar inventario es idempotente).
 package main
 
 import (
@@ -32,7 +39,6 @@ import (
 	"os"
 	"path/filepath"
 	"runtime"
-	"runtime/pprof"
 	"strconv"
 	"sync"
 	"sync/atomic"
@@ -60,8 +66,9 @@ type config struct {
 	Purge        bool          `json:"purge_stream_on_start"`
 	AckBatch     int           `json:"ack_batch"`
 	AckEvery     time.Duration `json:"ack_max_interval"`
+	AckWait      time.Duration `json:"ack_wait"`
 	Label        string        `json:"label"`
-	NoDedup      bool          `json:"no_dedup"`
+	Inventory    invConfig     `json:"inventory"`
 }
 
 type shard struct {
@@ -69,7 +76,7 @@ type shard struct {
 	win     *dedup.Window
 	agg     agg.Agg
 	invalid *atomic.Int64
-	noDedup bool // solo para demostrar el problema: cuenta cada línea como evento
+	inv     *inventory
 
 	applied        int64 // eventos únicos aplicados al agregado
 	dups           int64 // duplicados del origen (reintentos del gateway) descartados
@@ -82,6 +89,9 @@ type shard struct {
 
 	processed atomic.Int64 // para el log de progreso
 	winLen    atomic.Int64
+	latSum    atomic.Int64 // latencia e2e acumulada (ns), para la línea de tiempo
+	latN      atomic.Int64
+	latMax    atomic.Int64 // máximo desde la última muestra (el monitor lo reinicia)
 }
 
 func main() {
@@ -97,10 +107,32 @@ func main() {
 	flag.BoolVar(&cfg.Purge, "purge", true, "vaciar el stream al arrancar (corrida nueva); false = re-consumir lo que haya (reinicio)")
 	flag.IntVar(&cfg.AckBatch, "ack-batch", 1000, "mensajes por lote de ack (AckAll)")
 	flag.DurationVar(&cfg.AckEvery, "ack-every", 10*time.Millisecond, "intervalo máximo para cerrar un lote de ack incompleto")
+	// AckWait cubre el peor caso del nivel BLOCKED: los mensajes entregados
+	// esperan a que el buffer libere espacio (decisions.md §1).
+	flag.DurationVar(&cfg.AckWait, "ack-wait", 5*time.Minute, "tiempo que el broker espera un ack antes de re-entregar")
 	flag.StringVar(&cfg.Label, "label", "", "etiqueta de la corrida para el reporte")
-	flag.BoolVar(&cfg.NoDedup, "no-dedup", false, "DEMOSTRACIÓN: desactiva la deduplicación para ver el agregado inflado")
+
+	ic := &cfg.Inventory
+	flag.StringVar(&ic.URL, "inventory-url", "http://127.0.0.1:8090", "URL base del servicio de inventario (127.0.0.1, no localhost: ver decisions.md H1)")
+	flag.IntVar(&ic.Workers, "inv-workers", 32, "llamadas en vuelo como máximo (bulkhead)")
+	flag.DurationVar(&ic.Timeout, "inv-timeout", time.Second, "timeout por llamada a /check-inventory")
+	flag.IntVar(&ic.BreakerFailures, "breaker-failures", 5, "fallos consecutivos que abren el breaker")
+	flag.DurationVar(&ic.BreakerCooldown, "breaker-cooldown", 2*time.Second, "tiempo en OPEN antes de pasar a HALF-OPEN")
+	flag.IntVar(&ic.BreakerProbes, "breaker-probes", 3, "llamadas de prueba en HALF-OPEN (todas OK para cerrar)")
+	flag.BoolVar(&ic.NoLimiter, "no-limiter", false, "ABLACIÓN: sin limitador adaptativo (solo breaker + workers)")
+	flag.Float64Var(&ic.LimInitial, "lim-initial", 10, "tasa inicial de llamadas/s del limitador")
+	flag.Float64Var(&ic.LimMin, "lim-min", 2, "tasa mínima de llamadas/s")
+	flag.Float64Var(&ic.LimMax, "lim-max", 1000, "tasa máxima de llamadas/s")
+	flag.Float64Var(&ic.LimIncrease, "lim-increase", 2, "+llamadas/s por ventana sana")
+	flag.Float64Var(&ic.LimDecrease, "lim-decrease", 0.75, "factor de reducción por ventana con fallos o lenta")
+	flag.DurationVar(&ic.LimWindow, "lim-window", time.Second, "ventana de evaluación del limitador")
+	flag.Float64Var(&ic.LimLatFactor, "lim-latency-factor", 4, "ventana lenta si latencia media > factor × base")
+	flag.IntVar(&ic.MemCap, "buffer-mem", 50_000, "verificaciones pendientes en memoria")
+	flag.IntVar(&ic.SpillCap, "buffer-disk", 4_000_000, "verificaciones pendientes en disco (al llenarse, se bloquea la ingesta)")
+	flag.StringVar(&ic.SpillPath, "buffer-file", filepath.Join(os.TempDir(), "hotsale-inventory-spill.bin"), "archivo de desborde (fuera de OneDrive)")
+
 	pprofAddr := flag.String("pprof", "localhost:6060", "dirección de net/http/pprof (vacío = desactivado)")
-	outDir := flag.String("out", "results", "carpeta para el reporte JSON y el heap profile")
+	outDir := flag.String("out", "results", "carpeta para el reporte JSON y la línea de tiempo CSV")
 	flag.Parse()
 
 	if *pprofAddr != "" {
@@ -135,7 +167,7 @@ func main() {
 		Durable:       broker.ConsumerName,
 		AckPolicy:     jetstream.AckAllPolicy, // ack de S confirma todo <= S; ver commit.go
 		DeliverPolicy: jetstream.DeliverAllPolicy,
-		AckWait:       60 * time.Second,
+		AckWait:       cfg.AckWait,
 		MaxAckPending: cfg.MaxAckPend,
 	})
 	if err != nil {
@@ -146,6 +178,12 @@ func main() {
 		log.Fatal(err)
 	}
 
+	inv, err := newInventory(cfg.Inventory)
+	if err != nil {
+		log.Fatal(err)
+	}
+	inv.start()
+
 	var invalid atomic.Int64
 	shards := make([]*shard, cfg.Shards)
 	for i := range shards {
@@ -153,22 +191,25 @@ func main() {
 		if err != nil {
 			log.Fatal(err)
 		}
-		shards[i] = &shard{in: make(chan work, 1024), win: w, invalid: &invalid, noDedup: cfg.NoDedup, minPubTs: 1<<63 - 1}
+		shards[i] = &shard{in: make(chan work, 1024), win: w, invalid: &invalid, inv: inv, minPubTs: 1<<63 - 1}
 	}
 	var shardWG sync.WaitGroup
 	for _, s := range shards {
 		shardWG.Go(s.run)
 	}
 
+	_ = os.MkdirAll(*outDir, 0o755)
+	stamp := time.Now().Format("20060102-150405")
+	tlPath := filepath.Join(*outDir, "timeline-"+stamp+".csv")
 	var received atomic.Int64
 	var peakHeap atomic.Uint64
-	stopMon := monitor(shards, &received, &invalid, &peakHeap)
+	stopMon := monitor(tlPath, shards, inv, &received, &invalid, &peakHeap)
 
-	if cfg.NoDedup {
-		log.Printf("ATENCIÓN: -no-dedup activo; los reintentos se cuentan como eventos nuevos y el agregado NO es válido")
-	}
 	log.Printf("consumidor listo (shards=%d, ventana=%v/%d gen, retención garantizada=%v); esperando eventos...",
 		cfg.Shards, cfg.Window, cfg.Generations, shards[0].win.GuaranteedRetention())
+	log.Printf("inventario: %s, %d workers, timeout %v, breaker %d fallos/%v/%d pruebas, limitador=%v, buffer mem=%d disco=%d",
+		cfg.Inventory.URL, cfg.Inventory.Workers, cfg.Inventory.Timeout, cfg.Inventory.BreakerFailures,
+		cfg.Inventory.BreakerCooldown, cfg.Inventory.BreakerProbes, !cfg.Inventory.NoLimiter, cfg.Inventory.MemCap, cfg.Inventory.SpillCap)
 
 	// it.Next() bloquea; un goroutine lector permite cerrar lotes por tiempo
 	// cuando el tráfico es bajo.
@@ -243,19 +284,20 @@ func main() {
 		close(s.in)
 	}
 	shardWG.Wait()
-	stopMon()
 	if err := nc.Flush(); err != nil { // asegura que los últimos acks salgan
 		log.Printf("flush de acks: %v", err)
 	}
 
-	// Heap profile con las ventanas todavía vivas: muestra cuánto ocupa la dedup.
-	_ = os.MkdirAll(*outDir, 0o755)
-	stamp := time.Now().Format("20060102-150405")
-	heapPath := filepath.Join(*outDir, "heap-"+stamp+".pb.gz")
-	writeHeapProfile(heapPath)
+	// El stream ya se aplicó completo; falta confirmar el inventario pendiente.
+	inv.pipelineDone.Store(time.Now().UnixNano())
+	log.Printf("pipeline principal terminado: %d eventos aplicados; drenando %d verificaciones pendientes de inventario",
+		sumProcessed(shards), inv.q.Snapshot().Depth)
+	inv.drain()
+	stopMon()
+	log.Printf("buffer drenado en %v", inv.drainEnd.Sub(inv.drainStart).Round(time.Second))
 
-	rep := buildReport(cfg, shards, firstRecv, received.Load(), invalid.Load(), totalLines, peakHeap.Load())
-	rep.HeapProfile = heapPath
+	rep := buildReport(cfg, shards, inv, firstRecv, received.Load(), invalid.Load(), totalLines, peakHeap.Load())
+	rep.Timeline = tlPath
 	rep.Counts.Acks = acks.Load()
 	printReport(rep)
 	path := filepath.Join(*outDir, "consumer-"+stamp+".json")
@@ -263,8 +305,16 @@ func main() {
 	if err := os.WriteFile(path, b, 0o644); err != nil {
 		log.Fatal(err)
 	}
-	fmt.Printf("\nreporte: %s\nheap profile: %s\n", path, heapPath)
+	fmt.Printf("\nreporte: %s\nlínea de tiempo: %s\n", path, tlPath)
 	runtime.KeepAlive(shards)
+}
+
+func sumProcessed(shards []*shard) int64 {
+	var n int64
+	for _, s := range shards {
+		n += s.processed.Load()
+	}
+	return n
 }
 
 func reject(msg jetstream.Msg, err error, invalid *atomic.Int64) {
@@ -299,82 +349,41 @@ func (s *shard) handle(msg jetstream.Msg) {
 		redelivered = true
 	}
 
-	var dup bool
-	var origTS int64
-	if !s.noDedup {
-		dup, origTS = s.win.SeenOrAdd(ev.ID, ev.TS)
-	}
+	dup, origTS := s.win.SeenOrAdd(ev.ID, ev.TS)
+	apply := false
 	switch {
 	case redelivered:
 		s.redelivered++
 		if dup {
 			s.redeliveredDup++
 		} else { // la entrega original nunca llegó a aplicarse
-			s.agg.Apply(&ev)
-			s.applied++
+			apply = true
 		}
 	case dup:
 		s.dups++
 		s.delays.Add(ev.TS - origTS)
 	default:
+		apply = true
+	}
+	if apply {
 		s.agg.Apply(&ev)
 		s.applied++
+		// Solo los únicos van a verificación: la dedup ocurre ANTES de llamar
+		// al servicio externo (un reintento del gateway no cuesta una llamada).
+		if ev.Type == event.InventoryReserved {
+			s.inv.enqueue(&ev, pubTs)
+		}
 	}
 	now := time.Now().UnixNano()
 	if !redelivered && pubTs > 0 {
-		s.lat = append(s.lat, now-pubTs)
+		l := now - pubTs
+		s.lat = append(s.lat, l)
 		s.minPubTs = min(s.minPubTs, pubTs)
+		s.latSum.Add(l)
+		s.latN.Add(1)
+		if l > s.latMax.Load() {
+			s.latMax.Store(l) // carrera benigna con el Swap(0) del monitor: a lo más se pierde un máximo de 1 s
+		}
 	}
 	s.lastApply = now
-}
-
-// monitor imprime progreso cada 5 s y muestrea el heap cada segundo.
-func monitor(shards []*shard, received, invalid *atomic.Int64, peakHeap *atomic.Uint64) (stop func()) {
-	done := make(chan struct{})
-	var wg sync.WaitGroup
-	wg.Go(func() {
-		tick := time.NewTicker(time.Second)
-		defer tick.Stop()
-		var ms runtime.MemStats
-		var lastProcessed int64
-		for i := 1; ; i++ {
-			select {
-			case <-done:
-				return
-			case <-tick.C:
-			}
-			runtime.ReadMemStats(&ms)
-			if ms.HeapInuse > peakHeap.Load() {
-				peakHeap.Store(ms.HeapInuse)
-			}
-			if i%5 != 0 {
-				continue
-			}
-			var processed, winLen int64
-			for _, s := range shards {
-				processed += s.processed.Load()
-				winLen += s.winLen.Load()
-			}
-			if processed == lastProcessed && processed == 0 {
-				continue
-			}
-			log.Printf("recibidos=%d procesados=%d (%.0f ev/s) ventana=%d llaves heap=%d MiB inválidos=%d",
-				received.Load(), processed, float64(processed-lastProcessed)/5, winLen, ms.HeapInuse>>20, invalid.Load())
-			lastProcessed = processed
-		}
-	})
-	return func() { close(done); wg.Wait() }
-}
-
-func writeHeapProfile(path string) {
-	f, err := os.Create(path)
-	if err != nil {
-		log.Printf("heap profile: %v", err)
-		return
-	}
-	defer f.Close()
-	runtime.GC()
-	if err := pprof.WriteHeapProfile(f); err != nil {
-		log.Printf("heap profile: %v", err)
-	}
 }

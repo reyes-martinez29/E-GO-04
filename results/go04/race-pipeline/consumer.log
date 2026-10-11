@@ -1,0 +1,91 @@
+2026/10/11 03:31:19 consumidor listo (shards=8, ventana=5m0s/10 gen, retención garantizada=4m30s); esperando eventos...
+2026/10/11 03:31:19 inventario: http://race-svc:8090, 32 workers, timeout 1s, breaker 5 fallos/2s/3 pruebas, limitador=true, buffer mem=50000 disco=4000000
+2026/10/11 03:31:24 recibidos=1943 aplicados=1942 (388 ev/s) ventana=0 llaves heap=6 MiB inválidos=0 | inventario: confirmados=39/511 buffer=440 (mem=440 disco=0, nivel=memory, más viejo=3.3s) breaker=closed límite=14.0 llamadas/s
+2026/10/11 03:31:29 recibidos=4442 aplicados=4442 (500 ev/s) ventana=0 llaves heap=7 MiB inválidos=0 | inventario: confirmados=108/1181 buffer=1041 (mem=1041 disco=0, nivel=memory, más viejo=7.8s) breaker=closed límite=20.0 llamadas/s
+2026/10/11 03:31:35 recibidos=29426 aplicados=29425 (4165 ev/s) ventana=23880 llaves heap=9 MiB inválidos=0 | inventario: confirmados=243/7724 buffer=7449 (mem=7449 disco=0, nivel=memory, más viejo=12.7s) breaker=closed límite=32.0 llamadas/s
+2026/10/11 03:31:37 pipeline principal terminado: 40000 eventos aplicados; drenando 10125 verificaciones pendientes de inventario
+2026/10/11 03:31:46 BREAKER closed → open (5 fallos consecutivos)
+2026/10/11 03:31:48 BREAKER open → half-open (cooldown de 2s cumplido)
+2026/10/11 03:31:49 BREAKER half-open → open (prueba 1/3 en half-open falló)
+2026/10/11 03:31:51 BREAKER open → half-open (cooldown de 2s cumplido)
+2026/10/11 03:31:52 BREAKER half-open → open (prueba 1/3 en half-open falló)
+2026/10/11 03:31:54 BREAKER open → half-open (cooldown de 2s cumplido)
+2026/10/11 03:31:55 BREAKER half-open → open (prueba 1/3 en half-open falló)
+2026/10/11 03:31:57 BREAKER open → half-open (cooldown de 2s cumplido)
+2026/10/11 03:31:58 BREAKER half-open → open (prueba 1/3 en half-open falló)
+2026/10/11 03:32:00 BREAKER open → half-open (cooldown de 2s cumplido)
+2026/10/11 03:32:01 BREAKER half-open → open (prueba 1/3 en half-open falló)
+2026/10/11 03:32:03 BREAKER open → half-open (cooldown de 2s cumplido)
+2026/10/11 03:32:04 BREAKER half-open → open (prueba 1/3 en half-open falló)
+2026/10/11 03:32:05 drenando 13.8 confirmaciones/s, ETA 11m50s | inventario: confirmados=656/10467 buffer=9779 (mem=9779 disco=0, nivel=memory, más viejo=39.8s) breaker=open límite=3.5 llamadas/s
+2026/10/11 03:32:06 BREAKER open → half-open (cooldown de 2s cumplido)
+2026/10/11 03:32:07 BREAKER half-open → open (prueba 1/3 en half-open falló)
+2026/10/11 03:32:09 BREAKER open → half-open (cooldown de 2s cumplido)
+2026/10/11 03:32:10 BREAKER half-open → closed (3/3 pruebas OK en half-open)
+2026/10/11 03:32:36 drenando 3.4 confirmaciones/s, ETA 47m8s | inventario: confirmados=762/10467 buffer=9673 (mem=9673 disco=0, nivel=memory, más viejo=70.0s) breaker=closed límite=8.6 llamadas/s
+2026/10/11 03:33:07 drenando 28.6 confirmaciones/s, ETA 5m6s | inventario: confirmados=1650/10467 buffer=8785 (mem=8785 disco=0, nivel=memory, más viejo=96.9s) breaker=closed límite=60.6 llamadas/s
+2026/10/11 03:33:38 drenando 47.7 confirmaciones/s, ETA 2m33s | inventario: confirmados=3130/10467 buffer=7305 (mem=7305 disco=0, nivel=memory, más viejo=126.8s) breaker=closed límite=57.6 llamadas/s
+2026/10/11 03:34:08 drenando 47.1 confirmaciones/s, ETA 2m5s | inventario: confirmados=4542/10467 buffer=5893 (mem=5893 disco=0, nivel=memory, más viejo=155.8s) breaker=closed límite=53.2 llamadas/s
+2026/10/11 03:34:39 drenando 48.3 confirmaciones/s, ETA 1m31s | inventario: confirmados=6038/10467 buffer=4397 (mem=4397 disco=0, nivel=memory, más viejo=185.8s) breaker=closed límite=49.8 llamadas/s
+2026/10/11 03:35:10 drenando 47.5 confirmaciones/s, ETA 1m1s | inventario: confirmados=7509/10467 buffer=2926 (mem=2926 disco=0, nivel=memory, más viejo=215.7s) breaker=closed límite=49.3 llamadas/s
+2026/10/11 03:35:41 drenando 48.2 confirmaciones/s, ETA 29s | inventario: confirmados=9003/10467 buffer=1432 (mem=1432 disco=0, nivel=memory, más viejo=245.6s) breaker=closed límite=47.8 llamadas/s
+2026/10/11 03:36:12 buffer drenado en 4m35s
+
+=== CONSUMIDOR: AGREGADO FINAL ===
+país      órdenes      órdenes USD        pagos        pagos USD   inventario
+MX           3073        194996.19         2617        165568.74         2099
+AR           2999        185857.07         2561        159684.81         2053
+CO           3014        185514.23         2557        158694.46         2039
+CL           3194        195939.76         2689        167120.29         2172
+PE           3051        189682.75         2616        161004.39         2104
+TOTAL       15331        951990.00        13040        812072.69        10467
+
+=== CONTEO ===
+líneas esperadas (EOF):     40000
+primeras entregas:          40000
+eventos únicos aplicados:   38838
+duplicados descartados:     1162
+re-entregas del broker:     0 (descartadas por la ventana: 0)
+inválidos:                  0
+acks enviados (AckAll):     1702
+EVENTOS PROCESADOS:         38838 (esperados: 38838 únicos)
+
+=== INVENTARIO ===
+encolados / confirmados:    10467 / 10467
+llamadas:                   10670 (200=10467 503=147 timeout=42 conexión=14 otros=0)
+rechazadas por el breaker:  2565; ítems que necesitaron reintento: 169
+latencia por llamada:       p50=22.9ms p95=208.0ms p99=213.9ms max=1003.2ms
+espera en buffer:           p50=2m49.8s p95=4m24.7s max=4m35.4s
+limitador:                  tasa min=2.6 max=63.6 llamadas/s, base=18.8ms, +207 / -32 (fallos 32, latencia 0), backoffs por breaker 1
+pipeline principal:         17.0s; drenado del buffer: 4m34.7s; total: 4m51.7s
+
+=== CIRCUIT BREAKER ===
+veces que abrió:            8 (por fallos consecutivos: 1, por prueba fallida en half-open: 7)
+cerró tras half-open:       1
+tiempo total abierto:       16s (half-open: 7.6s)
+racha máx. de fallos:       5
+
+=== BUFFER DE ESPERA (backpressure) ===
+profundidad máxima:         10125 (memoria máx. 10125, disco máx. 0)
+ítems que pasaron por disco: 0; Push bloqueados: 0
+tiempo en nivel blocked:    0s
+tiempo en nivel memory:     4m52.8s
+tiempo en nivel spilling:   0s
+
+=== RENDIMIENTO DEL PIPELINE PRINCIPAL ===
+throughput consumidor:      2354 ev/s (17.00s, primer recibido -> último aplicado)
+latencia e2e (publicado -> aplicado): p50=0.44ms p95=0.60ms p99=0.76ms max=4.56ms (n=40000)
+heap pico: 13 MiB; ventana final: 38838 llaves, 0 expulsiones prematuras
+
+=== CHEQUEOS ===
+[OK] accounting: unique + duplicates + invalid == first_deliveries
+[OK] aggregate_total == unique_applied
+[OK] buffer: final depth == 0
+[OK] inventory: confirmed == enqueued (nada se descartó)
+[OK] inventory: enqueued == aggregate inventory_reserved
+[OK] no_loss: first_deliveries == expected_lines
+[OK] no_premature_evictions
+[OK] processed == unique_applied
+
+reporte: results/go04/race-pipeline/consumer-20261011-033119.json
+línea de tiempo: results/go04/race-pipeline/timeline-20261011-033119.csv

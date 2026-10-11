@@ -1,0 +1,8 @@
+# El dataset (666 MB) se monta como volumen, no se copia a la imagen.
+*.jsonl
+generate_events_go03.py
+results/
+bin/
+.git/
+.vscode/
+*.md

@@ -1,0 +1,5 @@
+=== COMPARACIÓN CON results\go04\ablation-no-limiter\consumer-20261010-212427.json ===
+OK duplicados: 1162 == 1162
+OK inventario confirmado: 10467 == 10467
+OK eventos procesados: 38838 == 38838
+OK agregado idéntico al centavo en los 5 países y el total

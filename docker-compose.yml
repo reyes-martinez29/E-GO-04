@@ -1,7 +1,7 @@
 services:
   nats:
     image: nats:2.11-alpine
-    container_name: hotsale-nats
+    container_name: hotsale-nats-go04  # distinto al de E-Go03 para que no choquen
     # -js: habilita JetStream; -sd: almacenamiento en disco (el stream vive en archivo, no en RAM)
     # -m 8222: endpoint de monitoreo HTTP (http://localhost:8222/jsz)
     command: ["-js", "-sd", "/data", "-m", "8222"]

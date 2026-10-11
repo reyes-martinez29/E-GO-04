@@ -1,0 +1,325 @@
+{
+  "label": "race-pipeline",
+  "timestamp": "2026-10-11T03:36:12.753522303Z",
+  "config": {
+    "shards": 8,
+    "dedup_window": 300000000000,
+    "dedup_generations": 10,
+    "dedup_min_retention": 180000000000,
+    "dedup_max_per_generation": 0,
+    "pull_max_messages": 4096,
+    "max_ack_pending": 65536,
+    "purge_stream_on_start": true,
+    "ack_batch": 1000,
+    "ack_max_interval": 10000000,
+    "ack_wait": 300000000000,
+    "label": "race-pipeline",
+    "inventory": {
+      "url": "http://race-svc:8090",
+      "workers": 32,
+      "call_timeout": 1000000000,
+      "breaker_consecutive_failures": 5,
+      "breaker_cooldown": 2000000000,
+      "breaker_half_open_probes": 3,
+      "no_limiter": false,
+      "limiter_initial_rps": 10,
+      "limiter_min_rps": 2,
+      "limiter_max_rps": 1000,
+      "limiter_increase_rps": 2,
+      "limiter_decrease_factor": 0.75,
+      "limiter_window": 1000000000,
+      "limiter_latency_factor": 4,
+      "buffer_mem_cap": 50000,
+      "buffer_spill_cap": 4000000,
+      "buffer_spill_path": "/tmp/spill.bin"
+    }
+  },
+  "counts": {
+    "expected_lines": 40000,
+    "received": 40000,
+    "first_deliveries": 40000,
+    "unique_applied": 38838,
+    "duplicates_discarded": 1162,
+    "broker_redeliveries": 0,
+    "broker_redeliveries_discarded": 0,
+    "invalid": 0,
+    "acks_sent": 1702,
+    "processed": 38838
+  },
+  "checks": {
+    "accounting: unique + duplicates + invalid == first_deliveries": true,
+    "aggregate_total == unique_applied": true,
+    "buffer: final depth == 0": true,
+    "inventory: confirmed == enqueued (nada se descartó)": true,
+    "inventory: enqueued == aggregate inventory_reserved": true,
+    "no_loss: first_deliveries == expected_lines": true,
+    "no_premature_evictions": true,
+    "processed == unique_applied": true
+  },
+  "throughput": {
+    "consumer_seconds": 16.995635383,
+    "consumer_events_per_sec": 2353.545430846926,
+    "end_to_end_seconds": 16.997251142,
+    "end_to_end_events_per_sec": 2353.3217027758383
+  },
+  "latency_end_to_end": {
+    "samples": 40000,
+    "p50_ms": 0.437504,
+    "p95_ms": 0.604278,
+    "p99_ms": 0.758233,
+    "max_ms": 4.559628,
+    "mean_ms": 0.450753235875
+  },
+  "retry_delays": {
+    "count": 1162,
+    "min_sec": 2,
+    "max_sec": 179,
+    "mean_sec": 91.41738382099828,
+    "outside_2_to_180s": 0
+  },
+  "dedup": {
+    "guaranteed_retention": "4m30s",
+    "final_keys": 38838,
+    "rotations": 0,
+    "premature_evictions": 0
+  },
+  "memory": {
+    "peak_heap_inuse_mib": 13,
+    "final_heap_inuse_mib": 10
+  },
+  "inventory": {
+    "enqueued": 10467,
+    "confirmed": 10467,
+    "final_buffer_depth": 0,
+    "calls": 10670,
+    "ok_200": 10467,
+    "overloaded_503": 147,
+    "timeouts": 42,
+    "connection_errors": 14,
+    "other_status": 0,
+    "rejected_by_breaker": 2565,
+    "items_needing_retry": 169,
+    "call_latency": {
+      "samples": 10670,
+      "p50_ms": 22.884428,
+      "p95_ms": 207.986774,
+      "p99_ms": 213.892097,
+      "max_ms": 1003.23998,
+      "mean_ms": 44.62304560356139
+    },
+    "wait_enqueue_to_confirmed": {
+      "samples": 10467,
+      "p50_ms": 169823.894937,
+      "p95_ms": 264727.753432,
+      "p99_ms": 272956.298954,
+      "max_ms": 275431.557524,
+      "mean_ms": 165644.5761026164
+    },
+    "breaker": {
+      "opens": 8,
+      "opens_from_closed": 1,
+      "reopens_from_half_open": 7,
+      "closes_from_half_open": 1,
+      "open_seconds": 16,
+      "half_open_seconds": 7.604951615,
+      "rejected_calls": 2565,
+      "successes": 10467,
+      "failures": 203,
+      "stale_results": 44,
+      "max_consecutive": 5
+    },
+    "breaker_transitions": [
+      {
+        "at": "2026-10-11T03:31:46.707426201Z",
+        "reason": "5 fallos consecutivos",
+        "from": "closed",
+        "to": "open"
+      },
+      {
+        "at": "2026-10-11T03:31:48.707426201Z",
+        "reason": "cooldown de 2s cumplido",
+        "from": "open",
+        "to": "half-open"
+      },
+      {
+        "at": "2026-10-11T03:31:49.71008544Z",
+        "reason": "prueba 1/3 en half-open falló",
+        "from": "half-open",
+        "to": "open"
+      },
+      {
+        "at": "2026-10-11T03:31:51.71008544Z",
+        "reason": "cooldown de 2s cumplido",
+        "from": "open",
+        "to": "half-open"
+      },
+      {
+        "at": "2026-10-11T03:31:52.711495769Z",
+        "reason": "prueba 1/3 en half-open falló",
+        "from": "half-open",
+        "to": "open"
+      },
+      {
+        "at": "2026-10-11T03:31:54.711495769Z",
+        "reason": "cooldown de 2s cumplido",
+        "from": "open",
+        "to": "half-open"
+      },
+      {
+        "at": "2026-10-11T03:31:55.646429249Z",
+        "reason": "prueba 1/3 en half-open falló",
+        "from": "half-open",
+        "to": "open"
+      },
+      {
+        "at": "2026-10-11T03:31:57.646429249Z",
+        "reason": "cooldown de 2s cumplido",
+        "from": "open",
+        "to": "half-open"
+      },
+      {
+        "at": "2026-10-11T03:31:58.64822926Z",
+        "reason": "prueba 1/3 en half-open falló",
+        "from": "half-open",
+        "to": "open"
+      },
+      {
+        "at": "2026-10-11T03:32:00.64822926Z",
+        "reason": "cooldown de 2s cumplido",
+        "from": "open",
+        "to": "half-open"
+      },
+      {
+        "at": "2026-10-11T03:32:01.573328497Z",
+        "reason": "prueba 1/3 en half-open falló",
+        "from": "half-open",
+        "to": "open"
+      },
+      {
+        "at": "2026-10-11T03:32:03.573328497Z",
+        "reason": "cooldown de 2s cumplido",
+        "from": "open",
+        "to": "half-open"
+      },
+      {
+        "at": "2026-10-11T03:32:04.575541105Z",
+        "reason": "prueba 1/3 en half-open falló",
+        "from": "half-open",
+        "to": "open"
+      },
+      {
+        "at": "2026-10-11T03:32:06.575541105Z",
+        "reason": "cooldown de 2s cumplido",
+        "from": "open",
+        "to": "half-open"
+      },
+      {
+        "at": "2026-10-11T03:32:07.511796841Z",
+        "reason": "prueba 1/3 en half-open falló",
+        "from": "half-open",
+        "to": "open"
+      },
+      {
+        "at": "2026-10-11T03:32:09.511796841Z",
+        "reason": "cooldown de 2s cumplido",
+        "from": "open",
+        "to": "half-open"
+      },
+      {
+        "at": "2026-10-11T03:32:10.312377805Z",
+        "reason": "3/3 pruebas OK en half-open",
+        "from": "half-open",
+        "to": "closed"
+      }
+    ],
+    "breaker_transitions_total": 17,
+    "buffer": {
+      "pushed": 10467,
+      "popped": 10467,
+      "spilled_to_disk": 0,
+      "max_depth": 10125,
+      "max_mem": 10125,
+      "max_disk": 0,
+      "blocked_pushes": 0,
+      "level_changes": 0,
+      "seconds_in_level": {
+        "blocked": 0,
+        "memory": 292.847718992,
+        "spilling": 0
+      }
+    },
+    "buffer_level_changes": null,
+    "limiter": {
+      "increases": 207,
+      "decreases": 32,
+      "decreases_by_latency": 0,
+      "decreases_by_failures": 32,
+      "backoffs_by_breaker": 1,
+      "stale_results_ignored": 207,
+      "min_rate": 2.602935791015625,
+      "max_rate": 63.60053082970249,
+      "baseline_latency_ms": 18.849781
+    },
+    "main_pipeline_seconds": 16.995635383,
+    "drain_seconds": 274.721053538,
+    "total_seconds": 291.7179911
+  },
+  "aggregate": {
+    "by_country": {
+      "AR": {
+        "orders": 2999,
+        "orders_usd": "185857.07",
+        "payments_confirmed": 2561,
+        "payments_confirmed_usd": "159684.81",
+        "inventory_reserved": 2053,
+        "unique_events": 7613
+      },
+      "CL": {
+        "orders": 3194,
+        "orders_usd": "195939.76",
+        "payments_confirmed": 2689,
+        "payments_confirmed_usd": "167120.29",
+        "inventory_reserved": 2172,
+        "unique_events": 8055
+      },
+      "CO": {
+        "orders": 3014,
+        "orders_usd": "185514.23",
+        "payments_confirmed": 2557,
+        "payments_confirmed_usd": "158694.46",
+        "inventory_reserved": 2039,
+        "unique_events": 7610
+      },
+      "MX": {
+        "orders": 3073,
+        "orders_usd": "194996.19",
+        "payments_confirmed": 2617,
+        "payments_confirmed_usd": "165568.74",
+        "inventory_reserved": 2099,
+        "unique_events": 7789
+      },
+      "PE": {
+        "orders": 3051,
+        "orders_usd": "189682.75",
+        "payments_confirmed": 2616,
+        "payments_confirmed_usd": "161004.39",
+        "inventory_reserved": 2104,
+        "unique_events": 7771
+      }
+    },
+    "total": {
+      "orders": 15331,
+      "orders_usd": "951990.00",
+      "payments_confirmed": 13040,
+      "payments_confirmed_usd": "812072.69",
+      "inventory_reserved": 10467,
+      "unique_events": 38838
+    },
+    "by_type": {
+      "inventory_reserved": 10467,
+      "order_placed": 15331,
+      "payment_confirmed": 13040
+    }
+  },
+  "timeline_csv": "results/go04/race-pipeline/timeline-20261011-033119.csv"
+}

@@ -1,0 +1,17 @@
+t_s,phase,target_rate,published_in_second,published_total
+1,normal,500,500,500
+2,normal,500,500,1000
+3,normal,500,500,1500
+4,normal,500,500,2000
+5,normal,500,500,2500
+6,normal,500,500,3000
+7,normal,500,500,3500
+8,normal,500,500,4000
+9,normal,500,500,4500
+10,spike,5000,506,5006
+11,spike,5000,4993,9999
+12,spike,5000,5003,15002
+13,spike,5000,5003,20005
+14,spike,5000,4996,25001
+15,spike,5000,5004,30005
+16,spike,5000,4998,35003

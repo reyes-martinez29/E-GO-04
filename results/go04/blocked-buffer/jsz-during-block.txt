@@ -1,0 +1,2 @@
+stream HOTSALE msgs 40001
+consumer hotsale-agg num_pending(en broker, sin entregar) 13366 num_ack_pending(entregados sin ack) 16211 ack_floor 110427

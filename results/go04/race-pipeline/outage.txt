@@ -1,0 +1,2 @@
+21:31:45 caída: docker stop race-svc
+21:32:05 recuperación: docker start race-svc
