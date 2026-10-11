@@ -5,7 +5,7 @@
 // buscar recorre las G generaciones (O(G), G constante => O(1)). Expirar es
 // descartar la generación más vieja completa, en vez de hacer delete llave por
 // llave: los maps de Go no devuelven memoria al hacer delete, así que un map
-// único con expiración por llave crecería sin control (ver decisions.md).
+// único con expiración por llave crecería sin control (E-GO03, decisions.md §2).
 //
 // Garantía: una llave vive como mínimo (G-1)/G * Window. Con Window=5m y G=10
 // eso son 4.5 min, por encima de los 3 min máximos de reintento del dataset.

@@ -1,0 +1,630 @@
+{
+  "label": "full-docker",
+  "timestamp": "2026-10-11T14:12:44.168085336Z",
+  "config": {
+    "shards": 8,
+    "dedup_window": 300000000000,
+    "dedup_generations": 10,
+    "dedup_min_retention": 180000000000,
+    "dedup_max_per_generation": 0,
+    "pull_max_messages": 4096,
+    "max_ack_pending": 65536,
+    "purge_stream_on_start": true,
+    "ack_batch": 1000,
+    "ack_max_interval": 10000000,
+    "ack_wait": 300000000000,
+    "label": "full-docker",
+    "inventory": {
+      "url": "http://127.0.0.1:8090",
+      "workers": 32,
+      "call_timeout": 1000000000,
+      "breaker_consecutive_failures": 5,
+      "breaker_cooldown": 2000000000,
+      "breaker_half_open_probes": 3,
+      "no_limiter": false,
+      "limiter_initial_rps": 10,
+      "limiter_min_rps": 2,
+      "limiter_max_rps": 1000,
+      "limiter_increase_rps": 2,
+      "limiter_decrease_factor": 0.75,
+      "limiter_window": 1000000000,
+      "limiter_latency_factor": 4,
+      "buffer_mem_cap": 50000,
+      "buffer_spill_cap": 4000000,
+      "buffer_spill_path": "/tmp/hotsale-inventory-spill.bin"
+    }
+  },
+  "counts": {
+    "expected_lines": 3126750,
+    "received": 3126750,
+    "first_deliveries": 3126750,
+    "unique_applied": 3035188,
+    "duplicates_discarded": 91562,
+    "broker_redeliveries": 0,
+    "broker_redeliveries_discarded": 0,
+    "invalid": 0,
+    "acks_sent": 47981,
+    "processed": 3035188
+  },
+  "checks": {
+    "accounting: unique + duplicates + invalid == first_deliveries": true,
+    "aggregate_total == unique_applied": true,
+    "buffer: final depth == 0": true,
+    "inventory: confirmed == enqueued (nada se descartó)": true,
+    "inventory: enqueued == aggregate inventory_reserved": true,
+    "no_loss: first_deliveries == expected_lines": true,
+    "no_premature_evictions": true,
+    "processed == unique_applied": true
+  },
+  "throughput": {
+    "consumer_seconds": 484.692968231,
+    "consumer_events_per_sec": 6450.991049884225,
+    "end_to_end_seconds": 484.693617574,
+    "end_to_end_events_per_sec": 6450.98240750535
+  },
+  "latency_end_to_end": {
+    "samples": 3126750,
+    "p50_ms": 0.431543,
+    "p95_ms": 0.679018,
+    "p99_ms": 1.082653,
+    "max_ms": 98.929664,
+    "mean_ms": 0.4563230935117934
+  },
+  "retry_delays": {
+    "count": 91562,
+    "min_sec": 2,
+    "max_sec": 179,
+    "mean_sec": 90.41415652781721,
+    "outside_2_to_180s": 0
+  },
+  "dedup": {
+    "guaranteed_retention": "4m30s",
+    "final_keys": 531144,
+    "rotations": 128,
+    "premature_evictions": 0
+  },
+  "memory": {
+    "peak_heap_inuse_mib": 297,
+    "final_heap_inuse_mib": 143
+  },
+  "inventory": {
+    "enqueued": 815590,
+    "confirmed": 815590,
+    "final_buffer_depth": 0,
+    "calls": 828403,
+    "ok_200": 815590,
+    "overloaded_503": 12715,
+    "timeouts": 0,
+    "connection_errors": 98,
+    "other_status": 0,
+    "rejected_by_breaker": 2278,
+    "items_needing_retry": 11647,
+    "call_latency": {
+      "samples": 828403,
+      "p50_ms": 22.264198,
+      "p95_ms": 207.234058,
+      "p99_ms": 210.649001,
+      "max_ms": 217.837055,
+      "mean_ms": 39.80355636063969
+    },
+    "wait_enqueue_to_confirmed": {
+      "samples": 815590,
+      "p50_ms": 11322098.805146,
+      "p95_ms": 18781443.64166,
+      "p99_ms": 34772403.59136,
+      "max_ms": 34935653.024825,
+      "mean_ms": 11775785.987574935
+    },
+    "breaker": {
+      "opens": 29,
+      "opens_from_closed": 7,
+      "reopens_from_half_open": 22,
+      "closes_from_half_open": 7,
+      "open_seconds": 58,
+      "half_open_seconds": 1.6850020890000001,
+      "rejected_calls": 2278,
+      "successes": 815590,
+      "failures": 12813,
+      "stale_results": 239,
+      "max_consecutive": 5
+    },
+    "breaker_transitions": [
+      {
+        "at": "2026-10-11T04:23:10.536520565Z",
+        "reason": "5 fallos consecutivos",
+        "from": "closed",
+        "to": "open"
+      },
+      {
+        "at": "2026-10-11T04:23:12.536520565Z",
+        "reason": "cooldown de 2s cumplido",
+        "from": "open",
+        "to": "half-open"
+      },
+      {
+        "at": "2026-10-11T04:23:12.651506828Z",
+        "reason": "3/3 pruebas OK en half-open",
+        "from": "half-open",
+        "to": "closed"
+      },
+      {
+        "at": "2026-10-11T04:24:03.798340978Z",
+        "reason": "5 fallos consecutivos",
+        "from": "closed",
+        "to": "open"
+      },
+      {
+        "at": "2026-10-11T04:24:05.798340978Z",
+        "reason": "cooldown de 2s cumplido",
+        "from": "open",
+        "to": "half-open"
+      },
+      {
+        "at": "2026-10-11T04:24:05.80728808Z",
+        "reason": "prueba 1/3 en half-open falló",
+        "from": "half-open",
+        "to": "open"
+      },
+      {
+        "at": "2026-10-11T04:24:07.80728808Z",
+        "reason": "cooldown de 2s cumplido",
+        "from": "open",
+        "to": "half-open"
+      },
+      {
+        "at": "2026-10-11T04:24:07.808522104Z",
+        "reason": "prueba 1/3 en half-open falló",
+        "from": "half-open",
+        "to": "open"
+      },
+      {
+        "at": "2026-10-11T04:24:09.808522104Z",
+        "reason": "cooldown de 2s cumplido",
+        "from": "open",
+        "to": "half-open"
+      },
+      {
+        "at": "2026-10-11T04:24:09.809041473Z",
+        "reason": "prueba 1/3 en half-open falló",
+        "from": "half-open",
+        "to": "open"
+      },
+      {
+        "at": "2026-10-11T04:24:11.809041473Z",
+        "reason": "cooldown de 2s cumplido",
+        "from": "open",
+        "to": "half-open"
+      },
+      {
+        "at": "2026-10-11T04:24:11.809883357Z",
+        "reason": "prueba 1/3 en half-open falló",
+        "from": "half-open",
+        "to": "open"
+      },
+      {
+        "at": "2026-10-11T04:24:13.809883357Z",
+        "reason": "cooldown de 2s cumplido",
+        "from": "open",
+        "to": "half-open"
+      },
+      {
+        "at": "2026-10-11T04:24:13.810356017Z",
+        "reason": "prueba 1/3 en half-open falló",
+        "from": "half-open",
+        "to": "open"
+      },
+      {
+        "at": "2026-10-11T04:24:15.810356017Z",
+        "reason": "cooldown de 2s cumplido",
+        "from": "open",
+        "to": "half-open"
+      },
+      {
+        "at": "2026-10-11T04:24:15.823254932Z",
+        "reason": "prueba 1/3 en half-open falló",
+        "from": "half-open",
+        "to": "open"
+      },
+      {
+        "at": "2026-10-11T04:24:17.823254932Z",
+        "reason": "cooldown de 2s cumplido",
+        "from": "open",
+        "to": "half-open"
+      },
+      {
+        "at": "2026-10-11T04:24:17.835252415Z",
+        "reason": "prueba 1/3 en half-open falló",
+        "from": "half-open",
+        "to": "open"
+      },
+      {
+        "at": "2026-10-11T04:24:19.835252415Z",
+        "reason": "cooldown de 2s cumplido",
+        "from": "open",
+        "to": "half-open"
+      },
+      {
+        "at": "2026-10-11T04:24:19.912730129Z",
+        "reason": "prueba 1/3 en half-open falló",
+        "from": "half-open",
+        "to": "open"
+      },
+      {
+        "at": "2026-10-11T04:24:21.912730129Z",
+        "reason": "cooldown de 2s cumplido",
+        "from": "open",
+        "to": "half-open"
+      },
+      {
+        "at": "2026-10-11T04:24:21.923691884Z",
+        "reason": "prueba 1/3 en half-open falló",
+        "from": "half-open",
+        "to": "open"
+      },
+      {
+        "at": "2026-10-11T04:24:23.923691884Z",
+        "reason": "cooldown de 2s cumplido",
+        "from": "open",
+        "to": "half-open"
+      },
+      {
+        "at": "2026-10-11T04:24:23.924417853Z",
+        "reason": "prueba 1/3 en half-open falló",
+        "from": "half-open",
+        "to": "open"
+      },
+      {
+        "at": "2026-10-11T04:24:25.924417853Z",
+        "reason": "cooldown de 2s cumplido",
+        "from": "open",
+        "to": "half-open"
+      },
+      {
+        "at": "2026-10-11T04:24:25.925335796Z",
+        "reason": "prueba 1/3 en half-open falló",
+        "from": "half-open",
+        "to": "open"
+      },
+      {
+        "at": "2026-10-11T04:24:27.925335796Z",
+        "reason": "cooldown de 2s cumplido",
+        "from": "open",
+        "to": "half-open"
+      },
+      {
+        "at": "2026-10-11T04:24:27.926124763Z",
+        "reason": "prueba 1/3 en half-open falló",
+        "from": "half-open",
+        "to": "open"
+      },
+      {
+        "at": "2026-10-11T04:24:29.926124763Z",
+        "reason": "cooldown de 2s cumplido",
+        "from": "open",
+        "to": "half-open"
+      },
+      {
+        "at": "2026-10-11T04:24:29.935674897Z",
+        "reason": "prueba 1/3 en half-open falló",
+        "from": "half-open",
+        "to": "open"
+      },
+      {
+        "at": "2026-10-11T04:24:31.935674897Z",
+        "reason": "cooldown de 2s cumplido",
+        "from": "open",
+        "to": "half-open"
+      },
+      {
+        "at": "2026-10-11T04:24:31.936308854Z",
+        "reason": "prueba 1/3 en half-open falló",
+        "from": "half-open",
+        "to": "open"
+      },
+      {
+        "at": "2026-10-11T04:24:33.936308854Z",
+        "reason": "cooldown de 2s cumplido",
+        "from": "open",
+        "to": "half-open"
+      },
+      {
+        "at": "2026-10-11T04:24:33.936807269Z",
+        "reason": "prueba 1/3 en half-open falló",
+        "from": "half-open",
+        "to": "open"
+      },
+      {
+        "at": "2026-10-11T04:24:35.936807269Z",
+        "reason": "cooldown de 2s cumplido",
+        "from": "open",
+        "to": "half-open"
+      },
+      {
+        "at": "2026-10-11T04:24:35.93744943Z",
+        "reason": "prueba 1/3 en half-open falló",
+        "from": "half-open",
+        "to": "open"
+      },
+      {
+        "at": "2026-10-11T04:24:37.93744943Z",
+        "reason": "cooldown de 2s cumplido",
+        "from": "open",
+        "to": "half-open"
+      },
+      {
+        "at": "2026-10-11T04:24:37.938793724Z",
+        "reason": "prueba 1/3 en half-open falló",
+        "from": "half-open",
+        "to": "open"
+      },
+      {
+        "at": "2026-10-11T04:24:39.938793724Z",
+        "reason": "cooldown de 2s cumplido",
+        "from": "open",
+        "to": "half-open"
+      },
+      {
+        "at": "2026-10-11T04:24:39.939616166Z",
+        "reason": "prueba 1/3 en half-open falló",
+        "from": "half-open",
+        "to": "open"
+      },
+      {
+        "at": "2026-10-11T04:24:41.939616166Z",
+        "reason": "cooldown de 2s cumplido",
+        "from": "open",
+        "to": "half-open"
+      },
+      {
+        "at": "2026-10-11T04:24:41.940605416Z",
+        "reason": "prueba 1/3 en half-open falló",
+        "from": "half-open",
+        "to": "open"
+      },
+      {
+        "at": "2026-10-11T04:24:43.940605416Z",
+        "reason": "cooldown de 2s cumplido",
+        "from": "open",
+        "to": "half-open"
+      },
+      {
+        "at": "2026-10-11T04:24:43.942024248Z",
+        "reason": "prueba 1/3 en half-open falló",
+        "from": "half-open",
+        "to": "open"
+      },
+      {
+        "at": "2026-10-11T04:24:45.942024248Z",
+        "reason": "cooldown de 2s cumplido",
+        "from": "open",
+        "to": "half-open"
+      },
+      {
+        "at": "2026-10-11T04:24:45.943458886Z",
+        "reason": "prueba 1/3 en half-open falló",
+        "from": "half-open",
+        "to": "open"
+      },
+      {
+        "at": "2026-10-11T04:24:47.943458886Z",
+        "reason": "cooldown de 2s cumplido",
+        "from": "open",
+        "to": "half-open"
+      },
+      {
+        "at": "2026-10-11T04:24:47.951990486Z",
+        "reason": "prueba 1/3 en half-open falló",
+        "from": "half-open",
+        "to": "open"
+      },
+      {
+        "at": "2026-10-11T04:24:49.951990486Z",
+        "reason": "cooldown de 2s cumplido",
+        "from": "open",
+        "to": "half-open"
+      },
+      {
+        "at": "2026-10-11T04:24:51.050853999Z",
+        "reason": "3/3 pruebas OK en half-open",
+        "from": "half-open",
+        "to": "closed"
+      },
+      {
+        "at": "2026-10-11T06:50:59.027565845Z",
+        "reason": "5 fallos consecutivos",
+        "from": "closed",
+        "to": "open"
+      },
+      {
+        "at": "2026-10-11T06:51:01.027565845Z",
+        "reason": "cooldown de 2s cumplido",
+        "from": "open",
+        "to": "half-open"
+      },
+      {
+        "at": "2026-10-11T06:51:01.121729086Z",
+        "reason": "3/3 pruebas OK en half-open",
+        "from": "half-open",
+        "to": "closed"
+      },
+      {
+        "at": "2026-10-11T07:10:49.317739657Z",
+        "reason": "5 fallos consecutivos",
+        "from": "closed",
+        "to": "open"
+      },
+      {
+        "at": "2026-10-11T07:10:51.317739657Z",
+        "reason": "cooldown de 2s cumplido",
+        "from": "open",
+        "to": "half-open"
+      },
+      {
+        "at": "2026-10-11T07:10:51.436982955Z",
+        "reason": "3/3 pruebas OK en half-open",
+        "from": "half-open",
+        "to": "closed"
+      },
+      {
+        "at": "2026-10-11T08:55:44.016365135Z",
+        "reason": "5 fallos consecutivos",
+        "from": "closed",
+        "to": "open"
+      },
+      {
+        "at": "2026-10-11T08:55:46.016365135Z",
+        "reason": "cooldown de 2s cumplido",
+        "from": "open",
+        "to": "half-open"
+      },
+      {
+        "at": "2026-10-11T08:55:46.101384365Z",
+        "reason": "3/3 pruebas OK en half-open",
+        "from": "half-open",
+        "to": "closed"
+      },
+      {
+        "at": "2026-10-11T09:26:12.466547244Z",
+        "reason": "5 fallos consecutivos",
+        "from": "closed",
+        "to": "open"
+      },
+      {
+        "at": "2026-10-11T09:26:14.466547244Z",
+        "reason": "cooldown de 2s cumplido",
+        "from": "open",
+        "to": "half-open"
+      },
+      {
+        "at": "2026-10-11T09:26:14.548566639Z",
+        "reason": "3/3 pruebas OK en half-open",
+        "from": "half-open",
+        "to": "closed"
+      },
+      {
+        "at": "2026-10-11T14:12:23.138855867Z",
+        "reason": "5 fallos consecutivos",
+        "from": "closed",
+        "to": "open"
+      },
+      {
+        "at": "2026-10-11T14:12:25.138855867Z",
+        "reason": "cooldown de 2s cumplido",
+        "from": "open",
+        "to": "half-open"
+      },
+      {
+        "at": "2026-10-11T14:12:25.233151611Z",
+        "reason": "3/3 pruebas OK en half-open",
+        "from": "half-open",
+        "to": "closed"
+      }
+    ],
+    "breaker_transitions_total": 65,
+    "buffer": {
+      "pushed": 815590,
+      "popped": 815590,
+      "spilled_to_disk": 763351,
+      "max_depth": 797700,
+      "max_mem": 50000,
+      "max_disk": 763351,
+      "blocked_pushes": 0,
+      "level_changes": 2,
+      "seconds_in_level": {
+        "blocked": 0,
+        "memory": 349.018541951,
+        "spilling": 16890.124980583
+      }
+    },
+    "buffer_level_changes": [
+      {
+        "at": "2026-10-11T04:23:27.668782254Z",
+        "from": "memory",
+        "to": "spilling",
+        "depth": 50001,
+        "mem": 50000,
+        "disk": 1
+      },
+      {
+        "at": "2026-10-11T14:07:53.636155725Z",
+        "from": "spilling",
+        "to": "memory",
+        "depth": 13350,
+        "mem": 13350,
+        "disk": 0
+      }
+    ],
+    "limiter": {
+      "increases": 14733,
+      "decreases": 2166,
+      "decreases_by_latency": 19,
+      "decreases_by_failures": 2147,
+      "backoffs_by_breaker": 7,
+      "stale_results_ignored": 14053,
+      "min_rate": 2,
+      "max_rate": 63.75702547901539,
+      "baseline_latency_ms": 16.397972
+    },
+    "main_pipeline_seconds": 484.692968231,
+    "drain_seconds": 16755.346756284,
+    "total_seconds": 17238.721243505
+  },
+  "aggregate": {
+    "by_country": {
+      "AR": {
+        "orders": 240836,
+        "orders_usd": "14845476.11",
+        "payments_confirmed": 204495,
+        "payments_confirmed_usd": "12612236.36",
+        "inventory_reserved": 163768,
+        "unique_events": 609099
+      },
+      "CL": {
+        "orders": 239995,
+        "orders_usd": "14771085.04",
+        "payments_confirmed": 203717,
+        "payments_confirmed_usd": "12523200.88",
+        "inventory_reserved": 162838,
+        "unique_events": 606550
+      },
+      "CO": {
+        "orders": 238820,
+        "orders_usd": "14722007.35",
+        "payments_confirmed": 203176,
+        "payments_confirmed_usd": "12540964.70",
+        "inventory_reserved": 162489,
+        "unique_events": 604485
+      },
+      "MX": {
+        "orders": 240412,
+        "orders_usd": "14825927.68",
+        "payments_confirmed": 204568,
+        "payments_confirmed_usd": "12609231.78",
+        "inventory_reserved": 163894,
+        "unique_events": 608874
+      },
+      "PE": {
+        "orders": 239937,
+        "orders_usd": "14808124.43",
+        "payments_confirmed": 203642,
+        "payments_confirmed_usd": "12559792.34",
+        "inventory_reserved": 162601,
+        "unique_events": 606180
+      }
+    },
+    "total": {
+      "orders": 1200000,
+      "orders_usd": "73972620.61",
+      "payments_confirmed": 1019598,
+      "payments_confirmed_usd": "62845426.06",
+      "inventory_reserved": 815590,
+      "unique_events": 3035188
+    },
+    "by_type": {
+      "inventory_reserved": 815590,
+      "order_placed": 1200000,
+      "payment_confirmed": 1019598
+    }
+  },
+  "timeline_csv": "results/go04/full-docker/timeline-20261011-042223.csv"
+}

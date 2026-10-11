@@ -74,9 +74,6 @@ func TestOpenRejectsForTheWholeCooldown(t *testing.T) {
 		if want := 2*time.Second - elapsed; oe.RetryAfter != want {
 			t.Fatalf("RetryAfter=%v, se esperaba %v", oe.RetryAfter, want)
 		}
-		if !errors.Is(err, ErrOpen) {
-			t.Fatal("OpenError debe cumplir errors.Is(err, ErrOpen)")
-		}
 	}
 	clk.t = start.Add(2 * time.Second)
 	if s := b.State(); s != HalfOpen {
@@ -96,7 +93,8 @@ func TestHalfOpenClosesAfterAllProbesSucceed(t *testing.T) {
 	if err1 != nil || err2 != nil || err3 != nil {
 		t.Fatalf("half-open debe permitir 3 pruebas: %v %v %v", err1, err2, err3)
 	}
-	if _, err := b.Allow(); !errors.Is(err, ErrOpen) {
+	var oe *OpenError
+	if _, err := b.Allow(); !errors.As(err, &oe) || oe.State != HalfOpen {
 		t.Fatalf("una 4ª llamada en half-open debe rechazarse, err=%v", err)
 	}
 	t1.Done(true)

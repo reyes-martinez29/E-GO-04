@@ -9,7 +9,7 @@ import (
 // Ack por lotes con AckAllPolicy.
 //
 // Hacer Ack() de cada mensaje costaba ~40% del CPU del consumidor en syscalls
-// (un PUB diminuto por evento, ver decisions.md). Con AckAllPolicy, hacer ack
+// (un PUB diminuto por evento; E-GO03, hallazgo H3). Con AckAllPolicy, hacer ack
 // del mensaje con secuencia S confirma todos los <= S. Pero los shards
 // terminan en desorden entre sí, así que no basta con hacer ack del último
 // mensaje aplicado: el piso de ack solo puede avanzar hasta el final de un

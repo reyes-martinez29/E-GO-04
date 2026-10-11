@@ -19,7 +19,6 @@
 package breaker
 
 import (
-	"errors"
 	"fmt"
 	"sync"
 	"time"
@@ -74,11 +73,6 @@ type OpenError struct {
 func (e *OpenError) Error() string {
 	return fmt.Sprintf("breaker %s: reintentar en %v", e.State, e.RetryAfter)
 }
-
-// ErrOpen permite usar errors.Is(err, breaker.ErrOpen).
-var ErrOpen = errors.New("breaker abierto")
-
-func (e *OpenError) Is(target error) bool { return target == ErrOpen }
 
 type Stats struct {
 	Opens               uint64        `json:"opens"`                  // veces que pasó a OPEN (desde CLOSED o HALF-OPEN)
@@ -256,5 +250,3 @@ func (b *Breaker) Stats() Stats {
 	st.HalfOpenSeconds = st.HalfOpenTime.Seconds()
 	return st
 }
-
-func (b *Breaker) Config() Config { return b.cfg }

@@ -57,7 +57,7 @@ func monitor(path string, shards []*shard, inv *inventory, received, invalid *at
 			}
 			recv := received.Load()
 			enq, conf := inv.enqueued.Load(), inv.confirmed.Load()
-			calls, ok, fail, rej := inv.calls.Load(), inv.ok.Load(), inv.failed.Load(), inv.rejected.Load()
+			calls, ok, fail, rej := inv.calls.Load(), inv.ok.Load(), inv.failed.Load(), int64(inv.br.Stats().Rejected)
 			var latMean float64
 			if dn := latN - last.latN; dn > 0 {
 				latMean = float64(latSum-last.latSum) / float64(dn) / 1e6

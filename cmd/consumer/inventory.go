@@ -90,7 +90,6 @@ type inventory struct {
 	failed               atomic.Int64 // 503 + timeouts + conexión + otros
 	timeouts, connErrs   atomic.Int64
 	otherStatus          atomic.Int64
-	rejected             atomic.Int64 // intentos que el breaker no dejó salir
 	itemsRetried         atomic.Int64 // ítems que necesitaron más de una llamada
 	breakerState         atomic.Int32
 	stateMu              sync.Mutex
@@ -215,7 +214,6 @@ func (inv *inventory) work(w *invWorker) {
 		for attempt := 0; ; attempt++ {
 			tk, err := inv.br.Allow()
 			if err != nil {
-				inv.rejected.Add(1)
 				var oe *breaker.OpenError
 				if errors.As(err, &oe) {
 					time.Sleep(jitter(oe.RetryAfter, 0.1))

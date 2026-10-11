@@ -10,7 +10,7 @@
 // event_id siempre cae en el mismo shard: el "¿ya lo vi? → márcalo → súmalo"
 // es atómico por construcción, sin sync.Mutex ni RWMutex. El fetcher es
 // secuencial y cada shard es FIFO, así que el orden por event_id se preserva
-// (un pool de decoders intermedio lo rompía, ver decisions.md). El json decode
+// (un pool de decoders intermedio lo rompía; E-GO03, hallazgo H2). El json decode
 // sigue siendo paralelo: ocurre dentro de los M shards. El ack se envía solo
 // después de aplicar el evento, por lotes y en orden (ver commit.go).
 //

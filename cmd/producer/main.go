@@ -49,7 +49,7 @@ type ackStats struct {
 func main() {
 	file := flag.String("file", "eventos_hotsale.jsonl", "archivo JSONL de eventos")
 	url := flag.String("url", nats.DefaultURL, "URL de NATS")
-	rate := flag.Int("rate", 2000, "ritmo normal en eventos/s (0 = sin límite, como E-Go03; ver decisions.md §4)")
+	rate := flag.Int("rate", 2000, "ritmo normal en eventos/s (0 = sin límite, como E-Go03; ver decisions.md §0)")
 	spikeMult := flag.Float64("spike-mult", 10, "multiplicador del ritmo durante el spike")
 	spikeAfter := flag.Duration("spike-after", time.Minute, "cuándo empieza el spike, desde la primera publicación")
 	spikeFor := flag.Duration("spike-for", 2*time.Minute, "duración del spike (0 = sin spike)")
@@ -57,10 +57,10 @@ func main() {
 	limit := flag.Uint64("limit", 0, "publicar solo las primeras N líneas (0 = todas)")
 	// El Nats-Msg-Id debe ser único POR CORRIDA: con solo el número de línea,
 	// una segunda corrida dentro de la ventana Duplicates del broker se
-	// descartaba entera (ver decisions.md, hallazgo 5).
+	// descartaba entera (E-GO03, hallazgo H4).
 	runID := flag.String("run-id", strconv.FormatInt(time.Now().UnixNano(), 36), "prefijo del Nats-Msg-Id de esta corrida")
 	// 1024: mismo throughput que 4096 con un tercio de la latencia; 16384 provoca
-	// 429 del broker (ver decisions.md, barrido de max-pending).
+	// 429 del broker (E-GO03, hallazgo H5).
 	maxPending := flag.Int("max-pending", 1024, "máximo de publicaciones async sin PubAck (contrapresión)")
 	cpuProfile := flag.String("cpuprofile", "", "escribir un CPU profile en este archivo")
 	flag.Parse()

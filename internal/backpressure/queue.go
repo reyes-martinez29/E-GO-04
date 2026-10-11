@@ -50,18 +50,14 @@ type Config struct {
 	MemCap    int    // ítems en memoria
 	SpillPath string // archivo de desborde ("" = sin disco: al llenarse la memoria, Push bloquea)
 	SpillCap  int    // ítems máximos en disco
-	Now       func() time.Time
 	// OnLevel se llama (con el lock tomado) en cada cambio de nivel.
 	OnLevel func(from, to Level, s Snapshot)
 }
 
 type Snapshot struct {
-	Mem      int           `json:"mem"`
-	Disk     int           `json:"disk"`
-	Depth    int           `json:"depth"`
-	Level    Level         `json:"-"`
-	OldestMs float64       `json:"oldest_wait_ms"` // antigüedad del ítem más viejo
-	Oldest   time.Duration `json:"-"`
+	Mem, Disk, Depth int
+	Level            Level
+	Oldest           time.Duration // antigüedad del ítem más viejo
 }
 
 type Stats struct {
@@ -99,10 +95,7 @@ func NewQueue(cfg Config) (*Queue, error) {
 	if cfg.MemCap < 1 {
 		return nil, fmt.Errorf("backpressure: MemCap debe ser >= 1")
 	}
-	if cfg.Now == nil {
-		cfg.Now = time.Now
-	}
-	q := &Queue{cfg: cfg, ring: make([]Item, cfg.MemCap), levelSince: cfg.Now()}
+	q := &Queue{cfg: cfg, ring: make([]Item, cfg.MemCap), levelSince: time.Now()}
 	if cfg.SpillPath != "" && cfg.SpillCap > 0 {
 		sf, err := openSpill(cfg.SpillPath)
 		if err != nil {
@@ -236,7 +229,7 @@ func (q *Queue) updateLevel() {
 	if lv == q.level {
 		return
 	}
-	now := q.cfg.Now()
+	now := time.Now()
 	q.timeInLevel[q.level] += now.Sub(q.levelSince)
 	from := q.level
 	q.level, q.levelSince = lv, now
@@ -254,7 +247,6 @@ func (q *Queue) snapshot(now time.Time) Snapshot {
 	} else if s.Disk > 0 {
 		s.Oldest = now.Sub(time.Unix(0, q.spill.oldestEnqueued()))
 	}
-	s.OldestMs = float64(s.Oldest) / float64(time.Millisecond)
 	return s
 }
 
@@ -262,7 +254,7 @@ func (q *Queue) snapshot(now time.Time) Snapshot {
 func (q *Queue) Snapshot() Snapshot {
 	q.mu.Lock()
 	defer q.mu.Unlock()
-	return q.snapshot(q.cfg.Now())
+	return q.snapshot(time.Now())
 }
 
 func (q *Queue) Stats() Stats {
@@ -270,7 +262,7 @@ func (q *Queue) Stats() Stats {
 	defer q.mu.Unlock()
 	st := q.st
 	tl := q.timeInLevel
-	tl[q.level] += q.cfg.Now().Sub(q.levelSince)
+	tl[q.level] += time.Since(q.levelSince)
 	st.TimeInLevel = map[string]float64{}
 	for l := range numLevels {
 		st.TimeInLevel[l.String()] = tl[l].Seconds()

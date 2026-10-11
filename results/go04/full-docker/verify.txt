@@ -1,0 +1,5 @@
+=== COMPARACIÓN CON results/go04/full-docker/consumer-20261011-042223.json ===
+OK duplicados: 91562 == 91562
+OK inventario confirmado: 815590 == 815590
+OK eventos procesados: 3035188 == 3035188
+OK agregado idéntico al centavo en los 5 países y el total

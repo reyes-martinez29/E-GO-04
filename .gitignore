@@ -25,13 +25,6 @@ bin/
 results/go04/smoke*/
 results/go04/*.out
 
-# --- TEMPORAL: hasta que terminen las corridas completas ---
-# decisions.md tiene cifras pendientes y las corridas siguen escribiendo sus
-# logs. no se sube hasta que este completo
-decisions.md
-results/go04/full/
-results/go04/full-docker/
-
 # --- Enunciado del curso (material del curso) ---
 e_go04_instrucciones.md
 

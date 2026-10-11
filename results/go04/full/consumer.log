@@ -1,0 +1,766 @@
+2026/10/10 21:36:27 consumidor listo (shards=8, ventana=5m0s/10 gen, retención garantizada=4m30s); esperando eventos...
+2026/10/10 21:36:27 inventario: http://127.0.0.1:8090, 32 workers, timeout 1s, breaker 5 fallos/2s/3 pruebas, limitador=true, buffer mem=50000 disco=4000000
+2026/10/10 21:36:32 recibidos=9221 aplicados=9221 (1844 ev/s) ventana=7978 llaves heap=7 MiB inválidos=0 | inventario: confirmados=46/2459 buffer=2381 (mem=2381 disco=0, nivel=memory, más viejo=4.5s) breaker=closed límite=14.0 llamadas/s
+2026/10/10 21:36:38 recibidos=21221 aplicados=21221 (2000 ev/s) ventana=15925 llaves heap=10 MiB inválidos=0 | inventario: confirmados=135/5590 buffer=5423 (mem=5423 disco=0, nivel=memory, más viejo=10.3s) breaker=closed límite=22.0 llamadas/s
+2026/10/10 21:36:44 recibidos=33221 aplicados=33221 (2001 ev/s) ventana=29827 llaves heap=8 MiB inválidos=0 | inventario: confirmados=287/8709 buffer=8390 (mem=8390 disco=0, nivel=memory, más viejo=16.0s) breaker=closed límite=34.0 llamadas/s
+2026/10/10 21:36:50 recibidos=45220 aplicados=45220 (2000 ev/s) ventana=39774 llaves heap=11 MiB inválidos=0 | inventario: confirmados=514/11839 buffer=11293 (mem=11293 disco=0, nivel=memory, más viejo=21.6s) breaker=closed límite=46.0 llamadas/s
+2026/10/10 21:36:56 recibidos=57222 aplicados=57222 (2000 ev/s) ventana=49711 llaves heap=10 MiB inválidos=0 | inventario: confirmados=816/14958 buffer=14110 (mem=14110 disco=0, nivel=memory, más viejo=27.0s) breaker=closed límite=58.0 llamadas/s
+2026/10/10 21:37:01 recibidos=67219 aplicados=67219 (1999 ev/s) ventana=63636 llaves heap=14 MiB inválidos=0 | inventario: confirmados=1076/17589 buffer=16481 (mem=16481 disco=0, nivel=memory, más viejo=31.5s) breaker=closed límite=36.9 llamadas/s
+2026/10/10 21:37:06 recibidos=77220 aplicados=77220 (2000 ev/s) ventana=71573 llaves heap=15 MiB inválidos=0 | inventario: confirmados=1273/20219 buffer=18914 (mem=18914 disco=0, nivel=memory, más viejo=36.1s) breaker=closed límite=46.9 llamadas/s
+2026/10/10 21:37:12 recibidos=89222 aplicados=89222 (2000 ev/s) ventana=79522 llaves heap=13 MiB inválidos=0 | inventario: confirmados=1577/23354 buffer=21745 (mem=21745 disco=0, nivel=memory, más viejo=41.6s) breaker=closed límite=56.9 llamadas/s
+2026/10/10 21:37:18 recibidos=101223 aplicados=101223 (2000 ev/s) ventana=95409 llaves heap=12 MiB inválidos=0 | inventario: confirmados=1871/26461 buffer=24558 (mem=24558 disco=0, nivel=memory, más viejo=47.0s) breaker=closed límite=37.4 llamadas/s
+2026/10/10 21:37:24 recibidos=113221 aplicados=113221 (2000 ev/s) ventana=103382 llaves heap=16 MiB inválidos=0 | inventario: confirmados=2127/29577 buffer=27418 (mem=27418 disco=0, nivel=memory, más viejo=52.6s) breaker=closed límite=49.4 llamadas/s
+2026/10/10 21:37:29 recibidos=152206 aplicados=152206 (7797 ev/s) ventana=143130 llaves heap=19 MiB inválidos=0 | inventario: confirmados=2396/39734 buffer=37306 (mem=37306 disco=0, nivel=memory, más viejo=57.1s) breaker=closed límite=59.4 llamadas/s
+2026/10/10 21:37:32 BUFFER memory → spilling (profundidad=50001 memoria=50000 disco=1)
+2026/10/10 21:37:35 recibidos=272186 aplicados=272186 (19998 ev/s) ventana=261193 llaves heap=23 MiB inválidos=0 | inventario: confirmados=2676/71008 buffer=68300 (mem=49847 disco=18453, nivel=spilling, más viejo=62.5s) breaker=closed límite=39.6 llamadas/s
+2026/10/10 21:37:40 recibidos=372104 aplicados=372104 (19982 ev/s) ventana=357571 llaves heap=28 MiB inválidos=0 | inventario: confirmados=2893/96948 buffer=94023 (mem=49630 disco=44393, nivel=spilling, más viejo=67.1s) breaker=closed límite=49.6 llamadas/s
+2026/10/10 21:37:46 recibidos=492208 aplicados=492208 (20017 ev/s) ventana=473759 llaves heap=41 MiB inválidos=0 | inventario: confirmados=3221/128296 buffer=125043 (mem=49302 disco=75741, nivel=spilling, más viejo=72.5s) breaker=closed límite=61.6 llamadas/s
+2026/10/10 21:37:52 recibidos=612215 aplicados=612215 (20001 ev/s) ventana=590071 llaves heap=61 MiB inválidos=0 | inventario: confirmados=3466/159570 buffer=156072 (mem=49057 disco=107015, nivel=spilling, más viejo=78.0s) breaker=closed límite=42.7 llamadas/s
+2026/10/10 21:37:58 recibidos=732200 aplicados=732200 (19999 ev/s) ventana=707267 llaves heap=75 MiB inválidos=0 | inventario: confirmados=3750/190871 buffer=187089 (mem=48773 disco=138316, nivel=spilling, más viejo=83.5s) breaker=closed límite=54.7 llamadas/s
+2026/10/10 21:38:03 recibidos=832223 aplicados=832223 (20004 ev/s) ventana=802743 llaves heap=78 MiB inválidos=0 | inventario: confirmados=4018/216907 buffer=212857 (mem=48505 disco=164352, nivel=spilling, más viejo=88.0s) breaker=closed límite=47.0 llamadas/s
+2026/10/10 21:38:08 BREAKER closed → open (5 fallos consecutivos)
+2026/10/10 21:38:09 recibidos=952222 aplicados=952222 (20000 ev/s) ventana=920095 llaves heap=73 MiB inválidos=0 | inventario: confirmados=4204/248120 buffer=243884 (mem=48319 disco=195565, nivel=spilling, más viejo=93.6s) breaker=open límite=15.5 llamadas/s
+2026/10/10 21:38:10 BREAKER open → half-open (cooldown de 2s cumplido)
+2026/10/10 21:38:10 BREAKER half-open → open (prueba 1/3 en half-open falló)
+2026/10/10 21:38:12 BREAKER open → half-open (cooldown de 2s cumplido)
+2026/10/10 21:38:12 BREAKER half-open → open (prueba 1/3 en half-open falló)
+2026/10/10 21:38:14 BREAKER open → half-open (cooldown de 2s cumplido)
+2026/10/10 21:38:14 BREAKER half-open → open (prueba 1/3 en half-open falló)
+2026/10/10 21:38:15 recibidos=1072216 aplicados=1072213 (19999 ev/s) ventana=1036394 llaves heap=108 MiB inválidos=0 | inventario: confirmados=4204/279461 buffer=275225 (mem=48319 disco=226906, nivel=spilling, más viejo=99.6s) breaker=open límite=6.5 llamadas/s
+2026/10/10 21:38:16 BREAKER open → half-open (cooldown de 2s cumplido)
+2026/10/10 21:38:16 BREAKER half-open → open (prueba 1/3 en half-open falló)
+2026/10/10 21:38:18 BREAKER open → half-open (cooldown de 2s cumplido)
+2026/10/10 21:38:18 BREAKER half-open → open (prueba 1/3 en half-open falló)
+2026/10/10 21:38:20 BREAKER open → half-open (cooldown de 2s cumplido)
+2026/10/10 21:38:20 BREAKER half-open → open (prueba 1/3 en half-open falló)
+2026/10/10 21:38:20 recibidos=1172229 aplicados=1172229 (20001 ev/s) ventana=1133812 llaves heap=112 MiB inválidos=0 | inventario: confirmados=4204/305558 buffer=301322 (mem=48319 disco=253003, nivel=spilling, más viejo=104.6s) breaker=open límite=2.8 llamadas/s
+2026/10/10 21:38:22 BREAKER open → half-open (cooldown de 2s cumplido)
+2026/10/10 21:38:22 BREAKER half-open → open (prueba 1/3 en half-open falló)
+2026/10/10 21:38:24 BREAKER open → half-open (cooldown de 2s cumplido)
+2026/10/10 21:38:24 BREAKER half-open → open (prueba 1/3 en half-open falló)
+2026/10/10 21:38:26 BREAKER open → half-open (cooldown de 2s cumplido)
+2026/10/10 21:38:26 BREAKER half-open → open (prueba 1/3 en half-open falló)
+2026/10/10 21:38:26 recibidos=1292217 aplicados=1292217 (19998 ev/s) ventana=1251122 llaves heap=83 MiB inválidos=0 | inventario: confirmados=4204/336850 buffer=332614 (mem=48319 disco=284295, nivel=spilling, más viejo=110.6s) breaker=open límite=2.0 llamadas/s
+2026/10/10 21:38:28 BREAKER open → half-open (cooldown de 2s cumplido)
+2026/10/10 21:38:28 BREAKER half-open → open (prueba 1/3 en half-open falló)
+2026/10/10 21:38:30 BREAKER open → half-open (cooldown de 2s cumplido)
+2026/10/10 21:38:30 BREAKER half-open → open (prueba 1/3 en half-open falló)
+2026/10/10 21:38:32 BREAKER open → half-open (cooldown de 2s cumplido)
+2026/10/10 21:38:32 BREAKER half-open → open (prueba 1/3 en half-open falló)
+2026/10/10 21:38:32 recibidos=1412225 aplicados=1412225 (20002 ev/s) ventana=1366361 llaves heap=129 MiB inválidos=0 | inventario: confirmados=4204/368115 buffer=363879 (mem=48319 disco=315560, nivel=spilling, más viejo=116.6s) breaker=open límite=2.0 llamadas/s
+2026/10/10 21:38:34 BREAKER open → half-open (cooldown de 2s cumplido)
+2026/10/10 21:38:34 BREAKER half-open → open (prueba 1/3 en half-open falló)
+2026/10/10 21:38:36 BREAKER open → half-open (cooldown de 2s cumplido)
+2026/10/10 21:38:36 BREAKER half-open → open (prueba 1/3 en half-open falló)
+2026/10/10 21:38:38 BREAKER open → half-open (cooldown de 2s cumplido)
+2026/10/10 21:38:38 BREAKER half-open → open (prueba 1/3 en half-open falló)
+2026/10/10 21:38:38 recibidos=1532219 aplicados=1532219 (19998 ev/s) ventana=1484681 llaves heap=152 MiB inválidos=0 | inventario: confirmados=4204/399399 buffer=395163 (mem=48319 disco=346844, nivel=spilling, más viejo=122.6s) breaker=open límite=2.0 llamadas/s
+2026/10/10 21:38:40 BREAKER open → half-open (cooldown de 2s cumplido)
+2026/10/10 21:38:40 BREAKER half-open → open (prueba 1/3 en half-open falló)
+2026/10/10 21:38:42 BREAKER open → half-open (cooldown de 2s cumplido)
+2026/10/10 21:38:42 BREAKER half-open → open (prueba 1/3 en half-open falló)
+2026/10/10 21:38:44 BREAKER open → half-open (cooldown de 2s cumplido)
+2026/10/10 21:38:44 BREAKER half-open → open (prueba 1/3 en half-open falló)
+2026/10/10 21:38:44 recibidos=1652199 aplicados=1652199 (19997 ev/s) ventana=1598979 llaves heap=92 MiB inválidos=0 | inventario: confirmados=4204/430619 buffer=426383 (mem=48319 disco=378064, nivel=spilling, más viejo=128.6s) breaker=open límite=2.0 llamadas/s
+2026/10/10 21:38:46 BREAKER open → half-open (cooldown de 2s cumplido)
+2026/10/10 21:38:46 BREAKER half-open → open (prueba 1/3 en half-open falló)
+2026/10/10 21:38:48 BREAKER open → half-open (cooldown de 2s cumplido)
+2026/10/10 21:38:48 BREAKER half-open → open (prueba 1/3 en half-open falló)
+2026/10/10 21:38:49 recibidos=1752207 aplicados=1752207 (20001 ev/s) ventana=1697453 llaves heap=157 MiB inválidos=0 | inventario: confirmados=4204/456732 buffer=452496 (mem=48319 disco=404177, nivel=spilling, más viejo=133.6s) breaker=open límite=2.0 llamadas/s
+2026/10/10 21:38:50 BREAKER open → half-open (cooldown de 2s cumplido)
+2026/10/10 21:38:50 BREAKER half-open → open (prueba 1/3 en half-open falló)
+2026/10/10 21:38:52 BREAKER open → half-open (cooldown de 2s cumplido)
+2026/10/10 21:38:52 BREAKER half-open → open (prueba 1/3 en half-open falló)
+2026/10/10 21:38:54 BREAKER open → half-open (cooldown de 2s cumplido)
+2026/10/10 21:38:55 BREAKER half-open → closed (3/3 pruebas OK en half-open)
+2026/10/10 21:38:55 recibidos=1872205 aplicados=1872205 (20000 ev/s) ventana=1812758 llaves heap=97 MiB inválidos=0 | inventario: confirmados=4207/488086 buffer=483847 (mem=48316 disco=435531, nivel=spilling, más viejo=139.6s) breaker=closed límite=4.0 llamadas/s
+2026/10/10 21:39:01 recibidos=1992210 aplicados=1992210 (20000 ev/s) ventana=1930082 llaves heap=127 MiB inválidos=0 | inventario: confirmados=4231/519435 buffer=515172 (mem=48292 disco=466880, nivel=spilling, más viejo=145.5s) breaker=closed límite=6.0 llamadas/s
+2026/10/10 21:39:07 recibidos=2112215 aplicados=2112215 (20002 ev/s) ventana=2046413 llaves heap=180 MiB inválidos=0 | inventario: confirmados=4260/550703 buffer=546411 (mem=48263 disco=498148, nivel=spilling, más viejo=151.5s) breaker=closed límite=8.0 llamadas/s
+2026/10/10 21:39:13 recibidos=2232212 aplicados=2232212 (19998 ev/s) ventana=2162771 llaves heap=151 MiB inválidos=0 | inventario: confirmados=4300/582065 buffer=577733 (mem=48223 disco=529510, nivel=spilling, más viejo=157.4s) breaker=closed límite=10.0 llamadas/s
+2026/10/10 21:39:19 recibidos=2352211 aplicados=2352211 (20002 ev/s) ventana=2279101 llaves heap=195 MiB inválidos=0 | inventario: confirmados=4354/613416 buffer=609030 (mem=48169 disco=560861, nivel=spilling, más viejo=163.3s) breaker=closed límite=16.0 llamadas/s
+2026/10/10 21:39:24 recibidos=2452203 aplicados=2452203 (19998 ev/s) ventana=2375619 llaves heap=195 MiB inválidos=0 | inventario: confirmados=4426/639506 buffer=635048 (mem=48097 disco=586951, nivel=spilling, más viejo=168.2s) breaker=closed límite=20.0 llamadas/s
+2026/10/10 21:39:30 recibidos=2525221 aplicados=2525217 (12170 ev/s) ventana=2447197 llaves heap=169 MiB inválidos=0 | inventario: confirmados=4568/658555 buffer=653955 (mem=47955 disco=606000, nivel=spilling, más viejo=173.9s) breaker=closed límite=32.0 llamadas/s
+2026/10/10 21:39:35 recibidos=2535220 aplicados=2535220 (2001 ev/s) ventana=2457139 llaves heap=194 MiB inválidos=0 | inventario: confirmados=4745/661150 buffer=656373 (mem=47778 disco=608595, nivel=spilling, más viejo=178.6s) breaker=closed límite=42.0 llamadas/s
+2026/10/10 21:39:40 recibidos=2545219 aplicados=2545219 (2000 ev/s) ventana=2467068 llaves heap=220 MiB inválidos=0 | inventario: confirmados=4975/663755 buffer=658748 (mem=47548 disco=611200, nivel=spilling, más viejo=183.1s) breaker=closed límite=52.0 llamadas/s
+2026/10/10 21:39:46 recibidos=2557221 aplicados=2557221 (2000 ev/s) ventana=2478022 llaves heap=253 MiB inválidos=0 | inventario: confirmados=5303/666890 buffer=661555 (mem=47220 disco=614335, nivel=spilling, más viejo=188.5s) breaker=closed límite=46.5 llamadas/s
+2026/10/10 21:39:51 recibidos=2567220 aplicados=2567220 (2000 ev/s) ventana=2486991 llaves heap=162 MiB inválidos=0 | inventario: confirmados=5504/669525 buffer=663989 (mem=47019 disco=616970, nivel=spilling, más viejo=193.1s) breaker=closed límite=42.9 llamadas/s
+2026/10/10 21:39:57 recibidos=2579219 aplicados=2579219 (2000 ev/s) ventana=2499938 llaves heap=195 MiB inválidos=0 | inventario: confirmados=5788/672643 buffer=666823 (mem=46735 disco=620088, nivel=spilling, más viejo=198.6s) breaker=closed límite=54.9 llamadas/s
+2026/10/10 21:40:02 recibidos=2589220 aplicados=2589220 (2000 ev/s) ventana=2508908 llaves heap=223 MiB inválidos=0 | inventario: confirmados=6058/675215 buffer=669125 (mem=46465 disco=622660, nivel=spilling, más viejo=203.1s) breaker=closed límite=47.2 llamadas/s
+2026/10/10 21:40:07 recibidos=2599218 aplicados=2599218 (2000 ev/s) ventana=2518830 llaves heap=249 MiB inválidos=0 | inventario: confirmados=6266/677807 buffer=671509 (mem=46257 disco=625252, nivel=spilling, más viejo=207.6s) breaker=closed límite=43.4 llamadas/s
+2026/10/10 21:40:13 recibidos=2611220 aplicados=2611220 (2000 ev/s) ventana=2530766 llaves heap=152 MiB inválidos=0 | inventario: confirmados=6552/680952 buffer=674368 (mem=45971 disco=628397, nivel=spilling, más viejo=213.1s) breaker=closed límite=55.4 llamadas/s
+2026/10/10 21:40:19 recibidos=2623216 aplicados=2623216 (2000 ev/s) ventana=2542679 llaves heap=183 MiB inválidos=0 | inventario: confirmados=6866/684038 buffer=677140 (mem=45657 disco=631483, nivel=spilling, más viejo=218.5s) breaker=closed límite=36.5 llamadas/s
+2026/10/10 21:40:24 recibidos=2633219 aplicados=2633219 (2001 ev/s) ventana=2550616 llaves heap=209 MiB inválidos=0 | inventario: confirmados=7060/686636 buffer=679544 (mem=45463 disco=634081, nivel=spilling, más viejo=223.1s) breaker=closed límite=44.5 llamadas/s
+2026/10/10 21:40:30 recibidos=2645218 aplicados=2645218 (2000 ev/s) ventana=2563527 llaves heap=243 MiB inválidos=0 | inventario: confirmados=7362/689779 buffer=682385 (mem=45161 disco=637224, nivel=spilling, más viejo=228.5s) breaker=closed límite=56.5 llamadas/s
+2026/10/10 21:40:36 recibidos=2657217 aplicados=2657217 (2000 ev/s) ventana=2574458 llaves heap=275 MiB inválidos=0 | inventario: confirmados=7667/692903 buffer=685204 (mem=44856 disco=640348, nivel=spilling, más viejo=233.9s) breaker=closed límite=37.2 llamadas/s
+2026/10/10 21:40:42 recibidos=2669217 aplicados=2669217 (2000 ev/s) ventana=2587374 llaves heap=174 MiB inválidos=0 | inventario: confirmados=7920/696030 buffer=688078 (mem=44603 disco=643475, nivel=spilling, más viejo=239.4s) breaker=closed límite=49.2 llamadas/s
+2026/10/10 21:40:47 recibidos=2679217 aplicados=2679217 (2000 ev/s) ventana=2596325 llaves heap=201 MiB inválidos=0 | inventario: confirmados=8187/698637 buffer=690418 (mem=44336 disco=646082, nivel=spilling, más viejo=243.9s) breaker=closed límite=59.2 llamadas/s
+2026/10/10 21:40:53 recibidos=2691217 aplicados=2691217 (2000 ev/s) ventana=2608204 llaves heap=233 MiB inválidos=0 | inventario: confirmados=8478/701760 buffer=693250 (mem=44045 disco=649205, nivel=spilling, más viejo=249.4s) breaker=closed límite=39.5 llamadas/s
+2026/10/10 21:40:59 recibidos=2703219 aplicados=2703219 (2000 ev/s) ventana=2620134 llaves heap=267 MiB inválidos=0 | inventario: confirmados=8742/704908 buffer=696134 (mem=43781 disco=652353, nivel=spilling, más viejo=254.9s) breaker=closed límite=51.5 llamadas/s
+2026/10/10 21:41:04 recibidos=2713219 aplicados=2713219 (2000 ev/s) ventana=2629082 llaves heap=161 MiB inválidos=0 | inventario: confirmados=9019/707488 buffer=698437 (mem=43504 disco=654933, nivel=spilling, más viejo=259.4s) breaker=closed límite=61.5 llamadas/s
+2026/10/10 21:41:09 recibidos=2723221 aplicados=2723221 (2000 ev/s) ventana=2640005 llaves heap=186 MiB inválidos=0 | inventario: confirmados=9228/710126 buffer=700866 (mem=43295 disco=657571, nivel=spilling, más viejo=263.9s) breaker=closed límite=40.6 llamadas/s
+2026/10/10 21:41:15 recibidos=2735220 aplicados=2735220 (2000 ev/s) ventana=2650969 llaves heap=217 MiB inválidos=0 | inventario: confirmados=9497/713293 buffer=703764 (mem=43026 disco=660738, nivel=spilling, más viejo=269.4s) breaker=closed límite=52.6 llamadas/s
+2026/10/10 21:41:20 recibidos=2745218 aplicados=2745218 (2000 ev/s) ventana=2660898 llaves heap=247 MiB inválidos=0 | inventario: confirmados=9777/715907 buffer=706098 (mem=42746 disco=663352, nivel=spilling, más viejo=273.9s) breaker=closed límite=62.6 llamadas/s
+2026/10/10 21:41:25 recibidos=2755220 aplicados=2755220 (2000 ev/s) ventana=2669859 llaves heap=157 MiB inválidos=0 | inventario: confirmados=9993/718549 buffer=708524 (mem=42530 disco=665994, nivel=spilling, más viejo=278.5s) breaker=closed límite=41.2 llamadas/s
+2026/10/10 21:41:30 recibidos=2765218 aplicados=2765218 (2000 ev/s) ventana=2630696 llaves heap=192 MiB inválidos=0 | inventario: confirmados=10213/721164 buffer=710919 (mem=42310 disco=668609, nivel=spilling, más viejo=283.0s) breaker=closed límite=51.2 llamadas/s
+2026/10/10 21:41:36 recibidos=2777220 aplicados=2777220 (2000 ev/s) ventana=2634322 llaves heap=224 MiB inválidos=0 | inventario: confirmados=10540/724293 buffer=713721 (mem=41983 disco=671738, nivel=spilling, más viejo=288.4s) breaker=closed límite=61.2 llamadas/s
+2026/10/10 21:41:41 recibidos=2787220 aplicados=2787220 (2000 ev/s) ventana=2643251 llaves heap=250 MiB inválidos=0 | inventario: confirmados=10765/726885 buffer=716088 (mem=41758 disco=674330, nivel=spilling, más viejo=293.0s) breaker=closed límite=39.6 llamadas/s
+2026/10/10 21:41:47 recibidos=2799217 aplicados=2799217 (2000 ev/s) ventana=2656146 llaves heap=281 MiB inválidos=0 | inventario: confirmados=11033/730008 buffer=718943 (mem=41490 disco=677453, nivel=spilling, más viejo=298.5s) breaker=closed límite=51.6 llamadas/s
+2026/10/10 21:41:52 recibidos=2809222 aplicados=2809219 (2000 ev/s) ventana=2666101 llaves heap=165 MiB inválidos=0 | inventario: confirmados=11312/732603 buffer=721259 (mem=41211 disco=680048, nivel=spilling, más viejo=302.9s) breaker=closed límite=61.6 llamadas/s
+2026/10/10 21:41:58 recibidos=2821219 aplicados=2821219 (2000 ev/s) ventana=2656040 llaves heap=196 MiB inválidos=0 | inventario: confirmados=11560/735756 buffer=724164 (mem=40963 disco=683201, nivel=spilling, más viejo=308.5s) breaker=closed límite=42.6 llamadas/s
+2026/10/10 21:42:04 recibidos=2833218 aplicados=2833218 (2000 ev/s) ventana=2630747 llaves heap=228 MiB inválidos=0 | inventario: confirmados=11843/738913 buffer=727038 (mem=40680 disco=686358, nivel=spilling, más viejo=313.9s) breaker=closed límite=54.6 llamadas/s
+2026/10/10 21:42:09 recibidos=2843220 aplicados=2843220 (2000 ev/s) ventana=2639686 llaves heap=255 MiB inválidos=0 | inventario: confirmados=12111/741507 buffer=729364 (mem=40412 disco=688952, nivel=spilling, más viejo=318.4s) breaker=closed límite=47.0 llamadas/s
+2026/10/10 21:42:14 recibidos=2853218 aplicados=2853218 (2000 ev/s) ventana=2648634 llaves heap=280 MiB inválidos=0 | inventario: confirmados=12318/744092 buffer=731742 (mem=40205 disco=691537, nivel=spilling, más viejo=323.0s) breaker=closed límite=43.2 llamadas/s
+2026/10/10 21:42:20 recibidos=2865221 aplicados=2865218 (2000 ev/s) ventana=2661569 llaves heap=169 MiB inválidos=0 | inventario: confirmados=12603/747219 buffer=734584 (mem=39920 disco=694664, nivel=spilling, más viejo=328.5s) breaker=closed límite=55.2 llamadas/s
+2026/10/10 21:42:25 recibidos=2875220 aplicados=2875220 (2000 ev/s) ventana=2671497 llaves heap=195 MiB inválidos=0 | inventario: confirmados=12868/749840 buffer=736940 (mem=39655 disco=697285, nivel=spilling, más viejo=333.0s) breaker=closed límite=47.4 llamadas/s
+2026/10/10 21:42:31 recibidos=2887220 aplicados=2887220 (2000 ev/s) ventana=2108367 llaves heap=228 MiB inválidos=0 | inventario: confirmados=13123/752991 buffer=739836 (mem=39400 disco=700436, nivel=spilling, más viejo=338.5s) breaker=closed límite=45.6 llamadas/s
+2026/10/10 21:42:37 recibidos=2899218 aplicados=2899218 (2000 ev/s) ventana=2120307 llaves heap=259 MiB inválidos=0 | inventario: confirmados=13419/756114 buffer=742663 (mem=39104 disco=703559, nivel=spilling, más viejo=343.9s) breaker=closed límite=57.6 llamadas/s
+2026/10/10 21:42:43 recibidos=2911219 aplicados=2911219 (2000 ev/s) ventana=2130249 llaves heap=292 MiB inválidos=0 | inventario: confirmados=13738/759225 buffer=745455 (mem=38785 disco=706670, nivel=spilling, más viejo=349.3s) breaker=closed límite=35.8 llamadas/s
+2026/10/10 21:42:49 recibidos=2923219 aplicados=2923219 (2000 ev/s) ventana=2144178 llaves heap=161 MiB inválidos=0 | inventario: confirmados=13984/762381 buffer=748365 (mem=38539 disco=709826, nivel=spilling, más viejo=354.9s) breaker=closed límite=47.8 llamadas/s
+2026/10/10 21:42:55 recibidos=2935218 aplicados=2935218 (2000 ev/s) ventana=2153137 llaves heap=192 MiB inválidos=0 | inventario: confirmados=14303/765522 buffer=751187 (mem=38220 disco=712967, nivel=spilling, más viejo=360.2s) breaker=closed límite=59.8 llamadas/s
+2026/10/10 21:43:01 recibidos=2947219 aplicados=2947219 (2000 ev/s) ventana=1584559 llaves heap=225 MiB inválidos=0 | inventario: confirmados=14585/768665 buffer=754048 (mem=37938 disco=716110, nivel=spilling, más viejo=365.7s) breaker=closed límite=39.9 llamadas/s
+2026/10/10 21:43:07 recibidos=2959216 aplicados=2959216 (2000 ev/s) ventana=1594479 llaves heap=256 MiB inválidos=0 | inventario: confirmados=14855/771802 buffer=756915 (mem=37668 disco=719247, nivel=spilling, más viejo=371.1s) breaker=closed límite=51.9 llamadas/s
+2026/10/10 21:43:13 recibidos=2971220 aplicados=2971220 (2001 ev/s) ventana=1607393 llaves heap=145 MiB inválidos=0 | inventario: confirmados=15183/774920 buffer=759705 (mem=37340 disco=722365, nivel=spilling, más viejo=376.5s) breaker=closed límite=46.4 llamadas/s
+2026/10/10 21:43:18 recibidos=2981217 aplicados=2981217 (1999 ev/s) ventana=1617324 llaves heap=170 MiB inválidos=0 | inventario: confirmados=15380/777528 buffer=762116 (mem=37143 disco=724973, nivel=spilling, más viejo=381.1s) breaker=closed límite=42.8 llamadas/s
+2026/10/10 21:43:24 recibidos=2993218 aplicados=2993218 (2000 ev/s) ventana=1627265 llaves heap=201 MiB inválidos=0 | inventario: confirmados=15664/780669 buffer=764973 (mem=36859 disco=728114, nivel=spilling, más viejo=386.6s) breaker=closed límite=54.8 llamadas/s
+2026/10/10 21:43:30 recibidos=3005217 aplicados=3005217 (2000 ev/s) ventana=1058626 llaves heap=109 MiB inválidos=0 | inventario: confirmados=15993/783816 buffer=767791 (mem=36530 disco=731261, nivel=spilling, más viejo=392.0s) breaker=closed límite=35.3 llamadas/s
+2026/10/10 21:43:35 recibidos=3015218 aplicados=3015218 (2000 ev/s) ventana=1066584 llaves heap=133 MiB inválidos=0 | inventario: confirmados=16190/786445 buffer=770223 (mem=36333 disco=733890, nivel=spilling, más viejo=396.6s) breaker=closed límite=45.3 llamadas/s
+2026/10/10 21:43:40 recibidos=3025218 aplicados=3025218 (2000 ev/s) ventana=1075525 llaves heap=160 MiB inválidos=0 | inventario: confirmados=16432/789080 buffer=772616 (mem=36091 disco=736525, nivel=spilling, más viejo=401.1s) breaker=closed límite=55.3 llamadas/s
+2026/10/10 21:43:46 recibidos=3037220 aplicados=3037220 (2000 ev/s) ventana=1088442 llaves heap=106 MiB inválidos=0 | inventario: confirmados=16765/792199 buffer=775402 (mem=35758 disco=739644, nivel=spilling, más viejo=406.5s) breaker=closed límite=35.6 llamadas/s
+2026/10/10 21:43:51 recibidos=3047219 aplicados=3047219 (2000 ev/s) ventana=1098365 llaves heap=128 MiB inválidos=0 | inventario: confirmados=16963/794809 buffer=777814 (mem=35560 disco=742254, nivel=spilling, más viejo=411.1s) breaker=closed límite=45.6 llamadas/s
+2026/10/10 21:43:57 recibidos=3059220 aplicados=3059220 (2000 ev/s) ventana=1109314 llaves heap=162 MiB inválidos=0 | inventario: confirmados=17260/797959 buffer=780667 (mem=35263 disco=745404, nivel=spilling, más viejo=416.5s) breaker=closed límite=57.6 llamadas/s
+2026/10/10 21:44:03 recibidos=3071219 aplicados=3071219 (2000 ev/s) ventana=539554 llaves heap=89 MiB inválidos=0 | inventario: confirmados=17557/801109 buffer=783520 (mem=34966 disco=748554, nivel=spilling, más viejo=422.0s) breaker=closed límite=36.7 llamadas/s
+2026/10/10 21:44:09 recibidos=3083218 aplicados=3083218 (2000 ev/s) ventana=549510 llaves heap=117 MiB inválidos=0 | inventario: confirmados=17809/804254 buffer=786413 (mem=34714 disco=751699, nivel=spilling, más viejo=427.5s) breaker=closed límite=48.7 llamadas/s
+2026/10/10 21:44:15 recibidos=3095218 aplicados=3095218 (2000 ev/s) ventana=563467 llaves heap=149 MiB inválidos=0 | inventario: confirmados=18134/807419 buffer=789253 (mem=34389 disco=754864, nivel=spilling, más viejo=432.9s) breaker=closed límite=60.7 llamadas/s
+2026/10/10 21:44:20 recibidos=3105220 aplicados=3105220 (2000 ev/s) ventana=571405 llaves heap=104 MiB inválidos=0 | inventario: confirmados=18360/809993 buffer=791601 (mem=34163 disco=757438, nivel=spilling, más viejo=437.5s) breaker=closed límite=39.2 llamadas/s
+2026/10/10 21:44:25 recibidos=3115221 aplicados=3115221 (2000 ev/s) ventana=579355 llaves heap=129 MiB inválidos=0 | inventario: confirmados=18576/812622 buffer=794014 (mem=33947 disco=760067, nivel=spilling, más viejo=442.1s) breaker=closed límite=49.2 llamadas/s
+2026/10/10 21:44:31 pipeline principal terminado: 3126750 eventos aplicados; drenando 796669 verificaciones pendientes de inventario
+2026/10/10 21:44:55 drenando 47.8 confirmaciones/s, ETA 4h37m34s | inventario: confirmados=20009/815590 buffer=795549 (mem=32514 disco=763035, nivel=spilling, más viejo=469.3s) breaker=closed límite=46.6 llamadas/s
+2026/10/10 21:45:26 drenando 47.9 confirmaciones/s, ETA 4h36m27s | inventario: confirmados=21493/815590 buffer=794065 (mem=31030 disco=763035, nivel=spilling, más viejo=497.5s) breaker=closed límite=43.6 llamadas/s
+2026/10/10 21:45:57 drenando 47.6 confirmaciones/s, ETA 4h37m26s | inventario: confirmados=22969/815590 buffer=792589 (mem=29554 disco=763035, nivel=spilling, más viejo=525.7s) breaker=closed límite=43.2 llamadas/s
+2026/10/10 21:46:27 drenando 48.7 confirmaciones/s, ETA 4h30m56s | inventario: confirmados=24429/815590 buffer=791129 (mem=28094 disco=763035, nivel=spilling, más viejo=552.9s) breaker=closed límite=37.8 llamadas/s
+2026/10/10 21:46:58 drenando 47.5 confirmaciones/s, ETA 4h37m21s | inventario: confirmados=25900/815590 buffer=789658 (mem=26623 disco=763035, nivel=spilling, más viejo=581.0s) breaker=closed límite=37.3 llamadas/s
+2026/10/10 21:47:29 drenando 47.8 confirmaciones/s, ETA 4h34m58s | inventario: confirmados=27381/815590 buffer=788177 (mem=25142 disco=763035, nivel=spilling, más viejo=609.1s) breaker=closed límite=36.7 llamadas/s
+2026/10/10 21:48:00 drenando 48.0 confirmaciones/s, ETA 4h33m9s | inventario: confirmados=28869/815590 buffer=786689 (mem=23654 disco=763035, nivel=spilling, más viejo=637.3s) breaker=closed límite=47.4 llamadas/s
+2026/10/10 21:48:31 drenando 47.4 confirmaciones/s, ETA 4h36m21s | inventario: confirmados=30337/815590 buffer=785221 (mem=22186 disco=763035, nivel=spilling, más viejo=665.5s) breaker=closed límite=47.0 llamadas/s
+2026/10/10 21:49:01 drenando 47.7 confirmaciones/s, ETA 4h33m40s | inventario: confirmados=31769/815590 buffer=783789 (mem=20754 disco=763035, nivel=spilling, más viejo=693.5s) breaker=closed límite=61.6 llamadas/s
+2026/10/10 21:49:32 drenando 47.2 confirmaciones/s, ETA 4h36m16s | inventario: confirmados=33232/815590 buffer=782326 (mem=19291 disco=763035, nivel=spilling, más viejo=724.2s) breaker=closed límite=59.2 llamadas/s
+2026/10/10 21:50:03 drenando 47.6 confirmaciones/s, ETA 4h33m19s | inventario: confirmados=34708/815590 buffer=780850 (mem=17815 disco=763035, nivel=spilling, más viejo=755.0s) breaker=closed límite=57.8 llamadas/s
+2026/10/10 21:50:33 drenando 47.0 confirmaciones/s, ETA 4h36m35s | inventario: confirmados=36117/815590 buffer=779441 (mem=16406 disco=763035, nivel=spilling, más viejo=784.7s) breaker=closed límite=53.3 llamadas/s
+2026/10/10 21:51:04 drenando 47.6 confirmaciones/s, ETA 4h32m30s | inventario: confirmados=37592/815590 buffer=777966 (mem=14931 disco=763035, nivel=spilling, más viejo=815.4s) breaker=closed límite=52.7 llamadas/s
+2026/10/10 21:51:34 drenando 47.4 confirmaciones/s, ETA 4h32m51s | inventario: confirmados=39015/815590 buffer=776543 (mem=13508 disco=763035, nivel=spilling, más viejo=845.1s) breaker=closed límite=47.6 llamadas/s
+2026/10/10 21:52:04 drenando 47.7 confirmaciones/s, ETA 4h30m38s | inventario: confirmados=40447/815590 buffer=775111 (mem=12076 disco=763035, nivel=spilling, más viejo=874.9s) breaker=closed límite=45.2 llamadas/s
+2026/10/10 21:52:34 drenando 47.9 confirmaciones/s, ETA 4h29m23s | inventario: confirmados=41883/815590 buffer=773675 (mem=10640 disco=763035, nivel=spilling, más viejo=904.6s) breaker=closed límite=42.6 llamadas/s
+2026/10/10 21:53:05 drenando 48.1 confirmaciones/s, ETA 4h27m45s | inventario: confirmados=43373/815590 buffer=772185 (mem=9150 disco=763035, nivel=spilling, más viejo=935.3s) breaker=closed límite=39.6 llamadas/s
+2026/10/10 21:53:35 drenando 48.0 confirmaciones/s, ETA 4h27m26s | inventario: confirmados=44814/815590 buffer=770744 (mem=7709 disco=763035, nivel=spilling, más viejo=965.0s) breaker=closed límite=37.2 llamadas/s
+2026/10/10 21:54:06 drenando 48.3 confirmaciones/s, ETA 4h25m18s | inventario: confirmados=46312/815590 buffer=769246 (mem=6211 disco=763035, nivel=spilling, más viejo=995.7s) breaker=closed límite=47.7 llamadas/s
+2026/10/10 21:54:36 drenando 48.2 confirmaciones/s, ETA 4h25m40s | inventario: confirmados=47757/815590 buffer=767801 (mem=4766 disco=763035, nivel=spilling, más viejo=1025.5s) breaker=closed límite=61.9 llamadas/s
+2026/10/10 21:55:07 drenando 47.3 confirmaciones/s, ETA 4h30m16s | inventario: confirmados=49222/815590 buffer=766336 (mem=3301 disco=763035, nivel=spilling, más viejo=1056.2s) breaker=closed límite=61.3 llamadas/s
+2026/10/10 21:55:38 drenando 47.6 confirmaciones/s, ETA 4h27m43s | inventario: confirmados=50698/815590 buffer=764860 (mem=1825 disco=763035, nivel=spilling, más viejo=1086.9s) breaker=closed límite=57.8 llamadas/s
+2026/10/10 21:56:08 drenando 47.7 confirmaciones/s, ETA 4h26m33s | inventario: confirmados=52130/815590 buffer=763428 (mem=393 disco=763035, nivel=spilling, más viejo=1116.6s) breaker=closed límite=54.8 llamadas/s
+2026/10/10 21:56:39 drenando 47.9 confirmaciones/s, ETA 4h25m16s | inventario: confirmados=53614/815590 buffer=761944 (mem=48909 disco=713035, nivel=spilling, más viejo=1147.3s) breaker=closed límite=51.6 llamadas/s
+2026/10/10 21:57:10 drenando 47.9 confirmaciones/s, ETA 4h24m45s | inventario: confirmados=55098/815590 buffer=760460 (mem=47425 disco=713035, nivel=spilling, más viejo=1178.1s) breaker=closed límite=50.8 llamadas/s
+2026/10/10 21:57:40 drenando 48.2 confirmaciones/s, ETA 4h22m27s | inventario: confirmados=56544/815590 buffer=759014 (mem=45979 disco=713035, nivel=spilling, más viejo=1207.8s) breaker=closed límite=45.6 llamadas/s
+2026/10/10 21:58:10 drenando 47.8 confirmaciones/s, ETA 4h24m20s | inventario: confirmados=57977/815590 buffer=757581 (mem=44546 disco=713035, nivel=spilling, más viejo=1237.5s) breaker=closed límite=43.2 llamadas/s
+2026/10/10 21:58:41 drenando 47.6 confirmaciones/s, ETA 4h24m29s | inventario: confirmados=59454/815590 buffer=756104 (mem=43069 disco=713035, nivel=spilling, más viejo=1268.2s) breaker=closed límite=42.6 llamadas/s
+2026/10/10 21:59:12 drenando 48.3 confirmaciones/s, ETA 4h20m26s | inventario: confirmados=60951/815590 buffer=754607 (mem=41572 disco=713035, nivel=spilling, más viejo=1298.9s) breaker=closed límite=39.6 llamadas/s
+2026/10/10 21:59:42 drenando 47.8 confirmaciones/s, ETA 4h22m36s | inventario: confirmados=62385/815590 buffer=753173 (mem=40138 disco=713035, nivel=spilling, más viejo=1328.7s) breaker=closed límite=37.2 llamadas/s
+2026/10/10 22:00:13 drenando 47.8 confirmaciones/s, ETA 4h22m14s | inventario: confirmados=63866/815590 buffer=751692 (mem=38657 disco=713035, nivel=spilling, más viejo=1359.4s) breaker=closed límite=35.1 llamadas/s
+2026/10/10 22:00:44 drenando 47.5 confirmaciones/s, ETA 4h23m30s | inventario: confirmados=65337/815590 buffer=750221 (mem=37186 disco=713035, nivel=spilling, más viejo=1390.1s) breaker=closed límite=35.1 llamadas/s
+2026/10/10 22:01:14 drenando 46.9 confirmaciones/s, ETA 4h26m6s | inventario: confirmados=66744/815590 buffer=748814 (mem=35779 disco=713035, nivel=spilling, más viejo=1419.8s) breaker=closed límite=62.4 llamadas/s
+2026/10/10 22:01:45 drenando 47.3 confirmaciones/s, ETA 4h23m34s | inventario: confirmados=68209/815590 buffer=747349 (mem=34314 disco=713035, nivel=spilling, más viejo=1450.5s) breaker=closed límite=62.4 llamadas/s
+2026/10/10 22:02:15 drenando 46.9 confirmaciones/s, ETA 4h24m54s | inventario: confirmados=69617/815590 buffer=745941 (mem=32906 disco=713035, nivel=spilling, más viejo=1480.3s) breaker=closed límite=57.5 llamadas/s
+2026/10/10 22:02:46 drenando 47.3 confirmaciones/s, ETA 4h22m11s | inventario: confirmados=71084/815590 buffer=744474 (mem=31439 disco=713035, nivel=spilling, más viejo=1511.0s) breaker=closed límite=57.2 llamadas/s
+2026/10/10 22:03:17 drenando 47.3 confirmaciones/s, ETA 4h21m51s | inventario: confirmados=72550/815590 buffer=743008 (mem=29973 disco=713035, nivel=spilling, más viejo=1541.7s) breaker=closed límite=54.6 llamadas/s
+2026/10/10 22:03:47 drenando 47.3 confirmaciones/s, ETA 4h21m29s | inventario: confirmados=73968/815590 buffer=741590 (mem=28555 disco=713035, nivel=spilling, más viejo=1571.4s) breaker=closed límite=51.6 llamadas/s
+2026/10/10 22:04:17 drenando 47.5 confirmaciones/s, ETA 4h19m53s | inventario: confirmados=75392/815590 buffer=740166 (mem=27131 disco=713035, nivel=spilling, más viejo=1601.2s) breaker=closed límite=47.2 llamadas/s
+2026/10/10 22:04:47 drenando 47.6 confirmaciones/s, ETA 4h18m50s | inventario: confirmados=76819/815590 buffer=738739 (mem=25704 disco=713035, nivel=spilling, más viejo=1630.9s) breaker=closed límite=43.1 llamadas/s
+2026/10/10 22:05:18 drenando 48.2 confirmaciones/s, ETA 4h14m47s | inventario: confirmados=78314/815590 buffer=737244 (mem=24209 disco=713035, nivel=spilling, más viejo=1661.6s) breaker=closed límite=41.7 llamadas/s
+2026/10/10 22:05:49 drenando 48.2 confirmaciones/s, ETA 4h14m36s | inventario: confirmados=79807/815590 buffer=735751 (mem=22716 disco=713035, nivel=spilling, más viejo=1692.3s) breaker=closed límite=39.3 llamadas/s
+2026/10/10 22:06:19 drenando 48.6 confirmaciones/s, ETA 4h11m38s | inventario: confirmados=81266/815590 buffer=734292 (mem=21257 disco=713035, nivel=spilling, más viejo=1722.0s) breaker=closed límite=34.6 llamadas/s
+2026/10/10 22:06:50 drenando 47.3 confirmaciones/s, ETA 4h18m5s | inventario: confirmados=82733/815590 buffer=732825 (mem=19790 disco=713035, nivel=spilling, más viejo=1752.7s) breaker=closed límite=47.4 llamadas/s
+2026/10/10 22:07:21 drenando 47.7 confirmaciones/s, ETA 4h15m39s | inventario: confirmados=84211/815590 buffer=731347 (mem=18312 disco=713035, nivel=spilling, más viejo=1783.5s) breaker=closed límite=62.6 llamadas/s
+2026/10/10 22:07:52 drenando 47.5 confirmaciones/s, ETA 4h16m10s | inventario: confirmados=85683/815590 buffer=729875 (mem=16840 disco=713035, nivel=spilling, más viejo=1814.2s) breaker=closed límite=62.4 llamadas/s
+2026/10/10 22:08:22 drenando 47.4 confirmaciones/s, ETA 4h16m19s | inventario: confirmados=87104/815590 buffer=728454 (mem=15419 disco=713035, nivel=spilling, más viejo=1843.9s) breaker=closed límite=57.5 llamadas/s
+2026/10/10 22:08:53 drenando 47.1 confirmaciones/s, ETA 4h17m16s | inventario: confirmados=88564/815590 buffer=726994 (mem=13959 disco=713035, nivel=spilling, más viejo=1874.6s) breaker=closed límite=55.2 llamadas/s
+2026/10/10 22:09:24 drenando 47.5 confirmaciones/s, ETA 4h14m39s | inventario: confirmados=90036/815590 buffer=725522 (mem=12487 disco=713035, nivel=spilling, más viejo=1905.3s) breaker=closed límite=54.6 llamadas/s
+2026/10/10 22:09:54 drenando 47.7 confirmaciones/s, ETA 4h13m10s | inventario: confirmados=91466/815590 buffer=724092 (mem=11057 disco=713035, nivel=spilling, más viejo=1935.1s) breaker=closed límite=49.6 llamadas/s
+2026/10/10 22:10:25 drenando 47.2 confirmaciones/s, ETA 4h15m1s | inventario: confirmados=92930/815590 buffer=722628 (mem=9593 disco=713035, nivel=spilling, más viejo=1965.8s) breaker=closed límite=49.2 llamadas/s
+2026/10/10 22:10:56 drenando 47.7 confirmaciones/s, ETA 4h12m5s | inventario: confirmados=94408/815590 buffer=721150 (mem=8115 disco=713035, nivel=spilling, más viejo=1996.5s) breaker=closed límite=46.6 llamadas/s
+2026/10/10 22:11:26 drenando 48.1 confirmaciones/s, ETA 4h9m12s | inventario: confirmados=95852/815590 buffer=719706 (mem=6671 disco=713035, nivel=spilling, más viejo=2026.2s) breaker=closed límite=43.6 llamadas/s
+2026/10/10 22:11:57 drenando 48.1 confirmaciones/s, ETA 4h9m2s | inventario: confirmados=97342/815590 buffer=718216 (mem=5181 disco=713035, nivel=spilling, más viejo=2056.9s) breaker=closed límite=39.9 llamadas/s
+2026/10/10 22:12:28 drenando 47.7 confirmaciones/s, ETA 4h10m33s | inventario: confirmados=98820/815590 buffer=716738 (mem=3703 disco=713035, nivel=spilling, más viejo=2087.6s) breaker=closed límite=39.3 llamadas/s
+2026/10/10 22:12:59 drenando 48.0 confirmaciones/s, ETA 4h8m21s | inventario: confirmados=100308/815590 buffer=715250 (mem=2215 disco=713035, nivel=spilling, más viejo=2118.4s) breaker=closed límite=38.7 llamadas/s
+2026/10/10 22:13:30 drenando 48.3 confirmaciones/s, ETA 4h6m30s | inventario: confirmados=101804/815590 buffer=713754 (mem=719 disco=713035, nivel=spilling, más viejo=2149.1s) breaker=closed límite=35.6 llamadas/s
+2026/10/10 22:14:01 drenando 47.4 confirmaciones/s, ETA 4h10m20s | inventario: confirmados=103274/815590 buffer=712284 (mem=49249 disco=663035, nivel=spilling, más viejo=2179.8s) breaker=closed límite=35.2 llamadas/s
+2026/10/10 22:14:32 drenando 47.6 confirmaciones/s, ETA 4h8m48s | inventario: confirmados=104750/815590 buffer=710808 (mem=47773 disco=663035, nivel=spilling, más viejo=2210.5s) breaker=closed límite=63.6 llamadas/s
+2026/10/10 22:15:02 drenando 47.5 confirmaciones/s, ETA 4h8m54s | inventario: confirmados=106175/815590 buffer=709383 (mem=46348 disco=663035, nivel=spilling, más viejo=2240.2s) breaker=closed límite=60.7 llamadas/s
+2026/10/10 22:15:04 BREAKER closed → open (5 fallos consecutivos)
+2026/10/10 22:15:06 BREAKER open → half-open (cooldown de 2s cumplido)
+2026/10/10 22:15:06 BREAKER half-open → closed (3/3 pruebas OK en half-open)
+2026/10/10 22:15:33 drenando 37.1 confirmaciones/s, ETA 5h17m54s | inventario: confirmados=107326/815590 buffer=708232 (mem=45197 disco=663035, nivel=spilling, más viejo=2271.0s) breaker=closed límite=38.7 llamadas/s
+2026/10/10 22:16:04 drenando 47.7 confirmaciones/s, ETA 4h6m43s | inventario: confirmados=108806/815590 buffer=706752 (mem=43717 disco=663035, nivel=spilling, más viejo=2301.7s) breaker=closed límite=38.5 llamadas/s
+2026/10/10 22:16:35 drenando 48.5 confirmaciones/s, ETA 4h2m6s | inventario: confirmados=110311/815590 buffer=705247 (mem=42212 disco=663035, nivel=spilling, más viejo=2332.4s) breaker=closed límite=35.5 llamadas/s
+2026/10/10 22:17:06 drenando 47.6 confirmaciones/s, ETA 4h6m31s | inventario: confirmados=111786/815590 buffer=703772 (mem=40737 disco=663035, nivel=spilling, más viejo=2363.2s) breaker=closed límite=35.2 llamadas/s
+2026/10/10 22:17:37 drenando 47.8 confirmaciones/s, ETA 4h4m50s | inventario: confirmados=113268/815590 buffer=702290 (mem=39255 disco=663035, nivel=spilling, más viejo=2393.9s) breaker=closed límite=46.2 llamadas/s
+2026/10/10 22:18:07 drenando 47.2 confirmaciones/s, ETA 4h7m18s | inventario: confirmados=114685/815590 buffer=700873 (mem=37838 disco=663035, nivel=spilling, más viejo=2423.6s) breaker=closed límite=61.2 llamadas/s
+2026/10/10 22:18:37 drenando 46.8 confirmaciones/s, ETA 4h9m16s | inventario: confirmados=116088/815590 buffer=699470 (mem=36435 disco=663035, nivel=spilling, más viejo=2453.3s) breaker=closed límite=56.6 llamadas/s
+2026/10/10 22:19:08 drenando 47.4 confirmaciones/s, ETA 4h5m39s | inventario: confirmados=117556/815590 buffer=698002 (mem=34967 disco=663035, nivel=spilling, más viejo=2484.1s) breaker=closed límite=54.4 llamadas/s
+2026/10/10 22:19:39 drenando 47.1 confirmaciones/s, ETA 4h6m19s | inventario: confirmados=119017/815590 buffer=696541 (mem=33506 disco=663035, nivel=spilling, más viejo=2514.8s) breaker=closed límite=54.4 llamadas/s
+2026/10/10 22:20:10 drenando 47.4 confirmaciones/s, ETA 4h4m18s | inventario: confirmados=120487/815590 buffer=695071 (mem=32036 disco=663035, nivel=spilling, más viejo=2545.5s) breaker=closed límite=51.5 llamadas/s
+2026/10/10 22:20:41 drenando 47.5 confirmaciones/s, ETA 4h3m36s | inventario: confirmados=121958/815590 buffer=693600 (mem=30565 disco=663035, nivel=spilling, más viejo=2576.2s) breaker=closed límite=51.2 llamadas/s
+2026/10/10 22:21:12 drenando 47.6 confirmaciones/s, ETA 4h2m16s | inventario: confirmados=123434/815590 buffer=692124 (mem=29089 disco=663035, nivel=spilling, más viejo=2606.9s) breaker=closed límite=48.6 llamadas/s
+2026/10/10 22:21:42 drenando 48.1 confirmaciones/s, ETA 3h59m19s | inventario: confirmados=124877/815590 buffer=690681 (mem=27646 disco=663035, nivel=spilling, más viejo=2636.6s) breaker=closed límite=45.6 llamadas/s
+2026/10/10 22:22:13 drenando 47.7 confirmaciones/s, ETA 4h0m35s | inventario: confirmados=126357/815590 buffer=689201 (mem=26166 disco=663035, nivel=spilling, más viejo=2667.4s) breaker=closed límite=43.2 llamadas/s
+2026/10/10 22:22:44 drenando 47.8 confirmaciones/s, ETA 3h59m45s | inventario: confirmados=127839/815590 buffer=687719 (mem=24684 disco=663035, nivel=spilling, más viejo=2698.1s) breaker=closed límite=40.6 llamadas/s
+2026/10/10 22:23:15 drenando 47.4 confirmaciones/s, ETA 4h1m11s | inventario: confirmados=129309/815590 buffer=686249 (mem=23214 disco=663035, nivel=spilling, más viejo=2728.8s) breaker=closed límite=40.4 llamadas/s
+2026/10/10 22:23:45 drenando 48.3 confirmaciones/s, ETA 3h56m8s | inventario: confirmados=130759/815590 buffer=684799 (mem=21764 disco=663035, nivel=spilling, más viejo=2758.5s) breaker=closed límite=35.5 llamadas/s
+2026/10/10 22:24:15 drenando 47.6 confirmaciones/s, ETA 3h59m6s | inventario: confirmados=132188/815590 buffer=683370 (mem=20335 disco=663035, nivel=spilling, más viejo=2788.2s) breaker=closed límite=46.3 llamadas/s
+2026/10/10 22:24:46 drenando 47.4 confirmaciones/s, ETA 3h59m49s | inventario: confirmados=133657/815590 buffer=681901 (mem=18866 disco=663035, nivel=spilling, más viejo=2819.0s) breaker=closed límite=61.3 llamadas/s
+2026/10/10 22:25:16 drenando 47.0 confirmaciones/s, ETA 4h1m8s | inventario: confirmados=135068/815590 buffer=680490 (mem=17455 disco=663035, nivel=spilling, más viejo=2848.7s) breaker=closed límite=58.6 llamadas/s
+2026/10/10 22:25:46 drenando 47.1 confirmaciones/s, ETA 4h0m17s | inventario: confirmados=136481/815590 buffer=679077 (mem=16042 disco=663035, nivel=spilling, más viejo=2878.4s) breaker=closed límite=53.6 llamadas/s
+2026/10/10 22:26:17 drenando 47.4 confirmaciones/s, ETA 3h58m19s | inventario: confirmados=137950/815590 buffer=677608 (mem=14573 disco=663035, nivel=spilling, más viejo=2909.1s) breaker=closed límite=53.2 llamadas/s
+2026/10/10 22:26:47 drenando 47.2 confirmaciones/s, ETA 3h58m46s | inventario: confirmados=139366/815590 buffer=676192 (mem=13157 disco=663035, nivel=spilling, más viejo=2938.9s) breaker=closed límite=49.1 llamadas/s
+2026/10/10 22:27:18 drenando 47.5 confirmaciones/s, ETA 3h56m30s | inventario: confirmados=140840/815590 buffer=674718 (mem=11683 disco=663035, nivel=spilling, más viejo=2969.6s) breaker=closed límite=48.6 llamadas/s
+2026/10/10 22:27:49 drenando 47.7 confirmaciones/s, ETA 3h55m11s | inventario: confirmados=142319/815590 buffer=673239 (mem=10204 disco=663035, nivel=spilling, más viejo=3000.3s) breaker=closed límite=45.6 llamadas/s
+2026/10/10 22:28:19 drenando 47.7 confirmaciones/s, ETA 3h54m44s | inventario: confirmados=143750/815590 buffer=671808 (mem=8773 disco=663035, nivel=spilling, más viejo=3030.0s) breaker=closed límite=43.2 llamadas/s
+2026/10/10 22:28:50 drenando 47.6 confirmaciones/s, ETA 3h54m29s | inventario: confirmados=145227/815590 buffer=670331 (mem=7296 disco=663035, nivel=spilling, más viejo=3060.7s) breaker=closed límite=42.6 llamadas/s
+2026/10/10 22:29:20 drenando 48.3 confirmaciones/s, ETA 3h50m39s | inventario: confirmados=146677/815590 buffer=668881 (mem=5846 disco=663035, nivel=spilling, más viejo=3090.5s) breaker=closed límite=37.6 llamadas/s
+2026/10/10 22:29:50 drenando 47.9 confirmaciones/s, ETA 3h52m23s | inventario: confirmados=148113/815590 buffer=667445 (mem=4410 disco=663035, nivel=spilling, más viejo=3120.2s) breaker=closed límite=47.0 llamadas/s
+2026/10/10 22:30:21 drenando 47.0 confirmaciones/s, ETA 3h56m9s | inventario: confirmados=149570/815590 buffer=665988 (mem=2953 disco=663035, nivel=spilling, más viejo=3150.9s) breaker=closed límite=62.4 llamadas/s
+2026/10/10 22:30:51 drenando 47.5 confirmaciones/s, ETA 3h53m0s | inventario: confirmados=150996/815590 buffer=664562 (mem=1527 disco=663035, nivel=spilling, más viejo=3180.6s) breaker=closed límite=59.5 llamadas/s
+2026/10/10 22:31:21 drenando 46.9 confirmaciones/s, ETA 3h55m29s | inventario: confirmados=152404/815590 buffer=663154 (mem=119 disco=663035, nivel=spilling, más viejo=3210.4s) breaker=closed límite=55.2 llamadas/s
+2026/10/10 22:31:52 drenando 47.4 confirmaciones/s, ETA 3h52m33s | inventario: confirmados=153874/815590 buffer=661684 (mem=48649 disco=613035, nivel=spilling, más viejo=3241.1s) breaker=closed límite=54.6 llamadas/s
+2026/10/10 22:32:23 drenando 47.4 confirmaciones/s, ETA 3h52m12s | inventario: confirmados=155343/815590 buffer=660215 (mem=47180 disco=613035, nivel=spilling, más viejo=3271.8s) breaker=closed límite=54.4 llamadas/s
+2026/10/10 22:32:54 drenando 47.7 confirmaciones/s, ETA 3h50m16s | inventario: confirmados=156821/815590 buffer=658737 (mem=45702 disco=613035, nivel=spilling, más viejo=3302.5s) breaker=closed límite=51.5 llamadas/s
+2026/10/10 22:33:25 drenando 47.7 confirmaciones/s, ETA 3h49m35s | inventario: confirmados=158300/815590 buffer=657258 (mem=44223 disco=613035, nivel=spilling, más viejo=3333.2s) breaker=closed límite=49.2 llamadas/s
+2026/10/10 22:33:55 drenando 47.7 confirmaciones/s, ETA 3h49m18s | inventario: confirmados=159730/815590 buffer=655828 (mem=42793 disco=613035, nivel=spilling, más viejo=3363.0s) breaker=closed límite=44.6 llamadas/s
+2026/10/10 22:34:26 drenando 48.6 confirmaciones/s, ETA 3h44m19s | inventario: confirmados=161237/815590 buffer=654321 (mem=41286 disco=613035, nivel=spilling, más viejo=3393.7s) breaker=closed límite=43.6 llamadas/s
+2026/10/10 22:34:56 drenando 47.5 confirmaciones/s, ETA 3h49m5s | inventario: confirmados=162662/815590 buffer=652896 (mem=39861 disco=613035, nivel=spilling, más viejo=3423.4s) breaker=closed límite=41.2 llamadas/s
+2026/10/10 22:35:26 drenando 48.3 confirmaciones/s, ETA 3h44m47s | inventario: confirmados=164111/815590 buffer=651447 (mem=38412 disco=613035, nivel=spilling, más viejo=3453.1s) breaker=closed límite=36.6 llamadas/s
+2026/10/10 22:35:57 drenando 48.1 confirmaciones/s, ETA 3h45m4s | inventario: confirmados=165603/815590 buffer=649955 (mem=36920 disco=613035, nivel=spilling, más viejo=3483.8s) breaker=closed límite=35.6 llamadas/s
+2026/10/10 22:36:28 drenando 47.6 confirmaciones/s, ETA 3h46m59s | inventario: confirmados=167079/815590 buffer=648479 (mem=35444 disco=613035, nivel=spilling, más viejo=3514.6s) breaker=closed límite=47.0 llamadas/s
+2026/10/10 22:36:59 drenando 47.4 confirmaciones/s, ETA 3h47m24s | inventario: confirmados=168549/815590 buffer=647009 (mem=33974 disco=613035, nivel=spilling, más viejo=3545.3s) breaker=closed límite=63.6 llamadas/s
+2026/10/10 22:37:30 drenando 47.8 confirmaciones/s, ETA 3h44m53s | inventario: confirmados=170032/815590 buffer=645526 (mem=32491 disco=613035, nivel=spilling, más viejo=3576.0s) breaker=closed límite=60.7 llamadas/s
+2026/10/10 23:23:45 drenando 0.5 confirmaciones/s, ETA 376h59m39s | inventario: confirmados=171349/815590 buffer=644209 (mem=31174 disco=613035, nivel=spilling, más viejo=6350.3s) breaker=closed límite=53.6 llamadas/s
+2026/10/10 23:23:45 BREAKER closed → open (5 fallos consecutivos)
+2026/10/10 23:23:47 BREAKER open → half-open (cooldown de 2s cumplido)
+2026/10/10 23:23:47 BREAKER half-open → closed (3/3 pruebas OK en half-open)
+2026/10/10 23:24:15 drenando 35.0 confirmaciones/s, ETA 5h6m14s | inventario: confirmados=172414/815590 buffer=643144 (mem=30109 disco=613035, nivel=spilling, más viejo=6380.5s) breaker=closed límite=35.5 llamadas/s
+2026/10/10 23:24:45 drenando 47.7 confirmaciones/s, ETA 3h44m13s | inventario: confirmados=173845/815590 buffer=641713 (mem=28678 disco=613035, nivel=spilling, más viejo=6410.3s) breaker=closed límite=61.7 llamadas/s
+2026/10/10 23:25:15 drenando 46.9 confirmaciones/s, ETA 3h47m22s | inventario: confirmados=175253/815590 buffer=640305 (mem=27270 disco=613035, nivel=spilling, más viejo=6440.0s) breaker=closed límite=59.3 llamadas/s
+2026/10/10 23:25:45 drenando 47.6 confirmaciones/s, ETA 3h43m51s | inventario: confirmados=176680/815590 buffer=638878 (mem=25843 disco=613035, nivel=spilling, más viejo=6469.7s) breaker=closed límite=53.8 llamadas/s
+2026/10/10 23:26:16 drenando 47.4 confirmaciones/s, ETA 3h44m11s | inventario: confirmados=178149/815590 buffer=637409 (mem=24374 disco=613035, nivel=spilling, más viejo=6500.4s) breaker=closed límite=53.3 llamadas/s
+2026/10/10 23:26:47 drenando 47.7 confirmaciones/s, ETA 3h42m0s | inventario: confirmados=179629/815590 buffer=635929 (mem=22894 disco=613035, nivel=spilling, más viejo=6531.1s) breaker=closed límite=48.7 llamadas/s
+2026/10/10 23:27:17 drenando 48.0 confirmaciones/s, ETA 3h40m27s | inventario: confirmados=181068/815590 buffer=634490 (mem=21455 disco=613035, nivel=spilling, más viejo=6560.9s) breaker=closed límite=45.6 llamadas/s
+2026/10/10 23:27:48 drenando 47.4 confirmaciones/s, ETA 3h42m38s | inventario: confirmados=182537/815590 buffer=633021 (mem=19986 disco=613035, nivel=spilling, más viejo=6591.6s) breaker=closed límite=45.2 llamadas/s
+2026/10/10 23:28:18 drenando 47.8 confirmaciones/s, ETA 3h40m3s | inventario: confirmados=183972/815590 buffer=631586 (mem=18551 disco=613035, nivel=spilling, más viejo=6621.3s) breaker=closed límite=40.6 llamadas/s
+2026/10/10 23:28:48 drenando 48.9 confirmaciones/s, ETA 3h34m37s | inventario: confirmados=185440/815590 buffer=630118 (mem=17083 disco=613035, nivel=spilling, más viejo=6651.0s) breaker=closed límite=37.6 llamadas/s
+2026/10/10 23:29:18 drenando 47.5 confirmaciones/s, ETA 3h40m45s | inventario: confirmados=186864/815590 buffer=628694 (mem=15659 disco=613035, nivel=spilling, más viejo=6680.8s) breaker=closed límite=47.0 llamadas/s
+2026/10/10 23:29:49 drenando 47.4 confirmaciones/s, ETA 3h40m44s | inventario: confirmados=188332/815590 buffer=627226 (mem=14191 disco=613035, nivel=spilling, más viejo=6711.5s) breaker=closed límite=63.6 llamadas/s
+2026/10/10 23:30:20 drenando 47.8 confirmaciones/s, ETA 3h38m9s | inventario: confirmados=189814/815590 buffer=625744 (mem=12709 disco=613035, nivel=spilling, más viejo=6742.2s) breaker=closed límite=60.7 llamadas/s
+2026/10/10 23:30:51 drenando 47.5 confirmaciones/s, ETA 3h38m49s | inventario: confirmados=191288/815590 buffer=624270 (mem=11235 disco=613035, nivel=spilling, más viejo=6772.9s) breaker=closed límite=59.6 llamadas/s
+2026/10/10 23:31:22 drenando 47.4 confirmaciones/s, ETA 3h39m2s | inventario: confirmados=192757/815590 buffer=622801 (mem=9766 disco=613035, nivel=spilling, más viejo=6803.6s) breaker=closed límite=59.2 llamadas/s
+2026/10/10 23:31:53 drenando 47.7 confirmaciones/s, ETA 3h36m54s | inventario: confirmados=194237/815590 buffer=621321 (mem=8286 disco=613035, nivel=spilling, más viejo=6834.3s) breaker=closed límite=55.8 llamadas/s
+2026/10/10 23:32:23 drenando 47.4 confirmaciones/s, ETA 3h37m49s | inventario: confirmados=195660/815590 buffer=619898 (mem=6863 disco=613035, nivel=spilling, más viejo=6864.1s) breaker=closed límite=53.3 llamadas/s
+2026/10/10 23:32:54 drenando 47.5 confirmaciones/s, ETA 3h36m55s | inventario: confirmados=197133/815590 buffer=618425 (mem=5390 disco=613035, nivel=spilling, más viejo=6894.8s) breaker=closed límite=50.7 llamadas/s
+2026/10/10 23:33:25 drenando 47.9 confirmaciones/s, ETA 3h34m30s | inventario: confirmados=198619/815590 buffer=616939 (mem=3904 disco=613035, nivel=spilling, más viejo=6925.5s) breaker=closed límite=49.6 llamadas/s
+2026/10/10 23:33:56 drenando 47.4 confirmaciones/s, ETA 3h36m28s | inventario: confirmados=200088/815590 buffer=615470 (mem=2435 disco=613035, nivel=spilling, más viejo=6956.2s) breaker=closed límite=47.2 llamadas/s
+2026/10/10 23:34:26 drenando 48.3 confirmaciones/s, ETA 3h31m52s | inventario: confirmados=201537/815590 buffer=614021 (mem=986 disco=613035, nivel=spilling, más viejo=6985.9s) breaker=closed límite=43.8 llamadas/s
+2026/10/10 23:34:56 drenando 48.1 confirmaciones/s, ETA 3h32m15s | inventario: confirmados=202980/815590 buffer=612578 (mem=49543 disco=563035, nivel=spilling, más viejo=7015.7s) breaker=closed límite=41.3 llamadas/s
+2026/10/10 23:35:27 drenando 47.5 confirmaciones/s, ETA 3h34m29s | inventario: confirmados=204452/815590 buffer=611106 (mem=48071 disco=563035, nivel=spilling, más viejo=7046.4s) breaker=closed límite=39.1 llamadas/s
+2026/10/10 23:35:57 drenando 48.8 confirmaciones/s, ETA 3h28m21s | inventario: confirmados=205915/815590 buffer=609643 (mem=46608 disco=563035, nivel=spilling, más viejo=7076.1s) breaker=closed límite=35.7 llamadas/s
+2026/10/10 23:36:27 drenando 47.1 confirmaciones/s, ETA 3h35m4s | inventario: confirmados=207329/815590 buffer=608229 (mem=45194 disco=563035, nivel=spilling, más viejo=7105.8s) breaker=closed límite=62.7 llamadas/s
+2026/10/10 23:36:57 drenando 47.5 confirmaciones/s, ETA 3h32m54s | inventario: confirmados=208754/815590 buffer=606804 (mem=43769 disco=563035, nivel=spilling, más viejo=7135.6s) breaker=closed límite=59.6 llamadas/s
+2026/10/10 23:37:28 drenando 47.4 confirmaciones/s, ETA 3h32m45s | inventario: confirmados=210224/815590 buffer=605334 (mem=42299 disco=563035, nivel=spilling, más viejo=7166.3s) breaker=closed límite=57.2 llamadas/s
+2026/10/10 23:37:59 drenando 47.7 confirmaciones/s, ETA 3h30m48s | inventario: confirmados=211704/815590 buffer=603854 (mem=40819 disco=563035, nivel=spilling, más viejo=7197.0s) breaker=closed límite=55.8 llamadas/s
+2026/10/10 23:38:29 drenando 47.3 confirmaciones/s, ETA 3h32m7s | inventario: confirmados=213124/815590 buffer=602434 (mem=39399 disco=563035, nivel=spilling, más viejo=7226.7s) breaker=closed límite=53.3 llamadas/s
+2026/10/10 23:39:00 drenando 48.0 confirmaciones/s, ETA 3h28m39s | inventario: confirmados=214612/815590 buffer=600946 (mem=37911 disco=563035, nivel=spilling, más viejo=7257.4s) breaker=closed límite=49.8 llamadas/s
+2026/10/10 23:39:31 drenando 47.4 confirmaciones/s, ETA 3h30m50s | inventario: confirmados=216081/815590 buffer=599477 (mem=36442 disco=563035, nivel=spilling, más viejo=7288.2s) breaker=closed límite=49.3 llamadas/s
+2026/10/10 23:40:01 drenando 47.3 confirmaciones/s, ETA 3h30m43s | inventario: confirmados=217500/815590 buffer=598058 (mem=35023 disco=563035, nivel=spilling, más viejo=7317.9s) breaker=closed límite=45.1 llamadas/s
+2026/10/10 23:40:32 drenando 48.4 confirmaciones/s, ETA 3h25m20s | inventario: confirmados=219001/815590 buffer=596557 (mem=33522 disco=563035, nivel=spilling, más viejo=7348.6s) breaker=closed límite=43.7 llamadas/s
+2026/10/10 23:41:03 drenando 47.5 confirmaciones/s, ETA 3h29m0s | inventario: confirmados=220472/815590 buffer=595086 (mem=32051 disco=563035, nivel=spilling, más viejo=7379.3s) breaker=closed límite=43.3 llamadas/s
+2026/10/10 23:41:33 drenando 48.0 confirmaciones/s, ETA 3h26m7s | inventario: confirmados=221912/815590 buffer=593646 (mem=30611 disco=563035, nivel=spilling, más viejo=7409.0s) breaker=closed límite=38.6 llamadas/s
+2026/10/10 23:42:04 drenando 48.3 confirmaciones/s, ETA 3h24m22s | inventario: confirmados=223409/815590 buffer=592149 (mem=29114 disco=563035, nivel=spilling, más viejo=7439.7s) breaker=closed límite=37.6 llamadas/s
+2026/10/10 23:42:34 drenando 48.2 confirmaciones/s, ETA 3h24m23s | inventario: confirmados=224854/815590 buffer=590704 (mem=27669 disco=563035, nivel=spilling, más viejo=7469.5s) breaker=closed límite=46.3 llamadas/s
+2026/10/10 23:43:04 drenando 47.5 confirmaciones/s, ETA 3h26m45s | inventario: confirmados=226279/815590 buffer=589279 (mem=26244 disco=563035, nivel=spilling, más viejo=7499.2s) breaker=closed límite=61.3 llamadas/s
+2026/10/10 23:43:35 drenando 47.4 confirmaciones/s, ETA 3h26m44s | inventario: confirmados=227748/815590 buffer=587810 (mem=24775 disco=563035, nivel=spilling, más viejo=7529.9s) breaker=closed límite=60.7 llamadas/s
+2026/10/10 23:44:05 drenando 46.8 confirmaciones/s, ETA 3h28m59s | inventario: confirmados=229151/815590 buffer=586407 (mem=23372 disco=563035, nivel=spilling, más viejo=7559.6s) breaker=closed límite=56.4 llamadas/s
+2026/10/10 23:44:36 drenando 47.8 confirmaciones/s, ETA 3h23m55s | inventario: confirmados=230633/815590 buffer=584925 (mem=21890 disco=563035, nivel=spilling, más viejo=7590.4s) breaker=closed límite=55.5 llamadas/s
+2026/10/10 23:45:07 drenando 47.7 confirmaciones/s, ETA 3h23m57s | inventario: confirmados=232111/815590 buffer=583447 (mem=20412 disco=563035, nivel=spilling, más viejo=7621.1s) breaker=closed límite=52.7 llamadas/s
+2026/10/10 23:45:37 drenando 47.2 confirmaciones/s, ETA 3h25m31s | inventario: confirmados=233527/815590 buffer=582031 (mem=18996 disco=563035, nivel=spilling, más viejo=7650.8s) breaker=closed límite=50.5 llamadas/s
+2026/10/10 23:46:07 drenando 48.0 confirmaciones/s, ETA 3h21m45s | inventario: confirmados=234966/815590 buffer=580592 (mem=17557 disco=563035, nivel=spilling, más viejo=7680.5s) breaker=closed límite=45.5 llamadas/s
+2026/10/10 23:46:38 drenando 47.7 confirmaciones/s, ETA 3h22m17s | inventario: confirmados=236445/815590 buffer=579113 (mem=16078 disco=563035, nivel=spilling, más viejo=7711.2s) breaker=closed límite=44.7 llamadas/s
+2026/10/10 23:47:09 drenando 48.1 confirmaciones/s, ETA 3h20m1s | inventario: confirmados=237937/815590 buffer=577621 (mem=14586 disco=563035, nivel=spilling, más viejo=7741.9s) breaker=closed límite=43.6 llamadas/s
+2026/10/10 23:47:39 drenando 47.9 confirmaciones/s, ETA 3h20m28s | inventario: confirmados=239374/815590 buffer=576184 (mem=13149 disco=563035, nivel=spilling, más viejo=7771.7s) breaker=closed límite=39.2 llamadas/s
+2026/10/10 23:48:09 drenando 48.1 confirmaciones/s, ETA 3h19m8s | inventario: confirmados=240817/815590 buffer=574741 (mem=11706 disco=563035, nivel=spilling, más viejo=7801.4s) breaker=closed límite=36.6 llamadas/s
+2026/10/10 23:48:40 drenando 47.3 confirmaciones/s, ETA 3h21m54s | inventario: confirmados=242284/815590 buffer=573274 (mem=10239 disco=563035, nivel=spilling, más viejo=7832.1s) breaker=closed límite=34.4 llamadas/s
+2026/10/10 23:49:10 drenando 47.0 confirmaciones/s, ETA 3h22m56s | inventario: confirmados=243693/815590 buffer=571865 (mem=8830 disco=563035, nivel=spilling, más viejo=7861.8s) breaker=closed límite=45.8 llamadas/s
+2026/10/10 23:49:41 drenando 47.5 confirmaciones/s, ETA 3h19m56s | inventario: confirmados=245167/815590 buffer=570391 (mem=7356 disco=563035, nivel=spilling, más viejo=7892.6s) breaker=closed límite=61.1 llamadas/s
+2026/10/10 23:50:12 drenando 47.3 confirmaciones/s, ETA 3h20m38s | inventario: confirmados=246632/815590 buffer=568926 (mem=5891 disco=563035, nivel=spilling, más viejo=7923.3s) breaker=closed límite=58.6 llamadas/s
+2026/10/10 23:50:43 drenando 47.6 confirmaciones/s, ETA 3h18m37s | inventario: confirmados=248109/815590 buffer=567449 (mem=4414 disco=563035, nivel=spilling, más viejo=7954.0s) breaker=closed límite=55.6 llamadas/s
+2026/10/10 23:51:13 drenando 47.1 confirmaciones/s, ETA 3h20m17s | inventario: confirmados=249521/815590 buffer=566037 (mem=3002 disco=563035, nivel=spilling, más viejo=7983.7s) breaker=closed límite=53.2 llamadas/s
+2026/10/10 23:51:43 drenando 47.3 confirmaciones/s, ETA 3h18m48s | inventario: confirmados=250941/815590 buffer=564617 (mem=1582 disco=563035, nivel=spilling, más viejo=8013.5s) breaker=closed límite=50.6 llamadas/s
+2026/10/10 23:52:13 drenando 47.9 confirmaciones/s, ETA 3h15m49s | inventario: confirmados=252379/815590 buffer=563179 (mem=144 disco=563035, nivel=spilling, más viejo=8043.2s) breaker=closed límite=45.6 llamadas/s
+2026/10/10 23:52:44 drenando 47.4 confirmaciones/s, ETA 3h17m41s | inventario: confirmados=253847/815590 buffer=561711 (mem=48676 disco=513035, nivel=spilling, más viejo=8073.9s) breaker=closed límite=45.2 llamadas/s
+2026/10/10 23:53:15 drenando 47.5 confirmaciones/s, ETA 3h16m22s | inventario: confirmados=255321/815590 buffer=560237 (mem=47202 disco=513035, nivel=spilling, más viejo=8104.6s) breaker=closed límite=43.1 llamadas/s
+2026/10/10 23:53:46 drenando 47.6 confirmaciones/s, ETA 3h15m35s | inventario: confirmados=256797/815590 buffer=558761 (mem=45726 disco=513035, nivel=spilling, más viejo=8135.4s) breaker=closed límite=43.1 llamadas/s
+2026/10/10 23:54:17 drenando 48.7 confirmaciones/s, ETA 3h10m40s | inventario: confirmados=258307/815590 buffer=557251 (mem=44216 disco=513035, nivel=spilling, más viejo=8166.1s) breaker=closed límite=39.7 llamadas/s
+2026/10/10 23:54:48 drenando 47.6 confirmaciones/s, ETA 3h14m40s | inventario: confirmados=259782/815590 buffer=555776 (mem=42741 disco=513035, nivel=spilling, más viejo=8196.8s) breaker=closed límite=39.3 llamadas/s
+2026/10/10 23:55:18 drenando 48.5 confirmaciones/s, ETA 3h10m37s | inventario: confirmados=261236/815590 buffer=554322 (mem=41287 disco=513035, nivel=spilling, más viejo=8226.5s) breaker=closed límite=34.6 llamadas/s
+2026/10/10 23:55:48 drenando 47.6 confirmaciones/s, ETA 3h13m27s | inventario: confirmados=262665/815590 buffer=552893 (mem=39858 disco=513035, nivel=spilling, más viejo=8256.2s) breaker=closed límite=45.9 llamadas/s
+2026/10/10 23:56:19 drenando 47.2 confirmaciones/s, ETA 3h14m44s | inventario: confirmados=264128/815590 buffer=551430 (mem=38395 disco=513035, nivel=spilling, más viejo=8287.0s) breaker=closed límite=61.1 llamadas/s
+2026/10/10 23:56:50 drenando 47.4 confirmaciones/s, ETA 3h13m17s | inventario: confirmados=265598/815590 buffer=549960 (mem=36925 disco=513035, nivel=spilling, más viejo=8317.7s) breaker=closed límite=60.6 llamadas/s
+2026/10/10 23:57:20 drenando 47.1 confirmaciones/s, ETA 3h14m6s | inventario: confirmados=267011/815590 buffer=548547 (mem=35512 disco=513035, nivel=spilling, más viejo=8347.4s) breaker=closed límite=57.6 llamadas/s
+2026/10/10 23:57:51 drenando 47.3 confirmaciones/s, ETA 3h12m48s | inventario: confirmados=268477/815590 buffer=547081 (mem=34046 disco=513035, nivel=spilling, más viejo=8378.1s) breaker=closed límite=55.2 llamadas/s
+2026/10/10 23:58:21 drenando 47.2 confirmaciones/s, ETA 3h12m32s | inventario: confirmados=269894/815590 buffer=545664 (mem=32629 disco=513035, nivel=spilling, más viejo=8407.9s) breaker=closed límite=52.6 llamadas/s
+2026/10/10 23:58:52 drenando 47.8 confirmaciones/s, ETA 3h9m50s | inventario: confirmados=271375/815590 buffer=544183 (mem=31148 disco=513035, nivel=spilling, más viejo=8438.6s) breaker=closed límite=49.6 llamadas/s
+2026/10/10 23:59:22 drenando 47.9 confirmaciones/s, ETA 3h8m42s | inventario: confirmados=272813/815590 buffer=542745 (mem=29710 disco=513035, nivel=spilling, más viejo=8468.3s) breaker=closed límite=46.7 llamadas/s
+2026/10/10 23:59:53 drenando 47.8 confirmaciones/s, ETA 3h8m42s | inventario: confirmados=274295/815590 buffer=541263 (mem=28228 disco=513035, nivel=spilling, más viejo=8499.0s) breaker=closed límite=45.6 llamadas/s
+2026/10/11 00:00:24 drenando 47.4 confirmaciones/s, ETA 3h9m43s | inventario: confirmados=275765/815590 buffer=539793 (mem=26758 disco=513035, nivel=spilling, más viejo=8529.8s) breaker=closed límite=43.2 llamadas/s
+2026/10/11 00:00:54 drenando 47.6 confirmaciones/s, ETA 3h8m30s | inventario: confirmados=277193/815590 buffer=538365 (mem=25330 disco=513035, nivel=spilling, más viejo=8559.5s) breaker=closed límite=41.1 llamadas/s
+2026/10/11 00:01:24 drenando 49.0 confirmaciones/s, ETA 3h2m44s | inventario: confirmados=278662/815590 buffer=536896 (mem=23861 disco=513035, nivel=spilling, más viejo=8589.2s) breaker=closed límite=34.6 llamadas/s
+2026/10/11 00:01:55 drenando 47.3 confirmaciones/s, ETA 3h8m42s | inventario: confirmados=280128/815590 buffer=535430 (mem=22395 disco=513035, nivel=spilling, más viejo=8619.9s) breaker=closed límite=47.4 llamadas/s
+2026/10/11 00:02:25 drenando 48.0 confirmaciones/s, ETA 3h5m32s | inventario: confirmados=281567/815590 buffer=533991 (mem=20956 disco=513035, nivel=spilling, más viejo=8649.7s) breaker=closed límite=59.8 llamadas/s
+2026/10/11 00:02:56 drenando 46.9 confirmaciones/s, ETA 3h9m6s | inventario: confirmados=283022/815590 buffer=532536 (mem=19501 disco=513035, nivel=spilling, más viejo=8680.4s) breaker=closed límite=57.3 llamadas/s
+2026/10/11 00:03:27 drenando 47.7 confirmaciones/s, ETA 3h5m23s | inventario: confirmados=284502/815590 buffer=531056 (mem=18021 disco=513035, nivel=spilling, más viejo=8711.1s) breaker=closed límite=55.8 llamadas/s
+2026/10/11 00:03:58 drenando 47.5 confirmaciones/s, ETA 3h5m52s | inventario: confirmados=285974/815590 buffer=529584 (mem=16549 disco=513035, nivel=spilling, más viejo=8741.8s) breaker=closed límite=53.3 llamadas/s
+2026/10/11 00:04:28 drenando 47.4 confirmaciones/s, ETA 3h5m50s | inventario: confirmados=287395/815590 buffer=528163 (mem=15128 disco=513035, nivel=spilling, más viejo=8771.6s) breaker=closed límite=48.7 llamadas/s
+2026/10/11 00:04:59 drenando 47.8 confirmaciones/s, ETA 3h3m29s | inventario: confirmados=288878/815590 buffer=526680 (mem=13645 disco=513035, nivel=spilling, más viejo=8802.3s) breaker=closed límite=45.6 llamadas/s
+2026/10/11 00:05:29 drenando 47.6 confirmaciones/s, ETA 3h3m54s | inventario: confirmados=290306/815590 buffer=525252 (mem=12217 disco=513035, nivel=spilling, más viejo=8832.0s) breaker=closed límite=43.2 llamadas/s
+2026/10/11 00:05:59 drenando 48.9 confirmaciones/s, ETA 2h58m39s | inventario: confirmados=291772/815590 buffer=523786 (mem=10751 disco=513035, nivel=spilling, más viejo=8861.7s) breaker=closed límite=39.8 llamadas/s
+2026/10/11 00:06:30 drenando 47.8 confirmaciones/s, ETA 3h2m11s | inventario: confirmados=293253/815590 buffer=522305 (mem=9270 disco=513035, nivel=spilling, más viejo=8892.4s) breaker=closed límite=37.3 llamadas/s
+2026/10/11 00:07:00 drenando 48.2 confirmaciones/s, ETA 3h0m6s | inventario: confirmados=294699/815590 buffer=520859 (mem=7824 disco=513035, nivel=spilling, más viejo=8922.2s) breaker=closed límite=34.7 llamadas/s
+2026/10/11 00:07:31 drenando 47.5 confirmaciones/s, ETA 3h2m25s | inventario: confirmados=296170/815590 buffer=519388 (mem=6353 disco=513035, nivel=spilling, más viejo=8952.9s) breaker=closed límite=63.2 llamadas/s
+2026/10/11 00:08:01 drenando 47.3 confirmaciones/s, ETA 3h2m38s | inventario: confirmados=297588/815590 buffer=517970 (mem=4935 disco=513035, nivel=spilling, más viejo=8982.6s) breaker=closed límite=60.6 llamadas/s
+2026/10/11 00:08:32 drenando 47.1 confirmaciones/s, ETA 3h2m39s | inventario: confirmados=299049/815590 buffer=516509 (mem=3474 disco=513035, nivel=spilling, más viejo=9013.3s) breaker=closed límite=60.4 llamadas/s
+2026/10/11 00:09:03 drenando 47.1 confirmaciones/s, ETA 3h2m23s | inventario: confirmados=300508/815590 buffer=515050 (mem=2015 disco=513035, nivel=spilling, más viejo=9044.1s) breaker=closed límite=58.4 llamadas/s
+2026/10/11 00:09:34 drenando 47.2 confirmaciones/s, ETA 3h1m22s | inventario: confirmados=301971/815590 buffer=513587 (mem=552 disco=513035, nivel=spilling, más viejo=9074.8s) breaker=closed límite=56.4 llamadas/s
+2026/10/11 00:10:04 drenando 47.0 confirmaciones/s, ETA 3h1m29s | inventario: confirmados=303382/815590 buffer=512176 (mem=49141 disco=463035, nivel=spilling, más viejo=9104.5s) breaker=closed límite=53.5 llamadas/s
+2026/10/11 00:10:34 drenando 47.5 confirmaciones/s, ETA 2h59m5s | inventario: confirmados=304808/815590 buffer=510750 (mem=47715 disco=463035, nivel=spilling, más viejo=9134.2s) breaker=closed límite=50.7 llamadas/s
+2026/10/11 00:11:04 drenando 48.1 confirmaciones/s, ETA 2h56m28s | inventario: confirmados=306251/815590 buffer=509307 (mem=46272 disco=463035, nivel=spilling, más viejo=9164.0s) breaker=closed límite=45.6 llamadas/s
+2026/10/11 00:11:35 drenando 47.5 confirmaciones/s, ETA 2h58m0s | inventario: confirmados=307725/815590 buffer=507833 (mem=44798 disco=463035, nivel=spilling, más viejo=9194.7s) breaker=closed límite=45.2 llamadas/s
+2026/10/11 00:12:06 drenando 47.6 confirmaciones/s, ETA 2h57m14s | inventario: confirmados=309201/815590 buffer=506357 (mem=43322 disco=463035, nivel=spilling, más viejo=9225.4s) breaker=closed límite=43.1 llamadas/s
+2026/10/11 00:12:36 drenando 48.8 confirmaciones/s, ETA 2h52m19s | inventario: confirmados=310666/815590 buffer=504892 (mem=41857 disco=463035, nivel=spilling, más viejo=9255.1s) breaker=closed límite=39.7 llamadas/s
+2026/10/11 00:13:07 drenando 47.6 confirmaciones/s, ETA 2h56m5s | inventario: confirmados=312143/815590 buffer=503415 (mem=40380 disco=463035, nivel=spilling, más viejo=9285.8s) breaker=closed límite=37.3 llamadas/s
+2026/10/11 00:13:38 drenando 47.8 confirmaciones/s, ETA 2h54m59s | inventario: confirmados=313625/815590 buffer=501933 (mem=38898 disco=463035, nivel=spilling, más viejo=9316.6s) breaker=closed límite=36.6 llamadas/s
+2026/10/11 00:14:08 drenando 47.7 confirmaciones/s, ETA 2h55m0s | inventario: confirmados=315055/815590 buffer=500503 (mem=37468 disco=463035, nivel=spilling, más viejo=9346.3s) breaker=closed límite=47.4 llamadas/s
+2026/10/11 00:14:39 drenando 47.4 confirmaciones/s, ETA 2h55m23s | inventario: confirmados=316525/815590 buffer=499033 (mem=35998 disco=463035, nivel=spilling, más viejo=9377.0s) breaker=closed límite=62.6 llamadas/s
+2026/10/11 00:15:09 drenando 47.7 confirmaciones/s, ETA 2h53m59s | inventario: confirmados=317955/815590 buffer=497603 (mem=34568 disco=463035, nivel=spilling, más viejo=9406.7s) breaker=closed límite=59.6 llamadas/s
+2026/10/11 00:15:40 drenando 47.2 confirmaciones/s, ETA 2h55m12s | inventario: confirmados=319418/815590 buffer=496140 (mem=33105 disco=463035, nivel=spilling, más viejo=9437.5s) breaker=closed límite=57.2 llamadas/s
+2026/10/11 00:16:11 drenando 47.4 confirmaciones/s, ETA 2h54m6s | inventario: confirmados=320886/815590 buffer=494672 (mem=31637 disco=463035, nivel=spilling, más viejo=9468.2s) breaker=closed límite=55.8 llamadas/s
+2026/10/11 00:16:42 drenando 47.5 confirmaciones/s, ETA 2h53m6s | inventario: confirmados=322358/815590 buffer=493200 (mem=30165 disco=463035, nivel=spilling, más viejo=9498.9s) breaker=closed límite=53.3 llamadas/s
+2026/10/11 00:17:13 drenando 47.5 confirmaciones/s, ETA 2h52m28s | inventario: confirmados=323831/815590 buffer=491727 (mem=28692 disco=463035, nivel=spilling, más viejo=9529.6s) breaker=closed límite=53.1 llamadas/s
+2026/10/11 00:17:43 drenando 47.5 confirmaciones/s, ETA 2h52m9s | inventario: confirmados=325255/815590 buffer=490303 (mem=27268 disco=463035, nivel=spilling, más viejo=9559.4s) breaker=closed límite=50.6 llamadas/s
+2026/10/11 00:18:14 drenando 47.8 confirmaciones/s, ETA 2h50m18s | inventario: confirmados=326738/815590 buffer=488820 (mem=25785 disco=463035, nivel=spilling, más viejo=9590.1s) breaker=closed límite=47.6 llamadas/s
+2026/10/11 00:18:44 drenando 47.7 confirmaciones/s, ETA 2h50m25s | inventario: confirmados=328168/815590 buffer=487390 (mem=24355 disco=463035, nivel=spilling, más viejo=9619.8s) breaker=closed límite=45.2 llamadas/s
+2026/10/11 00:19:14 drenando 47.9 confirmaciones/s, ETA 2h48m58s | inventario: confirmados=329606/815590 buffer=485952 (mem=22917 disco=463035, nivel=spilling, más viejo=9649.5s) breaker=closed límite=40.6 llamadas/s
+2026/10/11 00:19:45 drenando 48.0 confirmaciones/s, ETA 2h48m19s | inventario: confirmados=331093/815590 buffer=484465 (mem=21430 disco=463035, nivel=spilling, más viejo=9680.2s) breaker=closed límite=39.6 llamadas/s
+2026/10/11 00:20:16 drenando 47.8 confirmaciones/s, ETA 2h48m16s | inventario: confirmados=332576/815590 buffer=482982 (mem=19947 disco=463035, nivel=spilling, más viejo=9711.0s) breaker=closed límite=36.7 llamadas/s
+2026/10/11 00:20:47 drenando 48.3 confirmaciones/s, ETA 2h46m10s | inventario: confirmados=334073/815590 buffer=481485 (mem=18450 disco=463035, nivel=spilling, más viejo=9741.7s) breaker=closed límite=35.6 llamadas/s
+2026/10/11 00:21:18 drenando 48.0 confirmaciones/s, ETA 2h46m33s | inventario: confirmados=335562/815590 buffer=479996 (mem=16961 disco=463035, nivel=spilling, más viejo=9772.4s) breaker=closed límite=34.7 llamadas/s
+2026/10/11 00:21:48 drenando 47.4 confirmaciones/s, ETA 2h48m23s | inventario: confirmados=336983/815590 buffer=478575 (mem=15540 disco=463035, nivel=spilling, más viejo=9802.1s) breaker=closed límite=61.3 llamadas/s
+2026/10/11 00:22:19 drenando 47.5 confirmaciones/s, ETA 2h47m27s | inventario: confirmados=338455/815590 buffer=477103 (mem=14068 disco=463035, nivel=spilling, más viejo=9832.8s) breaker=closed límite=60.7 llamadas/s
+2026/10/11 00:22:50 drenando 47.6 confirmaciones/s, ETA 2h46m22s | inventario: confirmados=339932/815590 buffer=475626 (mem=12591 disco=463035, nivel=spilling, más viejo=9863.5s) breaker=closed límite=57.6 llamadas/s
+2026/10/11 00:23:20 drenando 47.3 confirmaciones/s, ETA 2h47m12s | inventario: confirmados=341350/815590 buffer=474208 (mem=11173 disco=463035, nivel=spilling, más viejo=9893.3s) breaker=closed límite=52.7 llamadas/s
+2026/10/11 00:23:51 drenando 47.5 confirmaciones/s, ETA 2h45m55s | inventario: confirmados=342822/815590 buffer=472736 (mem=9701 disco=463035, nivel=spilling, más viejo=9924.0s) breaker=closed límite=51.6 llamadas/s
+2026/10/11 00:24:21 drenando 47.3 confirmaciones/s, ETA 2h45m57s | inventario: confirmados=344242/815590 buffer=471316 (mem=8281 disco=463035, nivel=spilling, más viejo=9953.7s) breaker=closed límite=47.2 llamadas/s
+2026/10/11 00:24:30 BREAKER closed → open (5 fallos consecutivos)
+2026/10/11 00:24:32 BREAKER open → half-open (cooldown de 2s cumplido)
+2026/10/11 00:24:32 BREAKER half-open → closed (3/3 pruebas OK en half-open)
+2026/10/11 00:24:51 drenando 37.7 confirmaciones/s, ETA 3h27m51s | inventario: confirmados=345373/815590 buffer=470185 (mem=7150 disco=463035, nivel=spilling, más viejo=9983.5s) breaker=closed límite=55.8 llamadas/s
+2026/10/11 00:25:22 drenando 47.5 confirmaciones/s, ETA 2h44m24s | inventario: confirmados=346846/815590 buffer=468712 (mem=5677 disco=463035, nivel=spilling, más viejo=10014.2s) breaker=closed límite=53.3 llamadas/s
+2026/10/11 00:25:52 drenando 47.3 confirmaciones/s, ETA 2h44m46s | inventario: confirmados=348264/815590 buffer=467294 (mem=4259 disco=463035, nivel=spilling, más viejo=10043.9s) breaker=closed límite=51.1 llamadas/s
+2026/10/11 00:25:59 BREAKER closed → open (5 fallos consecutivos)
+2026/10/11 00:26:01 BREAKER open → half-open (cooldown de 2s cumplido)
+2026/10/11 00:26:01 BREAKER half-open → closed (3/3 pruebas OK en half-open)
+2026/10/11 00:26:22 drenando 38.2 confirmaciones/s, ETA 3h23m23s | inventario: confirmados=349410/815590 buffer=466148 (mem=3113 disco=463035, nivel=spilling, más viejo=10073.7s) breaker=closed límite=57.8 llamadas/s
+2026/10/11 00:26:53 drenando 47.5 confirmaciones/s, ETA 2h42m52s | inventario: confirmados=350884/815590 buffer=464674 (mem=1639 disco=463035, nivel=spilling, más viejo=10104.4s) breaker=closed límite=57.3 llamadas/s
+2026/10/11 00:27:24 drenando 47.5 confirmaciones/s, ETA 2h42m28s | inventario: confirmados=352357/815590 buffer=463201 (mem=166 disco=463035, nivel=spilling, más viejo=10135.2s) breaker=closed límite=52.7 llamadas/s
+2026/10/11 00:27:55 drenando 48.0 confirmaciones/s, ETA 2h40m18s | inventario: confirmados=353845/815590 buffer=461713 (mem=48678 disco=413035, nivel=spilling, más viejo=10165.9s) breaker=closed límite=51.6 llamadas/s
+2026/10/11 00:28:26 drenando 47.6 confirmaciones/s, ETA 2h41m12s | inventario: confirmados=355320/815590 buffer=460238 (mem=47203 disco=413035, nivel=spilling, más viejo=10196.6s) breaker=closed límite=51.2 llamadas/s
+2026/10/11 00:28:56 drenando 48.2 confirmaciones/s, ETA 2h38m45s | inventario: confirmados=356765/815590 buffer=458793 (mem=45758 disco=413035, nivel=spilling, más viejo=10226.3s) breaker=closed límite=45.8 llamadas/s
+2026/10/11 00:29:26 drenando 47.9 confirmaciones/s, ETA 2h39m8s | inventario: confirmados=358202/815590 buffer=457356 (mem=44321 disco=413035, nivel=spilling, más viejo=10256.1s) breaker=closed límite=43.3 llamadas/s
+2026/10/11 00:29:57 drenando 47.4 confirmaciones/s, ETA 2h40m13s | inventario: confirmados=359672/815590 buffer=455886 (mem=42851 disco=413035, nivel=spilling, más viejo=10286.8s) breaker=closed límite=41.1 llamadas/s
+2026/10/11 00:30:27 drenando 48.8 confirmaciones/s, ETA 2h35m5s | inventario: confirmados=361137/815590 buffer=454421 (mem=41386 disco=413035, nivel=spilling, más viejo=10316.5s) breaker=closed límite=36.6 llamadas/s
+2026/10/11 00:30:58 drenando 47.6 confirmaciones/s, ETA 2h38m39s | inventario: confirmados=362612/815590 buffer=452946 (mem=39911 disco=413035, nivel=spilling, más viejo=10347.2s) breaker=closed límite=47.4 llamadas/s
+2026/10/11 00:31:29 drenando 47.8 confirmaciones/s, ETA 2h37m23s | inventario: confirmados=364094/815590 buffer=451464 (mem=38429 disco=413035, nivel=spilling, más viejo=10377.9s) breaker=closed límite=46.3 llamadas/s
+2026/10/11 00:31:59 drenando 47.2 confirmaciones/s, ETA 2h38m48s | inventario: confirmados=365511/815590 buffer=450047 (mem=37012 disco=413035, nivel=spilling, más viejo=10407.7s) breaker=closed límite=61.3 llamadas/s
+2026/10/11 00:32:30 drenando 47.4 confirmaciones/s, ETA 2h37m39s | inventario: confirmados=366981/815590 buffer=448577 (mem=35542 disco=413035, nivel=spilling, más viejo=10438.4s) breaker=closed límite=58.6 llamadas/s
+2026/10/11 00:33:01 drenando 47.3 confirmaciones/s, ETA 2h37m28s | inventario: confirmados=368448/815590 buffer=447110 (mem=34075 disco=413035, nivel=spilling, más viejo=10469.1s) breaker=closed límite=57.6 llamadas/s
+2026/10/11 00:33:31 drenando 47.2 confirmaciones/s, ETA 2h37m16s | inventario: confirmados=369865/815590 buffer=445693 (mem=32658 disco=413035, nivel=spilling, más viejo=10498.8s) breaker=closed límite=55.2 llamadas/s
+2026/10/11 00:34:02 drenando 47.3 confirmaciones/s, ETA 2h36m39s | inventario: confirmados=371330/815590 buffer=444228 (mem=31193 disco=413035, nivel=spilling, más viejo=10529.5s) breaker=closed límite=53.1 llamadas/s
+2026/10/11 00:34:33 drenando 47.7 confirmaciones/s, ETA 2h34m46s | inventario: confirmados=372808/815590 buffer=442750 (mem=29715 disco=413035, nivel=spilling, más viejo=10560.3s) breaker=closed límite=50.6 llamadas/s
+2026/10/11 00:35:03 drenando 47.8 confirmaciones/s, ETA 2h33m46s | inventario: confirmados=374243/815590 buffer=441315 (mem=28280 disco=413035, nivel=spilling, más viejo=10590.0s) breaker=closed límite=45.6 llamadas/s
+2026/10/11 00:35:34 drenando 47.5 confirmaciones/s, ETA 2h34m22s | inventario: confirmados=375715/815590 buffer=439843 (mem=26808 disco=413035, nivel=spilling, más viejo=10620.7s) breaker=closed límite=45.2 llamadas/s
+2026/10/11 00:36:05 drenando 48.0 confirmaciones/s, ETA 2h32m12s | inventario: confirmados=377203/815590 buffer=438355 (mem=25320 disco=413035, nivel=spilling, más viejo=10651.4s) breaker=closed límite=42.6 llamadas/s
+2026/10/11 00:36:36 drenando 48.2 confirmaciones/s, ETA 2h31m10s | inventario: confirmados=378696/815590 buffer=436862 (mem=23827 disco=413035, nivel=spilling, más viejo=10682.1s) breaker=closed límite=41.6 llamadas/s
+2026/10/11 00:37:07 drenando 47.5 confirmaciones/s, ETA 2h32m48s | inventario: confirmados=380168/815590 buffer=435390 (mem=22355 disco=413035, nivel=spilling, más viejo=10712.9s) breaker=closed límite=39.2 llamadas/s
+2026/10/11 00:37:38 drenando 48.5 confirmaciones/s, ETA 2h29m9s | inventario: confirmados=381671/815590 buffer=433887 (mem=20852 disco=413035, nivel=spilling, más viejo=10743.6s) breaker=closed límite=36.6 llamadas/s
+2026/10/11 00:38:09 drenando 48.1 confirmaciones/s, ETA 2h29m50s | inventario: confirmados=383162/815590 buffer=432396 (mem=19361 disco=413035, nivel=spilling, más viejo=10774.3s) breaker=closed límite=35.6 llamadas/s
+2026/10/11 00:38:40 drenando 47.3 confirmaciones/s, ETA 2h31m52s | inventario: confirmados=384628/815590 buffer=430930 (mem=17895 disco=413035, nivel=spilling, más viejo=10805.0s) breaker=closed límite=62.6 llamadas/s
+2026/10/11 00:39:10 drenando 47.5 confirmaciones/s, ETA 2h30m48s | inventario: confirmados=386052/815590 buffer=429506 (mem=16471 disco=413035, nivel=spilling, más viejo=10834.7s) breaker=closed límite=59.6 llamadas/s
+2026/10/11 00:39:40 drenando 47.1 confirmaciones/s, ETA 2h31m36s | inventario: confirmados=387464/815590 buffer=428094 (mem=15059 disco=413035, nivel=spilling, más viejo=10864.5s) breaker=closed límite=55.2 llamadas/s
+2026/10/11 00:40:11 drenando 48.0 confirmaciones/s, ETA 2h28m12s | inventario: confirmados=388951/815590 buffer=426607 (mem=13572 disco=413035, nivel=spilling, más viejo=10895.2s) breaker=closed límite=53.8 llamadas/s
+2026/10/11 00:40:42 drenando 47.5 confirmaciones/s, ETA 2h29m0s | inventario: confirmados=390425/815590 buffer=425133 (mem=12098 disco=413035, nivel=spilling, más viejo=10925.9s) breaker=closed límite=53.3 llamadas/s
+2026/10/11 00:41:12 drenando 47.6 confirmaciones/s, ETA 2h28m21s | inventario: confirmados=391853/815590 buffer=423705 (mem=10670 disco=413035, nivel=spilling, más viejo=10955.6s) breaker=closed límite=48.7 llamadas/s
+2026/10/11 00:41:42 drenando 48.1 confirmaciones/s, ETA 2h26m24s | inventario: confirmados=393295/815590 buffer=422263 (mem=9228 disco=413035, nivel=spilling, más viejo=10985.3s) breaker=closed límite=45.6 llamadas/s
+2026/10/11 00:42:13 drenando 47.5 confirmaciones/s, ETA 2h27m41s | inventario: confirmados=394767/815590 buffer=420791 (mem=7756 disco=413035, nivel=spilling, más viejo=11016.1s) breaker=closed límite=43.2 llamadas/s
+2026/10/11 00:42:43 drenando 48.7 confirmaciones/s, ETA 2h23m36s | inventario: confirmados=396227/815590 buffer=419331 (mem=6296 disco=413035, nivel=spilling, más viejo=11045.8s) breaker=closed límite=38.6 llamadas/s
+2026/10/11 00:43:14 drenando 48.2 confirmaciones/s, ETA 2h24m35s | inventario: confirmados=397720/815590 buffer=417838 (mem=4803 disco=413035, nivel=spilling, más viejo=11076.5s) breaker=closed límite=37.6 llamadas/s
+2026/10/11 00:43:45 drenando 47.6 confirmaciones/s, ETA 2h25m44s | inventario: confirmados=399196/815590 buffer=416362 (mem=3327 disco=413035, nivel=spilling, más viejo=11107.2s) breaker=closed límite=35.2 llamadas/s
+2026/10/11 00:44:15 drenando 47.7 confirmaciones/s, ETA 2h25m4s | inventario: confirmados=400626/815590 buffer=414932 (mem=1897 disco=413035, nivel=spilling, más viejo=11136.9s) breaker=closed límite=61.6 llamadas/s
+2026/10/11 00:44:45 drenando 47.0 confirmaciones/s, ETA 2h26m32s | inventario: confirmados=402037/815590 buffer=413521 (mem=486 disco=413035, nivel=spilling, más viejo=11166.7s) breaker=closed límite=57.2 llamadas/s
+2026/10/11 00:45:16 drenando 47.6 confirmaciones/s, ETA 2h24m19s | inventario: confirmados=403512/815590 buffer=412046 (mem=49011 disco=363035, nivel=spilling, más viejo=11197.4s) breaker=closed límite=56.6 llamadas/s
+2026/10/11 00:45:47 drenando 47.5 confirmaciones/s, ETA 2h23m54s | inventario: confirmados=404986/815590 buffer=410572 (mem=47537 disco=363035, nivel=spilling, más viejo=11228.1s) breaker=closed límite=53.6 llamadas/s
+2026/10/11 00:46:18 drenando 47.0 confirmaciones/s, ETA 2h25m4s | inventario: confirmados=406443/815590 buffer=409115 (mem=46080 disco=363035, nivel=spilling, más viejo=11258.8s) breaker=closed límite=53.2 llamadas/s
+2026/10/11 00:46:49 drenando 48.1 confirmaciones/s, ETA 2h21m20s | inventario: confirmados=407933/815590 buffer=407625 (mem=44590 disco=363035, nivel=spilling, más viejo=11289.5s) breaker=closed límite=49.8 llamadas/s
+2026/10/11 00:47:19 drenando 47.3 confirmaciones/s, ETA 2h23m1s | inventario: confirmados=409353/815590 buffer=406205 (mem=43170 disco=363035, nivel=spilling, más viejo=11319.3s) breaker=closed límite=47.3 llamadas/s
+2026/10/11 00:47:50 drenando 47.8 confirmaciones/s, ETA 2h21m11s | inventario: confirmados=410834/815590 buffer=404724 (mem=41689 disco=363035, nivel=spilling, más viejo=11350.0s) breaker=closed límite=46.7 llamadas/s
+2026/10/11 00:48:21 drenando 47.8 confirmaciones/s, ETA 2h20m40s | inventario: confirmados=412315/815590 buffer=403243 (mem=40208 disco=363035, nivel=spilling, más viejo=11380.7s) breaker=closed límite=43.6 llamadas/s
+2026/10/11 00:48:51 drenando 48.3 confirmaciones/s, ETA 2h18m38s | inventario: confirmados=413764/815590 buffer=401794 (mem=38759 disco=363035, nivel=spilling, más viejo=11410.4s) breaker=closed límite=40.7 llamadas/s
+2026/10/11 00:49:21 drenando 48.2 confirmaciones/s, ETA 2h18m31s | inventario: confirmados=415209/815590 buffer=400349 (mem=37314 disco=363035, nivel=spilling, más viejo=11440.2s) breaker=closed límite=38.5 llamadas/s
+2026/10/11 00:49:52 drenando 48.1 confirmaciones/s, ETA 2h18m7s | inventario: confirmados=416701/815590 buffer=398857 (mem=35822 disco=363035, nivel=spilling, más viejo=11470.9s) breaker=closed límite=35.5 llamadas/s
+2026/10/11 00:50:22 drenando 47.2 confirmaciones/s, ETA 2h20m26s | inventario: confirmados=418116/815590 buffer=397442 (mem=34407 disco=363035, nivel=spilling, más viejo=11500.6s) breaker=closed límite=47.0 llamadas/s
+2026/10/11 00:50:53 drenando 48.1 confirmaciones/s, ETA 2h17m12s | inventario: confirmados=419607/815590 buffer=395951 (mem=32916 disco=363035, nivel=spilling, más viejo=11531.3s) breaker=closed límite=61.6 llamadas/s
+2026/10/11 00:51:23 drenando 46.6 confirmaciones/s, ETA 2h21m12s | inventario: confirmados=421004/815590 buffer=394554 (mem=31519 disco=363035, nivel=spilling, más viejo=11561.0s) breaker=closed límite=57.2 llamadas/s
+2026/10/11 00:51:54 drenando 48.0 confirmaciones/s, ETA 2h16m28s | inventario: confirmados=422492/815590 buffer=393066 (mem=30031 disco=363035, nivel=spilling, más viejo=11591.8s) breaker=closed límite=53.8 llamadas/s
+2026/10/11 00:52:25 drenando 47.4 confirmaciones/s, ETA 2h17m49s | inventario: confirmados=423960/815590 buffer=391598 (mem=28563 disco=363035, nivel=spilling, más viejo=11622.5s) breaker=closed límite=53.3 llamadas/s
+2026/10/11 00:52:56 drenando 47.7 confirmaciones/s, ETA 2h16m11s | inventario: confirmados=425440/815590 buffer=390118 (mem=27083 disco=363035, nivel=spilling, más viejo=11653.2s) breaker=closed límite=49.8 llamadas/s
+2026/10/11 00:53:26 drenando 47.2 confirmaciones/s, ETA 2h17m21s | inventario: confirmados=426855/815590 buffer=388703 (mem=25668 disco=363035, nivel=spilling, más viejo=11682.9s) breaker=closed límite=47.3 llamadas/s
+2026/10/11 00:53:57 drenando 47.5 confirmaciones/s, ETA 2h16m0s | inventario: confirmados=428326/815590 buffer=387232 (mem=24197 disco=363035, nivel=spilling, más viejo=11713.6s) breaker=closed límite=46.7 llamadas/s
+2026/10/11 00:54:27 drenando 48.2 confirmaciones/s, ETA 2h13m29s | inventario: confirmados=429771/815590 buffer=385787 (mem=22752 disco=363035, nivel=spilling, más viejo=11743.4s) breaker=closed límite=41.6 llamadas/s
+2026/10/11 00:54:58 drenando 47.8 confirmaciones/s, ETA 2h14m4s | inventario: confirmados=431252/815590 buffer=384306 (mem=21271 disco=363035, nivel=spilling, más viejo=11774.1s) breaker=closed límite=39.2 llamadas/s
+2026/10/11 00:55:29 drenando 47.9 confirmaciones/s, ETA 2h13m17s | inventario: confirmados=432736/815590 buffer=382822 (mem=19787 disco=363035, nivel=spilling, más viejo=11804.8s) breaker=closed límite=36.6 llamadas/s
+2026/10/11 00:56:00 drenando 48.1 confirmaciones/s, ETA 2h12m8s | inventario: confirmados=434227/815590 buffer=381331 (mem=18296 disco=363035, nivel=spilling, más viejo=11835.5s) breaker=closed límite=35.6 llamadas/s
+2026/10/11 00:56:31 drenando 47.9 confirmaciones/s, ETA 2h12m14s | inventario: confirmados=435711/815590 buffer=379847 (mem=16812 disco=363035, nivel=spilling, más viejo=11866.2s) breaker=closed límite=34.7 llamadas/s
+2026/10/11 00:57:01 drenando 47.6 confirmaciones/s, ETA 2h12m24s | inventario: confirmados=437140/815590 buffer=378418 (mem=15383 disco=363035, nivel=spilling, más viejo=11896.0s) breaker=closed límite=61.3 llamadas/s
+2026/10/11 00:57:32 drenando 47.6 confirmaciones/s, ETA 2h11m56s | inventario: confirmados=438616/815590 buffer=376942 (mem=13907 disco=363035, nivel=spilling, más viejo=11926.7s) breaker=closed límite=59.8 llamadas/s
+2026/10/11 00:58:03 drenando 47.5 confirmaciones/s, ETA 2h11m52s | inventario: confirmados=440087/815590 buffer=375471 (mem=12436 disco=363035, nivel=spilling, más viejo=11957.4s) breaker=closed límite=59.3 llamadas/s
+2026/10/11 00:58:33 drenando 47.8 confirmaciones/s, ETA 2h10m30s | inventario: confirmados=441520/815590 buffer=374038 (mem=11003 disco=363035, nivel=spilling, más viejo=11987.1s) breaker=closed límite=53.8 llamadas/s
+2026/10/11 00:59:04 drenando 47.5 confirmaciones/s, ETA 2h10m35s | inventario: confirmados=442994/815590 buffer=372564 (mem=9529 disco=363035, nivel=spilling, más viejo=12017.8s) breaker=closed límite=53.3 llamadas/s
+2026/10/11 00:59:35 drenando 47.6 confirmaciones/s, ETA 2h9m59s | inventario: confirmados=444469/815590 buffer=371089 (mem=8054 disco=363035, nivel=spilling, más viejo=12048.6s) breaker=closed límite=50.7 llamadas/s
+2026/10/11 01:00:06 drenando 47.6 confirmaciones/s, ETA 2h9m22s | inventario: confirmados=445945/815590 buffer=369613 (mem=6578 disco=363035, nivel=spilling, más viejo=12079.3s) breaker=closed límite=49.6 llamadas/s
+2026/10/11 01:00:36 drenando 47.5 confirmaciones/s, ETA 2h9m16s | inventario: confirmados=447369/815590 buffer=368189 (mem=5154 disco=363035, nivel=spilling, más viejo=12109.0s) breaker=closed límite=45.2 llamadas/s
+2026/10/11 01:01:07 drenando 47.6 confirmaciones/s, ETA 2h8m27s | inventario: confirmados=448844/815590 buffer=366714 (mem=3679 disco=363035, nivel=spilling, más viejo=12139.7s) breaker=closed límite=44.6 llamadas/s
+2026/10/11 01:01:37 drenando 47.9 confirmaciones/s, ETA 2h7m0s | inventario: confirmados=450282/815590 buffer=365276 (mem=2241 disco=363035, nivel=spilling, más viejo=12169.4s) breaker=closed límite=39.6 llamadas/s
+2026/10/11 01:02:07 drenando 47.7 confirmaciones/s, ETA 2h7m7s | inventario: confirmados=451713/815590 buffer=363845 (mem=810 disco=363035, nivel=spilling, más viejo=12199.2s) breaker=closed límite=37.2 llamadas/s
+2026/10/11 01:02:38 drenando 48.4 confirmaciones/s, ETA 2h4m48s | inventario: confirmados=453213/815590 buffer=362345 (mem=49310 disco=313035, nivel=spilling, más viejo=12229.9s) breaker=closed límite=35.8 llamadas/s
+2026/10/11 01:03:08 drenando 47.3 confirmaciones/s, ETA 2h7m16s | inventario: confirmados=454631/815590 buffer=360927 (mem=47892 disco=313035, nivel=spilling, más viejo=12259.6s) breaker=closed límite=62.7 llamadas/s
+2026/10/11 01:03:39 drenando 47.9 confirmaciones/s, ETA 2h5m3s | inventario: confirmados=456116/815590 buffer=359442 (mem=46407 disco=313035, nivel=spilling, más viejo=12290.3s) breaker=closed límite=61.6 llamadas/s
+2026/10/11 01:04:10 drenando 47.2 confirmaciones/s, ETA 2h6m20s | inventario: confirmados=457580/815590 buffer=357978 (mem=44943 disco=313035, nivel=spilling, más viejo=12321.1s) breaker=closed límite=61.2 llamadas/s
+2026/10/11 01:04:41 drenando 47.4 confirmaciones/s, ETA 2h5m28s | inventario: confirmados=459048/815590 buffer=356510 (mem=43475 disco=313035, nivel=spilling, más viejo=12351.8s) breaker=closed límite=58.6 llamadas/s
+2026/10/11 01:05:11 drenando 46.8 confirmaciones/s, ETA 2h6m22s | inventario: confirmados=460453/815590 buffer=355105 (mem=42070 disco=313035, nivel=spilling, más viejo=12381.5s) breaker=closed límite=56.4 llamadas/s
+2026/10/11 01:05:42 drenando 47.6 confirmaciones/s, ETA 2h3m52s | inventario: confirmados=461928/815590 buffer=353630 (mem=40595 disco=313035, nivel=spilling, más viejo=12412.2s) breaker=closed límite=53.5 llamadas/s
+2026/10/11 01:06:12 drenando 48.0 confirmaciones/s, ETA 2h2m22s | inventario: confirmados=463367/815590 buffer=352191 (mem=39156 disco=313035, nivel=spilling, más viejo=12441.9s) breaker=closed límite=48.7 llamadas/s
+2026/10/11 01:06:43 drenando 47.5 confirmaciones/s, ETA 2h3m11s | inventario: confirmados=464838/815590 buffer=350720 (mem=37685 disco=313035, nivel=spilling, más viejo=12472.7s) breaker=closed límite=46.5 llamadas/s
+2026/10/11 01:07:14 drenando 48.0 confirmaciones/s, ETA 2h1m15s | inventario: confirmados=466326/815590 buffer=349232 (mem=36197 disco=313035, nivel=spilling, más viejo=12503.4s) breaker=closed límite=45.5 llamadas/s
+2026/10/11 01:07:45 drenando 48.7 confirmaciones/s, ETA 1h59m3s | inventario: confirmados=467835/815590 buffer=347723 (mem=34688 disco=313035, nivel=spilling, más viejo=12534.1s) breaker=closed límite=41.8 llamadas/s
+2026/10/11 01:08:15 drenando 48.0 confirmaciones/s, ETA 2h0m9s | inventario: confirmados=469276/815590 buffer=346282 (mem=33247 disco=313035, nivel=spilling, más viejo=12563.8s) breaker=closed límite=39.3 llamadas/s
+2026/10/11 01:08:46 drenando 48.0 confirmaciones/s, ETA 1h59m43s | inventario: confirmados=470764/815590 buffer=344794 (mem=31759 disco=313035, nivel=spilling, más viejo=12594.5s) breaker=closed límite=38.7 llamadas/s
+2026/10/11 01:09:16 drenando 48.0 confirmaciones/s, ETA 1h59m8s | inventario: confirmados=472205/815590 buffer=343353 (mem=30318 disco=313035, nivel=spilling, más viejo=12624.3s) breaker=closed límite=34.5 llamadas/s
+2026/10/11 01:09:47 drenando 47.1 confirmaciones/s, ETA 2h0m59s | inventario: confirmados=473665/815590 buffer=341893 (mem=28858 disco=313035, nivel=spilling, más viejo=12655.0s) breaker=closed límite=47.3 llamadas/s
+2026/10/11 01:10:17 drenando 47.5 confirmaciones/s, ETA 1h59m27s | inventario: confirmados=475090/815590 buffer=340468 (mem=27433 disco=313035, nivel=spilling, más viejo=12684.7s) breaker=closed límite=60.6 llamadas/s
+2026/10/11 01:10:47 drenando 46.9 confirmaciones/s, ETA 2h0m34s | inventario: confirmados=476496/815590 buffer=339062 (mem=26027 disco=313035, nivel=spilling, más viejo=12714.4s) breaker=closed límite=58.4 llamadas/s
+2026/10/11 01:11:17 drenando 47.3 confirmaciones/s, ETA 1h58m53s | inventario: confirmados=477916/815590 buffer=337642 (mem=24607 disco=313035, nivel=spilling, más viejo=12744.2s) breaker=closed límite=53.5 llamadas/s
+2026/10/11 01:11:47 drenando 47.3 confirmaciones/s, ETA 1h58m23s | inventario: confirmados=479336/815590 buffer=336222 (mem=23187 disco=313035, nivel=spilling, más viejo=12773.9s) breaker=closed límite=50.7 llamadas/s
+2026/10/11 01:11:54 BREAKER closed → open (5 fallos consecutivos)
+2026/10/11 01:11:56 BREAKER open → half-open (cooldown de 2s cumplido)
+2026/10/11 01:11:56 BREAKER half-open → closed (3/3 pruebas OK en half-open)
+2026/10/11 01:12:17 drenando 41.9 confirmaciones/s, ETA 2h13m14s | inventario: confirmados=480593/815590 buffer=334965 (mem=21930 disco=313035, nivel=spilling, más viejo=12803.7s) breaker=closed límite=34.6 llamadas/s
+2026/10/11 01:12:47 drenando 47.1 confirmaciones/s, ETA 1h58m1s | inventario: confirmados=482006/815590 buffer=333552 (mem=20517 disco=313035, nivel=spilling, más viejo=12833.4s) breaker=closed límite=61.2 llamadas/s
+2026/10/11 01:13:18 drenando 47.7 confirmaciones/s, ETA 1h56m0s | inventario: confirmados=483485/815590 buffer=332073 (mem=19038 disco=313035, nivel=spilling, más viejo=12864.1s) breaker=closed límite=60.6 llamadas/s
+2026/10/11 01:13:48 drenando 47.2 confirmaciones/s, ETA 1h56m50s | inventario: confirmados=484900/815590 buffer=330658 (mem=17623 disco=313035, nivel=spilling, más viejo=12893.8s) breaker=closed límite=57.6 llamadas/s
+2026/10/11 01:13:52 BREAKER closed → open (5 fallos consecutivos)
+2026/10/11 01:13:54 BREAKER open → half-open (cooldown de 2s cumplido)
+2026/10/11 01:13:54 BREAKER half-open → closed (3/3 pruebas OK en half-open)
+2026/10/11 01:14:18 drenando 40.5 confirmaciones/s, ETA 2h15m27s | inventario: confirmados=486116/815590 buffer=329442 (mem=16407 disco=313035, nivel=spilling, más viejo=12923.6s) breaker=closed límite=39.5 llamadas/s
+2026/10/11 01:14:49 drenando 48.0 confirmaciones/s, ETA 1h53m47s | inventario: confirmados=487605/815590 buffer=327953 (mem=14918 disco=313035, nivel=spilling, más viejo=12954.3s) breaker=closed límite=38.7 llamadas/s
+2026/10/11 01:15:19 drenando 48.0 confirmaciones/s, ETA 1h53m22s | inventario: confirmados=489045/815590 buffer=326513 (mem=13478 disco=313035, nivel=spilling, más viejo=12984.0s) breaker=closed límite=34.5 llamadas/s
+2026/10/11 01:15:49 drenando 47.3 confirmaciones/s, ETA 1h54m33s | inventario: confirmados=490464/815590 buffer=325094 (mem=12059 disco=313035, nivel=spilling, más viejo=13013.8s) breaker=closed límite=63.1 llamadas/s
+2026/10/11 01:16:20 drenando 47.3 confirmaciones/s, ETA 1h54m8s | inventario: confirmados=491929/815590 buffer=323629 (mem=10594 disco=313035, nivel=spilling, más viejo=13044.5s) breaker=closed límite=58.6 llamadas/s
+2026/10/11 01:16:51 drenando 47.7 confirmaciones/s, ETA 1h52m32s | inventario: confirmados=493408/815590 buffer=322150 (mem=9115 disco=313035, nivel=spilling, más viejo=13075.2s) breaker=closed límite=57.6 llamadas/s
+2026/10/11 01:17:21 drenando 46.8 confirmaciones/s, ETA 1h54m18s | inventario: confirmados=494811/815590 buffer=320747 (mem=7712 disco=313035, nivel=spilling, más viejo=13104.9s) breaker=closed límite=51.2 llamadas/s
+2026/10/11 01:17:51 drenando 47.3 confirmaciones/s, ETA 1h52m35s | inventario: confirmados=496229/815590 buffer=319329 (mem=6294 disco=313035, nivel=spilling, más viejo=13134.7s) breaker=closed límite=49.1 llamadas/s
+2026/10/11 01:18:22 drenando 47.3 confirmaciones/s, ETA 1h52m1s | inventario: confirmados=497695/815590 buffer=317863 (mem=4828 disco=313035, nivel=spilling, más viejo=13165.4s) breaker=closed límite=47.1 llamadas/s
+2026/10/11 01:18:53 drenando 47.6 confirmaciones/s, ETA 1h50m44s | inventario: confirmados=499171/815590 buffer=316387 (mem=3352 disco=313035, nivel=spilling, más viejo=13196.1s) breaker=closed límite=46.6 llamadas/s
+2026/10/11 01:19:23 drenando 48.1 confirmaciones/s, ETA 1h49m7s | inventario: confirmados=500614/815590 buffer=314944 (mem=1909 disco=313035, nivel=spilling, más viejo=13225.8s) breaker=closed límite=41.6 llamadas/s
+2026/10/11 01:19:54 drenando 47.7 confirmaciones/s, ETA 1h49m30s | inventario: confirmados=502093/815590 buffer=313465 (mem=430 disco=313035, nivel=spilling, más viejo=13256.6s) breaker=closed límite=40.7 llamadas/s
+2026/10/11 01:20:25 drenando 48.4 confirmaciones/s, ETA 1h47m31s | inventario: confirmados=503592/815590 buffer=311966 (mem=48931 disco=263035, nivel=spilling, más viejo=13287.3s) breaker=closed límite=39.6 llamadas/s
+2026/10/11 01:20:56 drenando 47.6 confirmaciones/s, ETA 1h48m41s | inventario: confirmados=505068/815590 buffer=310490 (mem=47455 disco=263035, nivel=spilling, más viejo=13318.0s) breaker=closed límite=37.2 llamadas/s
+2026/10/11 01:21:26 drenando 48.2 confirmaciones/s, ETA 1h46m51s | inventario: confirmados=506514/815590 buffer=309044 (mem=46009 disco=263035, nivel=spilling, más viejo=13347.7s) breaker=closed límite=46.2 llamadas/s
+2026/10/11 01:21:57 drenando 47.8 confirmaciones/s, ETA 1h47m17s | inventario: confirmados=507995/815590 buffer=307563 (mem=44528 disco=263035, nivel=spilling, más viejo=13378.4s) breaker=closed límite=61.2 llamadas/s
+2026/10/11 01:22:28 drenando 47.4 confirmaciones/s, ETA 1h47m35s | inventario: confirmados=509465/815590 buffer=306093 (mem=43058 disco=263035, nivel=spilling, más viejo=13409.1s) breaker=closed límite=59.8 llamadas/s
+2026/10/11 01:22:58 drenando 47.2 confirmaciones/s, ETA 1h47m30s | inventario: confirmados=510882/815590 buffer=304676 (mem=41641 disco=263035, nivel=spilling, más viejo=13438.9s) breaker=closed límite=56.8 llamadas/s
+2026/10/11 01:23:19 BREAKER closed → open (5 fallos consecutivos)
+2026/10/11 01:23:21 BREAKER open → half-open (cooldown de 2s cumplido)
+2026/10/11 01:23:21 BREAKER half-open → closed (3/3 pruebas OK en half-open)
+2026/10/11 01:23:29 drenando 39.6 confirmaciones/s, ETA 2h7m46s | inventario: confirmados=512109/815590 buffer=303449 (mem=40414 disco=263035, nivel=spilling, más viejo=13469.6s) breaker=closed límite=33.8 llamadas/s
+2026/10/11 01:24:00 drenando 46.8 confirmaciones/s, ETA 1h47m27s | inventario: confirmados=513561/815590 buffer=301997 (mem=38962 disco=263035, nivel=spilling, más viejo=13500.4s) breaker=closed límite=47.1 llamadas/s
+2026/10/11 01:24:30 drenando 47.7 confirmaciones/s, ETA 1h45m5s | inventario: confirmados=514991/815590 buffer=300567 (mem=37532 disco=263035, nivel=spilling, más viejo=13530.1s) breaker=closed límite=59.6 llamadas/s
+2026/10/11 01:25:01 drenando 47.2 confirmaciones/s, ETA 1h45m37s | inventario: confirmados=516454/815590 buffer=299104 (mem=36069 disco=263035, nivel=spilling, más viejo=13560.8s) breaker=closed límite=59.2 llamadas/s
+2026/10/11 01:25:31 drenando 47.0 confirmaciones/s, ETA 1h45m29s | inventario: confirmados=517865/815590 buffer=297693 (mem=34658 disco=263035, nivel=spilling, más viejo=13590.5s) breaker=closed límite=54.6 llamadas/s
+2026/10/11 01:26:02 drenando 47.7 confirmaciones/s, ETA 1h43m32s | inventario: confirmados=519343/815590 buffer=296215 (mem=33180 disco=263035, nivel=spilling, más viejo=13621.3s) breaker=closed límite=53.6 llamadas/s
+2026/10/11 01:26:32 drenando 47.2 confirmaciones/s, ETA 1h44m10s | inventario: confirmados=520758/815590 buffer=294800 (mem=31765 disco=263035, nivel=spilling, más viejo=13651.0s) breaker=closed límite=49.2 llamadas/s
+2026/10/11 01:27:02 drenando 47.7 confirmaciones/s, ETA 1h42m30s | inventario: confirmados=522189/815590 buffer=293369 (mem=30334 disco=263035, nivel=spilling, más viejo=13680.7s) breaker=closed límite=46.6 llamadas/s
+2026/10/11 01:27:32 drenando 48.5 confirmaciones/s, ETA 1h40m23s | inventario: confirmados=523643/815590 buffer=291915 (mem=28880 disco=263035, nivel=spilling, más viejo=13710.4s) breaker=closed límite=43.6 llamadas/s
+2026/10/11 01:28:03 drenando 47.6 confirmaciones/s, ETA 1h41m35s | inventario: confirmados=525120/815590 buffer=290438 (mem=27403 disco=263035, nivel=spilling, más viejo=13741.1s) breaker=closed límite=41.2 llamadas/s
+2026/10/11 01:28:34 drenando 47.8 confirmaciones/s, ETA 1h40m48s | inventario: confirmados=526601/815590 buffer=288957 (mem=25922 disco=263035, nivel=spilling, más viejo=13771.9s) breaker=closed límite=40.6 llamadas/s
+2026/10/11 01:29:04 drenando 48.6 confirmaciones/s, ETA 1h38m35s | inventario: confirmados=528059/815590 buffer=287499 (mem=24464 disco=263035, nivel=spilling, más viejo=13801.6s) breaker=closed límite=35.6 llamadas/s
+2026/10/11 01:29:35 drenando 47.7 confirmaciones/s, ETA 1h39m54s | inventario: confirmados=529538/815590 buffer=286020 (mem=22985 disco=263035, nivel=spilling, más viejo=13832.3s) breaker=closed límite=35.2 llamadas/s
+2026/10/11 01:30:06 drenando 47.4 confirmaciones/s, ETA 1h40m4s | inventario: confirmados=531007/815590 buffer=284551 (mem=21516 disco=263035, nivel=spilling, más viejo=13863.0s) breaker=closed límite=46.8 llamadas/s
+2026/10/11 01:30:36 drenando 47.6 confirmaciones/s, ETA 1h39m12s | inventario: confirmados=532434/815590 buffer=283124 (mem=20089 disco=263035, nivel=spilling, más viejo=13892.7s) breaker=closed límite=61.5 llamadas/s
+2026/10/11 01:31:07 drenando 47.3 confirmaciones/s, ETA 1h39m20s | inventario: confirmados=533899/815590 buffer=281659 (mem=18624 disco=263035, nivel=spilling, más viejo=13923.5s) breaker=closed límite=61.2 llamadas/s
+2026/10/11 01:31:38 drenando 47.0 confirmaciones/s, ETA 1h39m25s | inventario: confirmados=535355/815590 buffer=280203 (mem=17168 disco=263035, nivel=spilling, más viejo=13954.2s) breaker=closed límite=59.1 llamadas/s
+2026/10/11 01:32:08 drenando 47.4 confirmaciones/s, ETA 1h38m5s | inventario: confirmados=536776/815590 buffer=278782 (mem=15747 disco=263035, nivel=spilling, más viejo=13983.9s) breaker=closed límite=52.6 llamadas/s
+2026/10/11 01:32:39 drenando 47.7 confirmaciones/s, ETA 1h36m52s | inventario: confirmados=538255/815590 buffer=277303 (mem=14268 disco=263035, nivel=spilling, más viejo=14014.6s) breaker=closed límite=51.6 llamadas/s
+2026/10/11 01:33:10 drenando 47.6 confirmaciones/s, ETA 1h36m33s | inventario: confirmados=539731/815590 buffer=275827 (mem=12792 disco=263035, nivel=spilling, más viejo=14045.3s) breaker=closed límite=50.7 llamadas/s
+2026/10/11 01:33:40 drenando 48.1 confirmaciones/s, ETA 1h35m4s | inventario: confirmados=541174/815590 buffer=274384 (mem=11349 disco=263035, nivel=spilling, más viejo=14075.1s) breaker=closed límite=45.6 llamadas/s
+2026/10/11 01:34:10 drenando 48.2 confirmaciones/s, ETA 1h34m18s | inventario: confirmados=542621/815590 buffer=272937 (mem=9902 disco=263035, nivel=spilling, más viejo=14104.8s) breaker=closed límite=41.2 llamadas/s
+2026/10/11 01:34:40 drenando 48.2 confirmaciones/s, ETA 1h33m52s | inventario: confirmados=544067/815590 buffer=271491 (mem=8456 disco=263035, nivel=spilling, más viejo=14134.5s) breaker=closed límite=36.6 llamadas/s
+2026/10/11 01:35:10 drenando 48.0 confirmaciones/s, ETA 1h33m42s | inventario: confirmados=545508/815590 buffer=270050 (mem=7015 disco=263035, nivel=spilling, más viejo=14164.2s) breaker=closed límite=47.4 llamadas/s
+2026/10/11 01:35:41 drenando 47.9 confirmaciones/s, ETA 1h33m26s | inventario: confirmados=546993/815590 buffer=268565 (mem=5530 disco=263035, nivel=spilling, más viejo=14194.9s) breaker=closed límite=62.6 llamadas/s
+2026/10/11 01:36:11 drenando 47.2 confirmaciones/s, ETA 1h34m23s | inventario: confirmados=548408/815590 buffer=267150 (mem=4115 disco=263035, nivel=spilling, más viejo=14224.7s) breaker=closed límite=57.6 llamadas/s
+2026/10/11 01:36:42 drenando 47.4 confirmaciones/s, ETA 1h33m26s | inventario: confirmados=549877/815590 buffer=265681 (mem=2646 disco=263035, nivel=spilling, más viejo=14255.4s) breaker=closed límite=54.7 llamadas/s
+2026/10/11 01:37:13 drenando 47.7 confirmaciones/s, ETA 1h32m13s | inventario: confirmados=551357/815590 buffer=264201 (mem=1166 disco=263035, nivel=spilling, más viejo=14286.1s) breaker=closed límite=51.6 llamadas/s
+2026/10/11 01:37:44 drenando 47.6 confirmaciones/s, ETA 1h31m54s | inventario: confirmados=552834/815590 buffer=262724 (mem=49689 disco=213035, nivel=spilling, más viejo=14316.8s) breaker=closed límite=49.2 llamadas/s
+2026/10/11 01:38:14 drenando 47.8 confirmaciones/s, ETA 1h31m6s | inventario: confirmados=554268/815590 buffer=261290 (mem=48255 disco=213035, nivel=spilling, más viejo=14346.6s) breaker=closed límite=44.6 llamadas/s
+2026/10/11 01:38:45 drenando 48.0 confirmaciones/s, ETA 1h30m12s | inventario: confirmados=555756/815590 buffer=259802 (mem=46767 disco=213035, nivel=spilling, más viejo=14377.3s) breaker=closed límite=43.6 llamadas/s
+2026/10/11 01:39:16 drenando 47.4 confirmaciones/s, ETA 1h30m51s | inventario: confirmados=557225/815590 buffer=258333 (mem=45298 disco=213035, nivel=spilling, más viejo=14408.0s) breaker=closed límite=43.2 llamadas/s
+2026/10/11 01:39:47 drenando 47.9 confirmaciones/s, ETA 1h29m25s | inventario: confirmados=558709/815590 buffer=256849 (mem=43814 disco=213035, nivel=spilling, más viejo=14438.7s) breaker=closed límite=40.6 llamadas/s
+2026/10/11 01:40:17 drenando 48.7 confirmaciones/s, ETA 1h27m20s | inventario: confirmados=560171/815590 buffer=255387 (mem=42352 disco=213035, nivel=spilling, más viejo=14468.4s) breaker=closed límite=37.6 llamadas/s
+2026/10/11 01:40:47 drenando 47.7 confirmaciones/s, ETA 1h28m47s | inventario: confirmados=561601/815590 buffer=253957 (mem=40922 disco=213035, nivel=spilling, más viejo=14498.2s) breaker=closed límite=47.0 llamadas/s
+2026/10/11 01:41:18 drenando 47.5 confirmaciones/s, ETA 1h28m40s | inventario: confirmados=563072/815590 buffer=252486 (mem=39451 disco=213035, nivel=spilling, más viejo=14528.9s) breaker=closed límite=46.2 llamadas/s
+2026/10/11 01:41:48 drenando 47.4 confirmaciones/s, ETA 1h28m16s | inventario: confirmados=564494/815590 buffer=251064 (mem=38029 disco=213035, nivel=spilling, más viejo=14558.6s) breaker=closed límite=59.2 llamadas/s
+2026/10/11 01:42:19 drenando 47.4 confirmaciones/s, ETA 1h27m47s | inventario: confirmados=565963/815590 buffer=249595 (mem=36560 disco=213035, nivel=spilling, más viejo=14589.3s) breaker=closed límite=58.6 llamadas/s
+2026/10/11 01:42:50 drenando 47.9 confirmaciones/s, ETA 1h26m22s | inventario: confirmados=567447/815590 buffer=248111 (mem=35076 disco=213035, nivel=spilling, más viejo=14620.0s) breaker=closed límite=55.6 llamadas/s
+2026/10/11 01:43:20 drenando 47.3 confirmaciones/s, ETA 1h26m59s | inventario: confirmados=568865/815590 buffer=246693 (mem=33658 disco=213035, nivel=spilling, más viejo=14649.8s) breaker=closed límite=52.7 llamadas/s
+2026/10/11 01:43:51 drenando 47.7 confirmaciones/s, ETA 1h25m43s | inventario: confirmados=570343/815590 buffer=245215 (mem=32180 disco=213035, nivel=spilling, más viejo=14680.5s) breaker=closed límite=51.6 llamadas/s
+2026/10/11 01:44:21 drenando 47.5 confirmaciones/s, ETA 1h25m32s | inventario: confirmados=571768/815590 buffer=243790 (mem=30755 disco=213035, nivel=spilling, más viejo=14710.2s) breaker=closed límite=47.2 llamadas/s
+2026/10/11 01:44:51 drenando 47.7 confirmaciones/s, ETA 1h24m37s | inventario: confirmados=573200/815590 buffer=242358 (mem=29323 disco=213035, nivel=spilling, más viejo=14739.9s) breaker=closed límite=44.6 llamadas/s
+2026/10/11 01:45:21 drenando 48.4 confirmaciones/s, ETA 1h23m0s | inventario: confirmados=574651/815590 buffer=240907 (mem=27872 disco=213035, nivel=spilling, más viejo=14769.7s) breaker=closed límite=39.6 llamadas/s
+2026/10/11 01:45:52 drenando 48.1 confirmaciones/s, ETA 1h23m1s | inventario: confirmados=576141/815590 buffer=239417 (mem=26382 disco=213035, nivel=spilling, más viejo=14800.4s) breaker=closed límite=37.2 llamadas/s
+2026/10/11 01:46:22 drenando 48.1 confirmaciones/s, ETA 1h22m27s | inventario: confirmados=577584/815590 buffer=237974 (mem=24939 disco=213035, nivel=spilling, más viejo=14830.1s) breaker=closed límite=63.6 llamadas/s
+2026/10/11 01:46:53 drenando 47.5 confirmaciones/s, ETA 1h22m57s | inventario: confirmados=579057/815590 buffer=236501 (mem=23466 disco=213035, nivel=spilling, más viejo=14860.8s) breaker=closed límite=62.7 llamadas/s
+2026/10/11 01:47:23 drenando 47.3 confirmaciones/s, ETA 1h22m46s | inventario: confirmados=580477/815590 buffer=235081 (mem=22046 disco=213035, nivel=spilling, más viejo=14890.6s) breaker=closed límite=57.6 llamadas/s
+2026/10/11 01:47:54 drenando 47.6 confirmaciones/s, ETA 1h21m42s | inventario: confirmados=581954/815590 buffer=233604 (mem=20569 disco=213035, nivel=spilling, más viejo=14921.3s) breaker=closed límite=56.7 llamadas/s
+2026/10/11 01:48:24 drenando 47.5 confirmaciones/s, ETA 1h21m24s | inventario: confirmados=583380/815590 buffer=232178 (mem=19143 disco=213035, nivel=spilling, más viejo=14951.0s) breaker=closed límite=53.6 llamadas/s
+2026/10/11 01:48:54 drenando 47.2 confirmaciones/s, ETA 1h21m25s | inventario: confirmados=584797/815590 buffer=230761 (mem=17726 disco=213035, nivel=spilling, más viejo=14980.7s) breaker=closed límite=49.2 llamadas/s
+2026/10/11 01:49:24 drenando 47.6 confirmaciones/s, ETA 1h20m21s | inventario: confirmados=586224/815590 buffer=229334 (mem=16299 disco=213035, nivel=spilling, más viejo=15010.5s) breaker=closed límite=47.1 llamadas/s
+2026/10/11 01:49:55 drenando 47.2 confirmaciones/s, ETA 1h20m25s | inventario: confirmados=587688/815590 buffer=227870 (mem=14835 disco=213035, nivel=spilling, más viejo=15041.2s) breaker=closed límite=45.1 llamadas/s
+2026/10/11 01:50:26 drenando 47.7 confirmaciones/s, ETA 1h19m8s | inventario: confirmados=589166/815590 buffer=226392 (mem=13357 disco=213035, nivel=spilling, más viejo=15071.9s) breaker=closed límite=44.6 llamadas/s
+2026/10/11 01:50:57 drenando 48.2 confirmaciones/s, ETA 1h17m43s | inventario: confirmados=590661/815590 buffer=224897 (mem=11862 disco=213035, nivel=spilling, más viejo=15102.6s) breaker=closed límite=41.6 llamadas/s
+2026/10/11 01:51:27 drenando 48.2 confirmaciones/s, ETA 1h17m19s | inventario: confirmados=592106/815590 buffer=223452 (mem=10417 disco=213035, nivel=spilling, más viejo=15132.3s) breaker=closed límite=38.7 llamadas/s
+2026/10/11 01:51:57 drenando 48.6 confirmaciones/s, ETA 1h16m4s | inventario: confirmados=593565/815590 buffer=221993 (mem=8958 disco=213035, nivel=spilling, más viejo=15162.0s) breaker=closed límite=35.6 llamadas/s
+2026/10/11 01:52:28 drenando 47.4 confirmaciones/s, ETA 1h17m33s | inventario: confirmados=595034/815590 buffer=220524 (mem=7489 disco=213035, nivel=spilling, más viejo=15192.8s) breaker=closed límite=47.0 llamadas/s
+2026/10/11 01:52:59 drenando 47.2 confirmaciones/s, ETA 1h17m21s | inventario: confirmados=596497/815590 buffer=219061 (mem=6026 disco=213035, nivel=spilling, más viejo=15223.5s) breaker=closed límite=46.8 llamadas/s
+2026/10/11 01:53:30 drenando 47.7 confirmaciones/s, ETA 1h16m3s | inventario: confirmados=597975/815590 buffer=217583 (mem=4548 disco=213035, nivel=spilling, más viejo=15254.2s) breaker=closed límite=61.5 llamadas/s
+2026/10/11 01:54:01 drenando 47.3 confirmaciones/s, ETA 1h16m6s | inventario: confirmados=599442/815590 buffer=216116 (mem=3081 disco=213035, nivel=spilling, más viejo=15284.9s) breaker=closed límite=60.7 llamadas/s
+2026/10/11 01:54:32 drenando 47.9 confirmaciones/s, ETA 1h14m43s | inventario: confirmados=600926/815590 buffer=214632 (mem=1597 disco=213035, nivel=spilling, más viejo=15315.6s) breaker=closed límite=59.6 llamadas/s
+2026/10/11 01:55:03 drenando 47.4 confirmaciones/s, ETA 1h14m58s | inventario: confirmados=602395/815590 buffer=213163 (mem=128 disco=213035, nivel=spilling, más viejo=15346.4s) breaker=closed límite=57.2 llamadas/s
+2026/10/11 01:55:34 drenando 47.1 confirmaciones/s, ETA 1h14m51s | inventario: confirmados=603856/815590 buffer=211702 (mem=48667 disco=163035, nivel=spilling, más viejo=15377.1s) breaker=closed límite=57.1 llamadas/s
+2026/10/11 01:56:04 drenando 47.9 confirmaciones/s, ETA 1h13m6s | inventario: confirmados=605294/815590 buffer=210264 (mem=47229 disco=163035, nivel=spilling, más viejo=15406.8s) breaker=closed límite=51.7 llamadas/s
+2026/10/11 01:56:35 drenando 47.6 confirmaciones/s, ETA 1h13m2s | inventario: confirmados=606771/815590 buffer=208787 (mem=45752 disco=163035, nivel=spilling, más viejo=15437.5s) breaker=closed límite=51.3 llamadas/s
+2026/10/11 01:57:05 drenando 48.0 confirmaciones/s, ETA 1h12m2s | inventario: confirmados=608210/815590 buffer=207348 (mem=44313 disco=163035, nivel=spilling, más viejo=15467.2s) breaker=closed límite=45.8 llamadas/s
+2026/10/11 01:57:36 drenando 47.7 confirmaciones/s, ETA 1h11m57s | inventario: confirmados=609688/815590 buffer=205870 (mem=42835 disco=163035, nivel=spilling, más viejo=15498.0s) breaker=closed límite=45.3 llamadas/s
+2026/10/11 01:58:06 drenando 48.1 confirmaciones/s, ETA 1h10m47s | inventario: confirmados=611132/815590 buffer=204426 (mem=41391 disco=163035, nivel=spilling, más viejo=15527.7s) breaker=closed límite=42.7 llamadas/s
+2026/10/11 01:58:37 drenando 48.2 confirmaciones/s, ETA 1h10m13s | inventario: confirmados=612625/815590 buffer=202933 (mem=39898 disco=163035, nivel=spilling, más viejo=15558.4s) breaker=closed límite=39.6 llamadas/s
+2026/10/11 01:59:08 drenando 47.7 confirmaciones/s, ETA 1h10m19s | inventario: confirmados=614105/815590 buffer=201453 (mem=38418 disco=163035, nivel=spilling, más viejo=15589.1s) breaker=closed límite=39.2 llamadas/s
+2026/10/11 01:59:39 drenando 47.6 confirmaciones/s, ETA 1h9m57s | inventario: confirmados=615582/815590 buffer=199976 (mem=36941 disco=163035, nivel=spilling, más viejo=15619.8s) breaker=closed límite=36.6 llamadas/s
+2026/10/11 02:00:10 drenando 48.0 confirmaciones/s, ETA 1h8m55s | inventario: confirmados=617070/815590 buffer=198488 (mem=35453 disco=163035, nivel=spilling, más viejo=15650.6s) breaker=closed límite=35.6 llamadas/s
+2026/10/11 02:00:41 drenando 47.9 confirmaciones/s, ETA 1h8m29s | inventario: confirmados=618556/815590 buffer=197002 (mem=33967 disco=163035, nivel=spilling, más viejo=15681.3s) breaker=closed límite=34.7 llamadas/s
+2026/10/11 02:01:12 drenando 47.2 confirmaciones/s, ETA 1h9m6s | inventario: confirmados=620018/815590 buffer=195540 (mem=32505 disco=163035, nivel=spilling, más viejo=15712.0s) breaker=closed límite=63.3 llamadas/s
+2026/10/11 02:01:42 drenando 47.8 confirmaciones/s, ETA 1h7m37s | inventario: confirmados=621453/815590 buffer=194105 (mem=31070 disco=163035, nivel=spilling, más viejo=15741.7s) breaker=closed límite=59.8 llamadas/s
+2026/10/11 02:02:13 drenando 47.4 confirmaciones/s, ETA 1h7m42s | inventario: confirmados=622923/815590 buffer=192635 (mem=29600 disco=163035, nivel=spilling, más viejo=15772.4s) breaker=closed límite=57.3 llamadas/s
+2026/10/11 02:02:43 drenando 47.4 confirmaciones/s, ETA 1h7m16s | inventario: confirmados=624344/815590 buffer=191214 (mem=28179 disco=163035, nivel=spilling, más viejo=15802.2s) breaker=closed límite=54.7 llamadas/s
+2026/10/11 02:03:14 drenando 47.1 confirmaciones/s, ETA 1h7m6s | inventario: confirmados=625805/815590 buffer=189753 (mem=26718 disco=163035, nivel=spilling, más viejo=15832.9s) breaker=closed límite=52.4 llamadas/s
+2026/10/11 02:03:44 drenando 48.0 confirmaciones/s, ETA 1h5m25s | inventario: confirmados=627244/815590 buffer=188314 (mem=25279 disco=163035, nivel=spilling, más viejo=15862.6s) breaker=closed límite=49.5 llamadas/s
+2026/10/11 02:04:15 drenando 47.3 confirmaciones/s, ETA 1h5m48s | inventario: confirmados=628711/815590 buffer=186847 (mem=23812 disco=163035, nivel=spilling, más viejo=15893.3s) breaker=closed límite=47.2 llamadas/s
+2026/10/11 02:04:45 drenando 47.5 confirmaciones/s, ETA 1h5m6s | inventario: confirmados=630135/815590 buffer=185423 (mem=22388 disco=163035, nivel=spilling, más viejo=15923.1s) breaker=closed límite=45.1 llamadas/s
+2026/10/11 02:05:16 drenando 48.1 confirmaciones/s, ETA 1h3m44s | inventario: confirmados=631626/815590 buffer=183932 (mem=20897 disco=163035, nivel=spilling, más viejo=15953.8s) breaker=closed límite=42.6 llamadas/s
+2026/10/11 02:05:46 drenando 48.6 confirmaciones/s, ETA 1h2m32s | inventario: confirmados=633085/815590 buffer=182473 (mem=19438 disco=163035, nivel=spilling, más viejo=15983.5s) breaker=closed límite=37.6 llamadas/s
+2026/10/11 02:06:16 drenando 47.8 confirmaciones/s, ETA 1h3m4s | inventario: confirmados=634520/815590 buffer=181038 (mem=18003 disco=163035, nivel=spilling, más viejo=16013.2s) breaker=closed límite=47.0 llamadas/s
+2026/10/11 02:06:47 drenando 47.0 confirmaciones/s, ETA 1h3m38s | inventario: confirmados=635978/815590 buffer=179580 (mem=16545 disco=163035, nivel=spilling, más viejo=16043.9s) breaker=closed límite=62.4 llamadas/s
+2026/10/11 02:07:18 drenando 47.9 confirmaciones/s, ETA 1h1m57s | inventario: confirmados=637463/815590 buffer=178095 (mem=15060 disco=163035, nivel=spilling, más viejo=16074.7s) breaker=closed límite=61.5 llamadas/s
+2026/10/11 02:07:48 drenando 47.1 confirmaciones/s, ETA 1h2m28s | inventario: confirmados=638877/815590 buffer=176681 (mem=13646 disco=163035, nivel=spilling, más viejo=16104.4s) breaker=closed límite=56.7 llamadas/s
+2026/10/11 02:08:19 drenando 47.6 confirmaciones/s, ETA 1h1m22s | inventario: confirmados=640352/815590 buffer=175206 (mem=12171 disco=163035, nivel=spilling, más viejo=16135.1s) breaker=closed límite=55.6 llamadas/s
+2026/10/11 02:08:50 drenando 47.8 confirmaciones/s, ETA 1h0m31s | inventario: confirmados=641835/815590 buffer=173723 (mem=10688 disco=163035, nivel=spilling, más viejo=16165.8s) breaker=closed límite=54.7 llamadas/s
+2026/10/11 02:09:21 drenando 47.7 confirmaciones/s, ETA 1h0m7s | inventario: confirmados=643315/815590 buffer=172243 (mem=9208 disco=163035, nivel=spilling, más viejo=16196.5s) breaker=closed límite=51.6 llamadas/s
+2026/10/11 02:09:51 drenando 47.2 confirmaciones/s, ETA 1h0m21s | inventario: confirmados=644730/815590 buffer=170828 (mem=7793 disco=163035, nivel=spilling, más viejo=16226.3s) breaker=closed límite=49.2 llamadas/s
+2026/10/11 02:10:22 drenando 47.3 confirmaciones/s, ETA 59m43s | inventario: confirmados=646195/815590 buffer=169363 (mem=6328 disco=163035, nivel=spilling, más viejo=16257.0s) breaker=closed límite=47.1 llamadas/s
+2026/10/11 02:10:53 drenando 47.5 confirmaciones/s, ETA 58m50s | inventario: confirmados=647669/815590 buffer=167889 (mem=4854 disco=163035, nivel=spilling, más viejo=16287.7s) breaker=closed límite=46.6 llamadas/s
+2026/10/11 02:11:24 drenando 47.8 confirmaciones/s, ETA 57m58s | inventario: confirmados=649152/815590 buffer=166406 (mem=3371 disco=163035, nivel=spilling, más viejo=16318.4s) breaker=closed límite=43.6 llamadas/s
+2026/10/11 02:11:55 drenando 47.5 confirmaciones/s, ETA 57m48s | inventario: confirmados=650626/815590 buffer=164932 (mem=1897 disco=163035, nivel=spilling, más viejo=16349.1s) breaker=closed límite=43.2 llamadas/s
+2026/10/11 02:12:26 drenando 47.8 confirmaciones/s, ETA 56m58s | inventario: confirmados=652108/815590 buffer=163450 (mem=415 disco=163035, nivel=spilling, más viejo=16379.9s) breaker=closed límite=40.6 llamadas/s
+2026/10/11 02:12:57 drenando 48.0 confirmaciones/s, ETA 56m14s | inventario: confirmados=653596/815590 buffer=161962 (mem=48927 disco=113035, nivel=spilling, más viejo=16410.6s) breaker=closed límite=39.6 llamadas/s
+2026/10/11 02:13:28 drenando 47.5 confirmaciones/s, ETA 56m22s | inventario: confirmados=655067/815590 buffer=160491 (mem=47456 disco=113035, nivel=spilling, más viejo=16441.3s) breaker=closed límite=39.2 llamadas/s
+2026/10/11 02:13:58 drenando 48.3 confirmaciones/s, ETA 54m50s | inventario: confirmados=656517/815590 buffer=159041 (mem=46006 disco=113035, nivel=spilling, más viejo=16471.0s) breaker=closed límite=34.6 llamadas/s
+2026/10/11 02:14:28 drenando 47.3 confirmaciones/s, ETA 55m30s | inventario: confirmados=657937/815590 buffer=157621 (mem=44586 disco=113035, nivel=spilling, más viejo=16499.4s) breaker=closed límite=63.2 llamadas/s
+2026/10/11 02:14:59 drenando 47.7 confirmaciones/s, ETA 54m34s | inventario: confirmados=659415/815590 buffer=156143 (mem=43108 disco=113035, nivel=spilling, más viejo=16527.6s) breaker=closed límite=60.6 llamadas/s
+2026/10/11 02:15:29 drenando 47.3 confirmaciones/s, ETA 54m28s | inventario: confirmados=660835/815590 buffer=154723 (mem=41688 disco=113035, nivel=spilling, más viejo=16554.8s) breaker=closed límite=57.6 llamadas/s
+2026/10/11 02:16:00 drenando 47.2 confirmaciones/s, ETA 54m9s | inventario: confirmados=662297/815590 buffer=153261 (mem=40226 disco=113035, nivel=spilling, más viejo=16583.0s) breaker=closed límite=55.2 llamadas/s
+2026/10/11 02:16:30 drenando 46.9 confirmaciones/s, ETA 53m55s | inventario: confirmados=663705/815590 buffer=151853 (mem=38818 disco=113035, nivel=spilling, más viejo=16610.3s) breaker=closed límite=53.1 llamadas/s
+2026/10/11 02:17:00 drenando 47.6 confirmaciones/s, ETA 52m42s | inventario: confirmados=665132/815590 buffer=150426 (mem=37391 disco=113035, nivel=spilling, más viejo=16637.6s) breaker=closed límite=48.6 llamadas/s
+2026/10/11 02:17:30 drenando 47.7 confirmaciones/s, ETA 52m5s | inventario: confirmados=666562/815590 buffer=148996 (mem=35961 disco=113035, nivel=spilling, más viejo=16664.8s) breaker=closed límite=45.6 llamadas/s
+2026/10/11 02:18:01 drenando 47.8 confirmaciones/s, ETA 51m27s | inventario: confirmados=668043/815590 buffer=147515 (mem=34480 disco=113035, nivel=spilling, más viejo=16693.0s) breaker=closed límite=44.7 llamadas/s
+2026/10/11 02:18:32 drenando 48.1 confirmaciones/s, ETA 50m35s | inventario: confirmados=669534/815590 buffer=146024 (mem=32989 disco=113035, nivel=spilling, más viejo=16721.2s) breaker=closed límite=41.6 llamadas/s
+2026/10/11 02:19:02 drenando 47.7 confirmaciones/s, ETA 50m29s | inventario: confirmados=670966/815590 buffer=144592 (mem=31557 disco=113035, nivel=spilling, más viejo=16748.4s) breaker=closed límite=39.2 llamadas/s
+2026/10/11 02:19:32 drenando 48.1 confirmaciones/s, ETA 49m36s | inventario: confirmados=672409/815590 buffer=143149 (mem=30114 disco=113035, nivel=spilling, más viejo=16775.7s) breaker=closed límite=35.1 llamadas/s
+2026/10/11 02:20:03 drenando 48.0 confirmaciones/s, ETA 49m13s | inventario: confirmados=673896/815590 buffer=141662 (mem=28627 disco=113035, nivel=spilling, más viejo=16803.8s) breaker=closed límite=34.6 llamadas/s
+2026/10/11 02:20:34 drenando 47.2 confirmaciones/s, ETA 49m28s | inventario: confirmados=675360/815590 buffer=140198 (mem=27163 disco=113035, nivel=spilling, más viejo=16831.9s) breaker=closed límite=63.2 llamadas/s
+2026/10/11 02:21:05 drenando 47.4 confirmaciones/s, ETA 48m45s | inventario: confirmados=676830/815590 buffer=138728 (mem=25693 disco=113035, nivel=spilling, más viejo=16860.1s) breaker=closed límite=60.6 llamadas/s
+2026/10/11 02:21:35 drenando 46.9 confirmaciones/s, ETA 48m45s | inventario: confirmados=678238/815590 buffer=137320 (mem=24285 disco=113035, nivel=spilling, más viejo=16887.4s) breaker=closed límite=55.6 llamadas/s
+2026/10/11 02:22:05 drenando 47.2 confirmaciones/s, ETA 47m57s | inventario: confirmados=679655/815590 buffer=135903 (mem=22868 disco=113035, nivel=spilling, más viejo=16914.7s) breaker=closed límite=52.7 llamadas/s
+2026/10/11 02:22:36 drenando 47.1 confirmaciones/s, ETA 47m32s | inventario: confirmados=681116/815590 buffer=134442 (mem=21407 disco=113035, nivel=spilling, más viejo=16942.9s) breaker=closed límite=52.5 llamadas/s
+2026/10/11 02:23:06 drenando 47.9 confirmaciones/s, ETA 46m14s | inventario: confirmados=682554/815590 buffer=133004 (mem=19969 disco=113035, nivel=spilling, más viejo=16970.1s) breaker=closed límite=47.5 llamadas/s
+2026/10/11 02:23:36 drenando 47.5 confirmaciones/s, ETA 46m8s | inventario: confirmados=683980/815590 buffer=131578 (mem=18543 disco=113035, nivel=spilling, más viejo=16997.3s) breaker=closed límite=45.2 llamadas/s
+2026/10/11 02:24:07 drenando 47.6 confirmaciones/s, ETA 45m34s | inventario: confirmados=685455/815590 buffer=130103 (mem=17068 disco=113035, nivel=spilling, más viejo=17025.5s) breaker=closed límite=42.6 llamadas/s
+2026/10/11 02:24:37 drenando 47.7 confirmaciones/s, ETA 44m57s | inventario: confirmados=686886/815590 buffer=128672 (mem=15637 disco=113035, nivel=spilling, más viejo=17052.7s) breaker=closed límite=40.4 llamadas/s
+2026/10/11 02:25:07 drenando 47.9 confirmaciones/s, ETA 44m16s | inventario: confirmados=688323/815590 buffer=127235 (mem=14200 disco=113035, nivel=spilling, más viejo=17080.0s) breaker=closed límite=36.4 llamadas/s
+2026/10/11 02:25:38 drenando 47.8 confirmaciones/s, ETA 43m50s | inventario: confirmados=689805/815590 buffer=125753 (mem=12718 disco=113035, nivel=spilling, más viejo=17108.2s) breaker=closed límite=35.5 llamadas/s
+2026/10/11 02:26:09 drenando 47.1 confirmaciones/s, ETA 43m59s | inventario: confirmados=691265/815590 buffer=124293 (mem=11258 disco=113035, nivel=spilling, más viejo=17136.3s) breaker=closed límite=62.6 llamadas/s
+2026/10/11 02:26:39 drenando 47.2 confirmaciones/s, ETA 43m25s | inventario: confirmados=692680/815590 buffer=122878 (mem=9843 disco=113035, nivel=spilling, más viejo=17163.7s) breaker=closed límite=59.6 llamadas/s
+2026/10/11 02:27:10 drenando 47.8 confirmaciones/s, ETA 42m19s | inventario: confirmados=694162/815590 buffer=121396 (mem=8361 disco=113035, nivel=spilling, más viejo=17191.8s) breaker=closed límite=58.7 llamadas/s
+2026/10/11 02:27:40 drenando 47.5 confirmaciones/s, ETA 42m3s | inventario: confirmados=695588/815590 buffer=119970 (mem=6935 disco=113035, nivel=spilling, más viejo=17219.1s) breaker=closed límite=53.6 llamadas/s
+2026/10/11 02:28:11 drenando 47.2 confirmaciones/s, ETA 41m49s | inventario: confirmados=697052/815590 buffer=118506 (mem=5471 disco=113035, nivel=spilling, más viejo=17247.3s) breaker=closed límite=53.2 llamadas/s
+2026/10/11 02:28:41 drenando 47.6 confirmaciones/s, ETA 40m57s | inventario: confirmados=698481/815590 buffer=117077 (mem=4042 disco=113035, nivel=spilling, más viejo=17274.5s) breaker=closed límite=48.6 llamadas/s
+2026/10/11 02:29:12 drenando 48.1 confirmaciones/s, ETA 40m4s | inventario: confirmados=699971/815590 buffer=115587 (mem=2552 disco=113035, nivel=spilling, más viejo=17302.6s) breaker=closed límite=47.6 llamadas/s
+2026/10/11 02:29:42 drenando 47.7 confirmaciones/s, ETA 39m54s | inventario: confirmados=701401/815590 buffer=114157 (mem=1122 disco=113035, nivel=spilling, más viejo=17329.9s) breaker=closed límite=43.2 llamadas/s
+2026/10/11 02:30:12 drenando 48.2 confirmaciones/s, ETA 38m56s | inventario: confirmados=702848/815590 buffer=112710 (mem=49675 disco=63035, nivel=spilling, más viejo=17357.1s) breaker=closed límite=38.6 llamadas/s
+2026/10/11 02:30:42 drenando 48.6 confirmaciones/s, ETA 38m9s | inventario: confirmados=704306/815590 buffer=111252 (mem=48217 disco=63035, nivel=spilling, más viejo=17384.3s) breaker=closed límite=35.6 llamadas/s
+2026/10/11 02:31:13 drenando 48.1 confirmaciones/s, ETA 38m3s | inventario: confirmados=705796/815590 buffer=109762 (mem=46727 disco=63035, nivel=spilling, más viejo=17412.5s) breaker=closed límite=46.3 llamadas/s
+2026/10/11 02:31:43 drenando 47.5 confirmaciones/s, ETA 38m2s | inventario: confirmados=707220/815590 buffer=108338 (mem=45303 disco=63035, nivel=spilling, más viejo=17439.7s) breaker=closed límite=61.3 llamadas/s
+2026/10/11 02:32:13 drenando 46.4 confirmaciones/s, ETA 38m23s | inventario: confirmados=708613/815590 buffer=106945 (mem=43910 disco=63035, nivel=spilling, más viejo=17467.1s) breaker=closed límite=58.7 llamadas/s
+2026/10/11 02:32:44 drenando 47.4 confirmaciones/s, ETA 37m5s | inventario: confirmados=710082/815590 buffer=105476 (mem=42441 disco=63035, nivel=spilling, más viejo=17495.3s) breaker=closed límite=56.4 llamadas/s
+2026/10/11 02:33:14 drenando 47.2 confirmaciones/s, ETA 36m44s | inventario: confirmados=711498/815590 buffer=104060 (mem=41025 disco=63035, nivel=spilling, más viejo=17522.6s) breaker=closed límite=53.5 llamadas/s
+2026/10/11 02:33:44 drenando 47.7 confirmaciones/s, ETA 35m51s | inventario: confirmados=712929/815590 buffer=102629 (mem=39594 disco=63035, nivel=spilling, más viejo=17549.9s) breaker=closed límite=48.7 llamadas/s
+2026/10/11 02:34:14 drenando 48.0 confirmaciones/s, ETA 35m6s | inventario: confirmados=714370/815590 buffer=101188 (mem=38153 disco=63035, nivel=spilling, más viejo=17577.1s) breaker=closed límite=45.6 llamadas/s
+2026/10/11 02:34:45 drenando 47.9 confirmaciones/s, ETA 34m42s | inventario: confirmados=715854/815590 buffer=99704 (mem=36669 disco=63035, nivel=spilling, más viejo=17605.3s) breaker=closed límite=41.2 llamadas/s
+2026/10/11 02:35:15 drenando 49.1 confirmaciones/s, ETA 33m22s | inventario: confirmados=717326/815590 buffer=98232 (mem=35197 disco=63035, nivel=spilling, más viejo=17632.5s) breaker=closed límite=37.8 llamadas/s
+2026/10/11 02:35:46 drenando 47.6 confirmaciones/s, ETA 33m53s | inventario: confirmados=718801/815590 buffer=96757 (mem=33722 disco=63035, nivel=spilling, más viejo=17660.7s) breaker=closed límite=37.3 llamadas/s
+2026/10/11 02:36:16 drenando 47.6 confirmaciones/s, ETA 33m24s | inventario: confirmados=720228/815590 buffer=95330 (mem=32295 disco=63035, nivel=spilling, más viejo=17688.0s) breaker=closed límite=46.9 llamadas/s
+2026/10/11 02:36:46 drenando 47.5 confirmaciones/s, ETA 32m56s | inventario: confirmados=721653/815590 buffer=93905 (mem=30870 disco=63035, nivel=spilling, más viejo=17715.3s) breaker=closed límite=61.5 llamadas/s
+2026/10/11 02:37:17 drenando 47.1 confirmaciones/s, ETA 32m41s | inventario: confirmados=723114/815590 buffer=92444 (mem=29409 disco=63035, nivel=spilling, más viejo=17743.5s) breaker=closed límite=57.2 llamadas/s
+2026/10/11 02:37:47 drenando 47.0 confirmaciones/s, ETA 32m15s | inventario: confirmados=724525/815590 buffer=91033 (mem=27998 disco=63035, nivel=spilling, más viejo=17770.8s) breaker=closed límite=52.6 llamadas/s
+2026/10/11 02:38:18 drenando 47.6 confirmaciones/s, ETA 31m19s | inventario: confirmados=726002/815590 buffer=89556 (mem=26521 disco=63035, nivel=spilling, más viejo=17798.9s) breaker=closed límite=49.6 llamadas/s
+2026/10/11 02:38:49 drenando 47.4 confirmaciones/s, ETA 30m57s | inventario: confirmados=727472/815590 buffer=88086 (mem=25051 disco=63035, nivel=spilling, más viejo=17827.1s) breaker=closed límite=49.2 llamadas/s
+2026/10/11 02:39:19 drenando 47.7 confirmaciones/s, ETA 30m17s | inventario: confirmados=728902/815590 buffer=86656 (mem=23621 disco=63035, nivel=spilling, más viejo=17854.3s) breaker=closed límite=44.6 llamadas/s
+2026/10/11 02:39:50 drenando 48.0 confirmaciones/s, ETA 29m33s | inventario: confirmados=730391/815590 buffer=85167 (mem=22132 disco=63035, nivel=spilling, más viejo=17882.5s) breaker=closed límite=41.6 llamadas/s
+2026/10/11 02:40:20 drenando 49.0 confirmaciones/s, ETA 28m29s | inventario: confirmados=731860/815590 buffer=83698 (mem=20663 disco=63035, nivel=spilling, más viejo=17909.7s) breaker=closed límite=36.7 llamadas/s
+2026/10/11 02:40:50 drenando 47.7 confirmaciones/s, ETA 28m44s | inventario: confirmados=733291/815590 buffer=82267 (mem=19232 disco=63035, nivel=spilling, más viejo=17936.9s) breaker=closed límite=46.0 llamadas/s
+2026/10/11 02:41:21 drenando 47.2 confirmaciones/s, ETA 28m30s | inventario: confirmados=734755/815590 buffer=80803 (mem=17768 disco=63035, nivel=spilling, más viejo=17965.1s) breaker=closed límite=63.1 llamadas/s
+2026/10/11 02:41:51 drenando 47.8 confirmaciones/s, ETA 27m40s | inventario: confirmados=736189/815590 buffer=79369 (mem=16334 disco=63035, nivel=spilling, más viejo=17992.4s) breaker=closed límite=57.7 llamadas/s
+2026/10/11 02:42:22 drenando 47.5 confirmaciones/s, ETA 27m20s | inventario: confirmados=737661/815590 buffer=77897 (mem=14862 disco=63035, nivel=spilling, más viejo=18020.6s) breaker=closed límite=57.3 llamadas/s
+2026/10/11 02:42:52 drenando 47.9 confirmaciones/s, ETA 26m37s | inventario: confirmados=739097/815590 buffer=76461 (mem=13426 disco=63035, nivel=spilling, más viejo=18047.9s) breaker=closed límite=51.8 llamadas/s
+2026/10/11 02:43:23 drenando 47.4 confirmaciones/s, ETA 26m21s | inventario: confirmados=740567/815590 buffer=74991 (mem=11956 disco=63035, nivel=spilling, más viejo=18076.0s) breaker=closed límite=51.3 llamadas/s
+2026/10/11 02:43:53 drenando 47.5 confirmaciones/s, ETA 25m49s | inventario: confirmados=741991/815590 buffer=73567 (mem=10532 disco=63035, nivel=spilling, más viejo=18103.3s) breaker=closed límite=48.7 llamadas/s
+2026/10/11 02:44:23 drenando 47.7 confirmaciones/s, ETA 25m11s | inventario: confirmados=743423/815590 buffer=72135 (mem=9100 disco=63035, nivel=spilling, más viejo=18130.5s) breaker=closed límite=44.4 llamadas/s
+2026/10/11 02:44:54 drenando 47.6 confirmaciones/s, ETA 24m45s | inventario: confirmados=744898/815590 buffer=70660 (mem=7625 disco=63035, nivel=spilling, más viejo=18158.7s) breaker=closed límite=43.5 llamadas/s
+2026/10/11 02:45:25 drenando 47.6 confirmaciones/s, ETA 24m13s | inventario: confirmados=746374/815590 buffer=69184 (mem=6149 disco=63035, nivel=spilling, más viejo=18186.9s) breaker=closed límite=41.2 llamadas/s
+2026/10/11 02:45:56 drenando 48.5 confirmaciones/s, ETA 23m15s | inventario: confirmados=747877/815590 buffer=67681 (mem=4646 disco=63035, nivel=spilling, más viejo=18215.0s) breaker=closed límite=39.8 llamadas/s
+2026/10/11 02:46:27 drenando 47.6 confirmaciones/s, ETA 23m11s | inventario: confirmados=749352/815590 buffer=66206 (mem=3171 disco=63035, nivel=spilling, más viejo=18243.1s) breaker=closed límite=39.3 llamadas/s
+2026/10/11 02:46:57 drenando 48.6 confirmaciones/s, ETA 22m11s | inventario: confirmados=750811/815590 buffer=64747 (mem=1712 disco=63035, nivel=spilling, más viejo=18270.4s) breaker=closed límite=46.2 llamadas/s
+2026/10/11 02:47:28 drenando 47.1 confirmaciones/s, ETA 22m23s | inventario: confirmados=752271/815590 buffer=63287 (mem=252 disco=63035, nivel=spilling, más viejo=18298.6s) breaker=closed límite=63.2 llamadas/s
+2026/10/11 02:47:59 drenando 47.7 confirmaciones/s, ETA 21m36s | inventario: confirmados=753749/815590 buffer=61809 (mem=48774 disco=13035, nivel=spilling, más viejo=18326.8s) breaker=closed límite=60.6 llamadas/s
+2026/10/11 02:48:29 drenando 46.9 confirmaciones/s, ETA 21m28s | inventario: confirmados=755155/815590 buffer=60403 (mem=47368 disco=13035, nivel=spilling, más viejo=18354.1s) breaker=closed límite=57.6 llamadas/s
+2026/10/11 02:48:59 drenando 47.3 confirmaciones/s, ETA 20m47s | inventario: confirmados=756573/815590 buffer=58985 (mem=45950 disco=13035, nivel=spilling, más viejo=18381.3s) breaker=closed límite=55.2 llamadas/s
+2026/10/11 02:49:30 drenando 47.4 confirmaciones/s, ETA 20m12s | inventario: confirmados=758043/815590 buffer=57515 (mem=44480 disco=13035, nivel=spilling, más viejo=18409.5s) breaker=closed límite=50.6 llamadas/s
+2026/10/11 02:50:01 drenando 47.8 confirmaciones/s, ETA 19m32s | inventario: confirmados=759524/815590 buffer=56034 (mem=42999 disco=13035, nivel=spilling, más viejo=18437.7s) breaker=closed límite=49.6 llamadas/s
+2026/10/11 02:50:32 drenando 47.9 confirmaciones/s, ETA 18m59s | inventario: confirmados=761008/815590 buffer=54550 (mem=41515 disco=13035, nivel=spilling, más viejo=18465.8s) breaker=closed límite=45.2 llamadas/s
+2026/10/11 02:51:02 drenando 47.7 confirmaciones/s, ETA 18m32s | inventario: confirmados=762440/815590 buffer=53118 (mem=40083 disco=13035, nivel=spilling, más viejo=18493.1s) breaker=closed límite=42.6 llamadas/s
+2026/10/11 02:51:33 drenando 48.2 confirmaciones/s, ETA 17m51s | inventario: confirmados=763934/815590 buffer=51624 (mem=38589 disco=13035, nivel=spilling, más viejo=18521.3s) breaker=closed límite=39.6 llamadas/s
+2026/10/11 02:52:04 drenando 48.4 confirmaciones/s, ETA 17m16s | inventario: confirmados=765433/815590 buffer=50125 (mem=37090 disco=13035, nivel=spilling, más viejo=18549.4s) breaker=closed límite=37.2 llamadas/s
+2026/10/11 02:52:35 drenando 48.0 confirmaciones/s, ETA 16m53s | inventario: confirmados=766920/815590 buffer=48638 (mem=35603 disco=13035, nivel=spilling, más viejo=18577.6s) breaker=closed límite=36.6 llamadas/s
+2026/10/11 02:53:06 drenando 47.7 confirmaciones/s, ETA 16m28s | inventario: confirmados=768399/815590 buffer=47159 (mem=34124 disco=13035, nivel=spilling, más viejo=18605.7s) breaker=closed límite=34.4 llamadas/s
+2026/10/11 02:53:36 drenando 47.1 confirmaciones/s, ETA 16m10s | inventario: confirmados=769813/815590 buffer=45745 (mem=32710 disco=13035, nivel=spilling, más viejo=18633.0s) breaker=closed límite=63.1 llamadas/s
+2026/10/11 02:54:06 drenando 47.8 confirmaciones/s, ETA 15m27s | inventario: confirmados=771246/815590 buffer=44312 (mem=31277 disco=13035, nivel=spilling, más viejo=18660.3s) breaker=closed límite=57.7 llamadas/s
+2026/10/11 02:54:37 drenando 47.5 confirmaciones/s, ETA 15m2s | inventario: confirmados=772717/815590 buffer=42841 (mem=29806 disco=13035, nivel=spilling, más viejo=18688.5s) breaker=closed límite=57.3 llamadas/s
+2026/10/11 02:55:07 drenando 47.8 confirmaciones/s, ETA 14m26s | inventario: confirmados=774150/815590 buffer=41408 (mem=28373 disco=13035, nivel=spilling, más viejo=18715.7s) breaker=closed límite=51.8 llamadas/s
+2026/10/11 02:55:38 drenando 47.6 confirmaciones/s, ETA 13m59s | inventario: confirmados=775625/815590 buffer=39933 (mem=26898 disco=13035, nivel=spilling, más viejo=18743.9s) breaker=closed límite=51.3 llamadas/s
+2026/10/11 02:56:08 drenando 47.1 confirmaciones/s, ETA 13m38s | inventario: confirmados=777037/815590 buffer=38521 (mem=25486 disco=13035, nivel=spilling, más viejo=18771.2s) breaker=closed límite=49.1 llamadas/s
+2026/10/11 02:56:39 drenando 48.3 confirmaciones/s, ETA 12m47s | inventario: confirmados=778533/815590 buffer=37025 (mem=23990 disco=13035, nivel=spilling, más viejo=18799.3s) breaker=closed límite=45.7 llamadas/s
+2026/10/11 02:57:10 drenando 47.5 confirmaciones/s, ETA 12m29s | inventario: confirmados=780004/815590 buffer=35554 (mem=22519 disco=13035, nivel=spilling, más viejo=18827.5s) breaker=closed límite=45.3 llamadas/s
+2026/10/11 02:57:40 drenando 48.4 confirmaciones/s, ETA 11m44s | inventario: confirmados=781457/815590 buffer=34101 (mem=21066 disco=13035, nivel=spilling, más viejo=18854.7s) breaker=closed límite=38.6 llamadas/s
+2026/10/11 02:58:11 drenando 48.2 confirmaciones/s, ETA 11m16s | inventario: confirmados=782951/815590 buffer=32607 (mem=19572 disco=13035, nivel=spilling, más viejo=18882.8s) breaker=closed límite=37.6 llamadas/s
+2026/10/11 02:58:42 drenando 47.3 confirmaciones/s, ETA 10m58s | inventario: confirmados=784417/815590 buffer=31141 (mem=18106 disco=13035, nivel=spilling, más viejo=18911.1s) breaker=closed límite=37.2 llamadas/s
+2026/10/11 02:59:13 drenando 47.9 confirmaciones/s, ETA 10m19s | inventario: confirmados=785902/815590 buffer=29656 (mem=16621 disco=13035, nivel=spilling, más viejo=18939.2s) breaker=closed límite=34.6 llamadas/s
+2026/10/11 02:59:44 drenando 47.3 confirmaciones/s, ETA 9m56s | inventario: confirmados=787368/815590 buffer=28190 (mem=15155 disco=13035, nivel=spilling, más viejo=18967.5s) breaker=closed límite=47.4 llamadas/s
+2026/10/11 03:00:15 drenando 48.4 confirmaciones/s, ETA 9m11s | inventario: confirmados=788867/815590 buffer=26691 (mem=13656 disco=13035, nivel=spilling, más viejo=18995.6s) breaker=closed límite=61.8 llamadas/s
+2026/10/11 03:00:45 drenando 46.9 confirmaciones/s, ETA 8m58s | inventario: confirmados=790275/815590 buffer=25283 (mem=12248 disco=13035, nivel=spilling, más viejo=19022.9s) breaker=closed límite=59.3 llamadas/s
+2026/10/11 03:01:16 drenando 47.2 confirmaciones/s, ETA 8m25s | inventario: confirmados=791737/815590 buffer=23821 (mem=10786 disco=13035, nivel=spilling, más viejo=19051.1s) breaker=closed límite=56.7 llamadas/s
+2026/10/11 03:01:47 drenando 47.4 confirmaciones/s, ETA 7m51s | inventario: confirmados=793206/815590 buffer=22352 (mem=9317 disco=13035, nivel=spilling, más viejo=19079.3s) breaker=closed límite=55.6 llamadas/s
+2026/10/11 03:02:17 drenando 47.6 confirmaciones/s, ETA 7m19s | inventario: confirmados=794634/815590 buffer=20924 (mem=7889 disco=13035, nivel=spilling, más viejo=19106.6s) breaker=closed límite=52.7 llamadas/s
+2026/10/11 03:02:48 drenando 48.0 confirmaciones/s, ETA 6m45s | inventario: confirmados=796121/815590 buffer=19437 (mem=6402 disco=13035, nivel=spilling, más viejo=19134.7s) breaker=closed límite=49.6 llamadas/s
+2026/10/11 03:03:18 drenando 47.7 confirmaciones/s, ETA 6m17s | inventario: confirmados=797553/815590 buffer=18005 (mem=4970 disco=13035, nivel=spilling, más viejo=19162.0s) breaker=closed límite=46.7 llamadas/s
+2026/10/11 03:03:49 drenando 48.1 confirmaciones/s, ETA 5m43s | inventario: confirmados=799044/815590 buffer=16514 (mem=3479 disco=13035, nivel=spilling, más viejo=19190.1s) breaker=closed límite=43.6 llamadas/s
+2026/10/11 03:04:19 drenando 47.8 confirmaciones/s, ETA 5m15s | inventario: confirmados=800477/815590 buffer=15081 (mem=2046 disco=13035, nivel=spilling, más viejo=19217.4s) breaker=closed límite=41.2 llamadas/s
+2026/10/11 03:04:50 drenando 47.5 confirmaciones/s, ETA 4m46s | inventario: confirmados=801950/815590 buffer=13608 (mem=573 disco=13035, nivel=spilling, más viejo=19245.6s) breaker=closed límite=40.6 llamadas/s
+2026/10/11 03:05:02 BUFFER spilling → memory (profundidad=13034 memoria=13034 disco=0)
+2026/10/11 03:05:20 drenando 48.8 confirmaciones/s, ETA 4m8s | inventario: confirmados=803414/815590 buffer=12144 (mem=12144 disco=0, nivel=memory, más viejo=19272.8s) breaker=closed límite=35.6 llamadas/s
+2026/10/11 03:05:51 drenando 48.1 confirmaciones/s, ETA 3m41s | inventario: confirmados=804904/815590 buffer=10654 (mem=10654 disco=0, nivel=memory, más viejo=19301.0s) breaker=closed límite=34.7 llamadas/s
+2026/10/11 03:06:21 drenando 47.2 confirmaciones/s, ETA 3m15s | inventario: confirmados=806321/815590 buffer=9237 (mem=9237 disco=0, nivel=memory, más viejo=19328.3s) breaker=closed límite=63.3 llamadas/s
+2026/10/11 03:06:51 drenando 46.9 confirmaciones/s, ETA 2m46s | inventario: confirmados=807728/815590 buffer=7830 (mem=7830 disco=0, nivel=memory, más viejo=19355.6s) breaker=closed límite=58.7 llamadas/s
+2026/10/11 03:07:22 drenando 47.8 confirmaciones/s, ETA 2m12s | inventario: confirmados=809210/815590 buffer=6348 (mem=6348 disco=0, nivel=memory, más viejo=19383.7s) breaker=closed límite=57.6 llamadas/s
+2026/10/11 03:07:52 drenando 47.2 confirmaciones/s, ETA 1m44s | inventario: confirmados=810626/815590 buffer=4932 (mem=4932 disco=0, nivel=memory, más viejo=19411.0s) breaker=closed límite=53.2 llamadas/s
+2026/10/11 03:08:23 drenando 47.3 confirmaciones/s, ETA 1m13s | inventario: confirmados=812092/815590 buffer=3466 (mem=3466 disco=0, nivel=memory, más viejo=19439.2s) breaker=closed límite=53.1 llamadas/s
+2026/10/11 03:08:54 drenando 48.2 confirmaciones/s, ETA 40s | inventario: confirmados=813585/815590 buffer=1973 (mem=1973 disco=0, nivel=memory, más viejo=19467.3s) breaker=closed límite=49.7 llamadas/s
+2026/10/11 03:09:24 drenando 47.8 confirmaciones/s, ETA 11s | inventario: confirmados=815020/815590 buffer=538 (mem=538 disco=0, nivel=memory, más viejo=19494.6s) breaker=closed límite=46.8 llamadas/s
+2026/10/11 03:09:35 buffer drenado en 5h25m4s
+
+=== CONSUMIDOR: AGREGADO FINAL ===
+país      órdenes      órdenes USD        pagos        pagos USD   inventario
+MX         240412      14825927.68       204568      12609231.78       163894
+AR         240836      14845476.11       204495      12612236.36       163768
+CO         238820      14722007.35       203176      12540964.70       162489
+CL         239995      14771085.04       203717      12523200.88       162838
+PE         239937      14808124.43       203642      12559792.34       162601
+TOTAL     1200000      73972620.61      1019598      62845426.06       815590
+
+=== CONTEO ===
+líneas esperadas (EOF):     3126750
+primeras entregas:          3126750
+eventos únicos aplicados:   3035188
+duplicados descartados:     91562
+re-entregas del broker:     0 (descartadas por la ventana: 0)
+inválidos:                  0
+acks enviados (AckAll):     48315
+EVENTOS PROCESADOS:         3035188 (esperados: 3035188 únicos)
+
+=== INVENTARIO ===
+encolados / confirmados:    815590 / 815590
+llamadas:                   828401 (200=815590 503=12689 timeout=0 conexión=122 otros=0)
+rechazadas por el breaker:  2290; ítems que necesitaron reintento: 11649
+latencia por llamada:       p50=22.5ms p95=207.4ms p99=211.0ms max=223.4ms
+espera en buffer:           p50=3h8m6.6s p95=5h12m8.5s max=5h25m4.6s
+limitador:                  tasa min=2.0 max=63.8 llamadas/s, base=17.6ms, +14732 / -2176 (fallos 2157, latencia 19), backoffs por breaker 8
+pipeline principal:         483.4s; drenado del buffer: 5h25m4.3s; total: 5h33m7.7s
+
+=== CIRCUIT BREAKER ===
+veces que abrió:            30 (por fallos consecutivos: 8, por prueba fallida en half-open: 22)
+cerró tras half-open:       8
+tiempo total abierto:       1m0s (half-open: 1.8s)
+racha máx. de fallos:       5
+
+=== BUFFER DE ESPERA (backpressure) ===
+profundidad máxima:         796669 (memoria máx. 50000, disco máx. 763035)
+ítems que pasaron por disco: 763035; Push bloqueados: 0
+tiempo en nivel blocked:    0s
+tiempo en nivel memory:     5m37.9s
+tiempo en nivel spilling:   5h27m30.3s
+
+=== RENDIMIENTO DEL PIPELINE PRINCIPAL ===
+throughput consumidor:      6469 ev/s (483.38s, primer recibido -> último aplicado)
+latencia e2e (publicado -> aplicado): p50=0.56ms p95=1.12ms p99=2.11ms max=102.55ms (n=3126750)
+heap pico: 297 MiB; ventana final: 531520 llaves, 0 expulsiones prematuras
+
+=== CHEQUEOS ===
+[OK] accounting: unique + duplicates + invalid == first_deliveries
+[OK] aggregate_total == unique_applied
+[OK] buffer: final depth == 0
+[OK] inventory: confirmed == enqueued (nada se descartó)
+[OK] inventory: enqueued == aggregate inventory_reserved
+[OK] no_loss: first_deliveries == expected_lines
+[OK] no_premature_evictions
+[OK] processed == unique_applied
+
+reporte: results\go04\full\consumer-20261010-213627.json
+línea de tiempo: results\go04\full\timeline-20261010-213627.csv

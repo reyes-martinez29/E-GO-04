@@ -157,7 +157,7 @@ func buildInvReport(inv *inventory, firstRecv time.Time, lastApply int64) invRep
 	r := invReport{
 		Enqueued: inv.enqueued.Load(), Confirmed: inv.confirmed.Load(), FinalDepth: inv.q.Snapshot().Depth,
 		Calls: inv.calls.Load(), OK: inv.ok.Load(), HTTP503: inv.s503.Load(), Timeouts: inv.timeouts.Load(),
-		ConnErrors: inv.connErrs.Load(), OtherStatus: inv.otherStatus.Load(), Rejected: inv.rejected.Load(),
+		ConnErrors: inv.connErrs.Load(), OtherStatus: inv.otherStatus.Load(), Rejected: int64(inv.br.Stats().Rejected),
 		ItemsRetried: inv.itemsRetried.Load(),
 		Breaker:      inv.br.Stats(), Buffer: inv.q.Stats(),
 	}

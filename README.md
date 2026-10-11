@@ -137,7 +137,7 @@ Variables: `RATE`, `SPIKE_MULT`, `SPIKE_AFTER`, `SPIKE_FOR`, `OUTAGE_AT`,
 Corridas cortas para probar (minutos, no horas):
 
 ```bash
-RATE=500 SPIKE_AFTER=10s SPIKE_FOR=30s OUTAGE_AT=25 OUTAGE_FOR=20 scripts/run.sh outage-smoke 40000
+RATE=500 SPIKE_AFTER=10s SPIKE_FOR=30s OUTAGE_AT=25 OUTAGE_FOR=20 scripts/run.sh smoke-outage 40000
 CONSUMER_ARGS="-no-limiter" RATE=500 SPIKE_AFTER=10s SPIKE_FOR=30s scripts/run.sh ablation-no-limiter 40000
 CONSUMER_ARGS="-buffer-mem 500 -buffer-disk 2000" RATE=500 SPIKE_AFTER=10s SPIKE_FOR=30s scripts/run.sh blocked-buffer 40000
 ```
